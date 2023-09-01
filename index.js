@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import fs from "node:fs/promises";
+import process from "node:process";
 import path from "node:path";
 import { globby } from "globby";
 import { compile } from "@mdx-js/mdx";
@@ -12,7 +13,9 @@ import remarkComment from "@slorber/remark-comment";
 ////////////////////////////////////////
 // Params
 
-const versioned = false;
+const verbose = false;
+
+const excludeVersionedDocs = true;
 
 const cwd = "/Users/sebastienlorber/Desktop/projects/jest";
 
@@ -30,7 +33,7 @@ const exclude = [
   "website/README.md",
   "benchmarks/test-file-overhead/README.md",
   //
-  versioned ? null : "**/versioned_docs",
+  excludeVersionedDocs ? "**/versioned_docs" : null,
 ].filter(Boolean);
 
 const format = "mdx";
@@ -51,25 +54,44 @@ const allRelativeFilePaths = await globby(include, {
   // gitignore: true, // Does not work well with relative paths like ../docs
 });
 
+if (allRelativeFilePaths.length === 0) {
+  console.error("Couldn't find any file to compile!");
+  process.exit(1);
+}
+
 console.log(
-  "All file paths being checked: " + allRelativeFilePaths.length,
-  JSON.stringify(allRelativeFilePaths, null, 2)
+  "Found " + allRelativeFilePaths.length + " files to compile with MDX"
 );
+
+if (verbose) {
+  console.log(
+    "List of files:\n",
+    JSON.stringify(allRelativeFilePaths, null, 2)
+  );
+}
 
 const allResults = await Promise.all(allRelativeFilePaths.map(processFilePath));
 
 const allErrors = allResults.filter((r) => r.status === "error");
 const allSuccess = allResults.filter((r) => r.status === "success");
 
-console.log("Errors: ", allErrors.length);
-console.log("Success: ", allSuccess.length);
+console.log(`Errors: ${allErrors.length}`);
+console.log(`Success: ${allSuccess.length}`);
+
+if (allErrors.length === 0) {
+  console.log("All MDX files compile successfully!");
+  process.exit(0);
+}
 
 const outputSeparator = "\n---\n";
 const outputs = allErrors.map((error) => {
   return error.errorMessage;
 });
 
+console.log("Some MDX files couldn't compile successfully!");
 console.log(outputSeparator + outputs.join(outputSeparator) + outputSeparator);
+
+process.exit(1);
 
 ////////////////////////////////////////
 // Functions
