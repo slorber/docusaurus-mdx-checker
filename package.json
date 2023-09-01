@@ -22,7 +22,7 @@
   "bin": "cli.js",
   "type": "module",
   "scripts": {
-    "launch": "node index.js",
+    "launch": "node cli.js",
     "test": "vitest"
   },
   "dependencies": {
