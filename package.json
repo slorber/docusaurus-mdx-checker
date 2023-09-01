@@ -1,0 +1,36 @@
+{
+  "name": "docusaurus-mdx-checker",
+  "author": "slorber",
+  "license": "MIT",
+  "version": "0.0.1",
+  "description": "Check your Docusaurus content for MDX v2 parsing errors",
+  "homepage": "https://github.com/slorber/docusaurus-mdx-checker#readme",
+  "keywords": [
+    "mdx",
+    "docusaurus",
+    "markdown",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slorber/docusaurus-mdx-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slorber/docusaurus-mdx-checker/issues"
+  },
+  "main": "index.js",
+  "bin": "index.js",
+  "type": "module",
+  "scripts": {
+    "launch": "node index.js",
+    "test": "test"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^2.3.0",
+    "globby": "^13.2.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}
