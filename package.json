@@ -27,8 +27,12 @@
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.3.0",
+    "@slorber/remark-comment": "^1.0.0",
     "globby": "^13.2.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "remark-directive": "^2.0.1",
+    "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "prettier": "^3.0.3"

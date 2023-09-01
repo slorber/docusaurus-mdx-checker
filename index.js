@@ -2,8 +2,12 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
-import { globby, isGitIgnored } from "globby";
+import { globby } from "globby";
 import { compile } from "@mdx-js/mdx";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkDirectives from "remark-directive";
+import remarkGFM from "remark-gfm";
+import remarkComment from "@slorber/remark-comment";
 
 ////////////////////////////////////////
 // Params
@@ -31,6 +35,13 @@ const exclude = [
 
 const format = "mdx";
 
+const remarkPlugins = [
+  remarkFrontmatter,
+  remarkDirectives,
+  remarkGFM,
+  remarkComment,
+];
+
 ////////////////////////////////////////
 // Script
 
@@ -53,8 +64,12 @@ const allSuccess = allResults.filter((r) => r.status === "success");
 console.log("Errors: ", allErrors.length);
 console.log("Success: ", allSuccess.length);
 
-const firstError = allErrors?.[0]?.error;
-console.error("firstError", firstError);
+const outputSeparator = "\n---\n";
+const outputs = allErrors.map((error) => {
+  return error.errorMessage;
+});
+
+console.log(outputSeparator + outputs.join(outputSeparator) + outputSeparator);
 
 ////////////////////////////////////////
 // Functions
@@ -65,14 +80,30 @@ async function processFilePath(relativeFilePath) {
     // console.log("filePath", filePath);
     const fileContent = await fs.readFile(filePath);
     // console.log("fileContent", fileContent);
-    const result = await compile(fileContent, { format });
-    // TODO handle warnings
+    const result = await compile(fileContent, { format, remarkPlugins });
+    // TODO generate warnings for compat options here?
     return { relativeFilePath, status: "success", result };
   } catch (error) {
-    const wrappedError = new Error(
-      "Error while processing file " + relativeFilePath,
-      { cause: error }
-    );
-    return { relativeFilePath, status: "error", error: wrappedError };
+    const errorMessage = `Error while compiling file ${relativeFilePath}:\n${formatMDXErrorMessage(
+      error
+    )}`;
+    return { relativeFilePath, status: "error", error, errorMessage };
   }
+}
+
+function formatMDXErrorMessage(error) {
+  let message = `Details: ${error.message}`;
+
+  if (error.line || error.column) {
+    let lineColumn = "";
+    if (error.line) {
+      lineColumn = lineColumn + "Line=" + error.line + " ";
+    }
+    if (error.column) {
+      lineColumn = lineColumn + "Column=" + error.column;
+    }
+    message = message + "\n" + lineColumn;
+  }
+
+  return message;
 }
