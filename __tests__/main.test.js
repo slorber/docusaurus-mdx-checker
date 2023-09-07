@@ -21,10 +21,6 @@ const SiteFixtures = {
   },
 };
 
-console.log(SiteFixtures);
-
-// TODO
-
 const exclude = [
   "packages",
   "examples",
@@ -40,6 +36,8 @@ const exclude = [
   // excludeVersionedDocs ? "**/versioned_docs" : null,
 ].filter(Boolean);
 
+const OnlyDocsInclude = "docs/**/*.{md,mdx}";
+
 describe("Docusaurus", () => {
   async function testDocusaurusSite(options) {
     return main({
@@ -49,14 +47,30 @@ describe("Docusaurus", () => {
     });
   }
 
-  test("v3 website compiles", async () => {
-    const result = await testDocusaurusSite({
-      cwd: SiteFixtures.v3.docusaurus,
-    });
+  test("v2 website does not compile", async () => {
+    await expect(
+      testDocusaurusSite({
+        cwd: SiteFixtures.v2.docusaurus,
+      })
+    ).rejects.toThrowErrorMatchingSnapshot();
+  });
 
-    expect(result).toMatchInlineSnapshot(
-      '"[32m[SUCCESS][39m All 694 MDX files compiled successfully!"'
-    );
+  test("v2 website does not compile - only docs", async () => {
+    await expect(
+      testDocusaurusSite({
+        cwd: SiteFixtures.v2.docusaurus,
+        include: [OnlyDocsInclude],
+      })
+    ).rejects.toThrowErrorMatchingSnapshot();
+  });
+
+  test("v2 website does not compile - exclude versioned docs", async () => {
+    await expect(
+      testDocusaurusSite({
+        cwd: SiteFixtures.v2.docusaurus,
+        exclude: [VersionedDocsExclusion],
+      })
+    ).rejects.toThrowErrorMatchingSnapshot();
   });
 
   test("v3 website compiles", async () => {
@@ -69,7 +83,18 @@ describe("Docusaurus", () => {
     );
   });
 
-  test("v3 website compiles without versioned docs", async () => {
+  test("v3 website compiles - only docs", async () => {
+    const result = await testDocusaurusSite({
+      cwd: SiteFixtures.v3.docusaurus,
+      include: [OnlyDocsInclude],
+    });
+
+    expect(result).toMatchInlineSnapshot(
+      '"[32m[SUCCESS][39m All 85 MDX files compiled successfully!"'
+    );
+  });
+
+  test("v3 website compiles - exclude versioned docs", async () => {
     const result = await testDocusaurusSite({
       cwd: SiteFixtures.v3.docusaurus,
       exclude: [VersionedDocsExclusion],

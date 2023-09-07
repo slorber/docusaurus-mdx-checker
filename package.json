@@ -23,7 +23,7 @@
   "type": "module",
   "scripts": {
     "launch": "node src/cli.js",
-    "test": "vitest"
+    "test": "vitest --test-timeout 15000"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.3.0",

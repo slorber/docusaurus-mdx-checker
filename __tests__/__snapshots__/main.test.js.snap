@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Docusaurus > v2 website does not compile - exclude versioned docs 1`] = `
+"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+
+[33m---[39m
+Error while compiling file docs/deployment.mdx:
+Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
+Line=443 Column=1
+[33m---[39m
+"
+`;
+
+exports[`Docusaurus > v2 website does not compile - only docs 1`] = `
+"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+
+[33m---[39m
+Error while compiling file docs/deployment.mdx:
+Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
+Line=443 Column=1
+[33m---[39m
+"
+`;
+
+exports[`Docusaurus > v2 website does not compile 1`] = `
+"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+
+[33m---[39m
+Error while compiling file docs/deployment.mdx:
+Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
+Line=443 Column=1
+[33m---[39m
+Error while compiling file versioned_docs/version-2.0.0-beta.22/deployment.mdx:
+Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
+Line=443 Column=1
+[33m---[39m
+Error while compiling file versioned_docs/version-2.0.0-rc.1/deployment.mdx:
+Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
+Line=443 Column=1
+[33m---[39m
+"
+`;
