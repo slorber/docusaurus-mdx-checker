@@ -85,21 +85,32 @@ ${outputSeparator}${allErrors
 
   async function processFilePath(relativeFilePath) {
     const filePath = path.resolve(cwd, relativeFilePath);
+    const fileFormat =
+      format === "detect" ? (filePath.endsWith(".md") ? "md" : "mdx") : "mdx";
     try {
       // console.log("filePath", filePath);
       const fileContent = await fs.readFile(filePath, "utf8");
       // console.log("fileContent", fileContent);
       const contentPreprocessed = preprocess(fileContent);
-      const result = await compile(contentPreprocessed, {
-        format:
-          format === "detect"
-            ? filePath.endsWith(".md")
-              ? "md"
-              : "mdx"
-            : "mdx",
+      const compilerOptions = {
+        format: fileFormat,
         remarkPlugins,
         rehypePlugins,
-      });
+      };
+      const result = await compile(contentPreprocessed, compilerOptions);
+
+      // const fileToDebug = "docs/introduction.md";
+      const fileToDebug = undefined;
+      if (relativeFilePath === fileToDebug) {
+        console.log({
+          relativeFilePath,
+          fileContent,
+          contentPreprocessed,
+          result: result.toString(),
+          compilerOptions,
+        });
+      }
+
       // TODO generate warnings for compat options here?
       return { relativeFilePath, status: "success", result };
     } catch (error) {

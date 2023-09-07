@@ -38,54 +38,59 @@ const exclude = [
 
 const OnlyDocsInclude = "docs/**/*.{md,mdx}";
 
-describe("Docusaurus", () => {
-  async function testDocusaurusSite(options) {
+describe("Docusaurus v2", () => {
+  async function testSite(options) {
     return main({
-      format: "detect",
+      cwd: SiteFixtures.v2.docusaurus,
+      format: "mdx",
       remarkPlugins: [...DefaultRemarkPlugins, remarkMath],
+      // verbose: true,
       ...options,
     });
   }
 
-  test("v2 website does not compile", async () => {
-    await expect(
-      testDocusaurusSite({
-        cwd: SiteFixtures.v2.docusaurus,
-      })
-    ).rejects.toThrowErrorMatchingSnapshot();
+  test("does not compile", async () => {
+    await expect(testSite({})).rejects.toThrowErrorMatchingSnapshot();
   });
 
-  test("v2 website does not compile - only docs", async () => {
+  test("does not compile - only docs", async () => {
     await expect(
-      testDocusaurusSite({
-        cwd: SiteFixtures.v2.docusaurus,
+      testSite({
         include: [OnlyDocsInclude],
       })
     ).rejects.toThrowErrorMatchingSnapshot();
   });
 
-  test("v2 website does not compile - exclude versioned docs", async () => {
+  test("does not compile - exclude versioned docs", async () => {
     await expect(
-      testDocusaurusSite({
-        cwd: SiteFixtures.v2.docusaurus,
+      testSite({
         exclude: [VersionedDocsExclusion],
       })
     ).rejects.toThrowErrorMatchingSnapshot();
   });
+});
 
-  test("v3 website compiles", async () => {
-    const result = await testDocusaurusSite({
+describe("Docusaurus v3", () => {
+  async function testSite(options) {
+    return main({
       cwd: SiteFixtures.v3.docusaurus,
+      format: "detect",
+      remarkPlugins: [...DefaultRemarkPlugins, remarkMath],
+      // verbose: true,
+      ...options,
     });
+  }
+
+  test("compiles", async () => {
+    const result = await testSite({});
 
     expect(result).toMatchInlineSnapshot(
       '"[32m[SUCCESS][39m All 694 MDX files compiled successfully!"'
     );
   });
 
-  test("v3 website compiles - only docs", async () => {
-    const result = await testDocusaurusSite({
-      cwd: SiteFixtures.v3.docusaurus,
+  test("compiles - only docs", async () => {
+    const result = await testSite({
       include: [OnlyDocsInclude],
     });
 
@@ -94,9 +99,8 @@ describe("Docusaurus", () => {
     );
   });
 
-  test("v3 website compiles - exclude versioned docs", async () => {
-    const result = await testDocusaurusSite({
-      cwd: SiteFixtures.v3.docusaurus,
+  test("compiles - exclude versioned docs", async () => {
+    const result = await testSite({
       exclude: [VersionedDocsExclusion],
     });
 
