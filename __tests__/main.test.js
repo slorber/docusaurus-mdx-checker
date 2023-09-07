@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import main from "./main.js";
+import main from "../main.js";
 
 // TODO
 
@@ -28,12 +28,8 @@ const exclude = [
 
 const format = "mdx";
 
-function sum(a, b) {
-  return a + b;
-}
-
 test("adds 1 + 2 to equal 3", async () => {
-  await main({
+  const result = await main({
     verbose,
     cwd,
     format,
@@ -41,6 +37,7 @@ test("adds 1 + 2 to equal 3", async () => {
     exclude,
   });
 
-  expect(sum(1, 2)).toBe(3);
-  expect(sum(1, 2)).toMatchSnapshot();
+  expect(result).toMatchInlineSnapshot(
+    '"[32m[SUCCESS][39m All MDX files compiled successfully!"'
+  );
 });

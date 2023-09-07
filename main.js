@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import fs from "node:fs/promises";
-import process from "node:process";
 import path from "node:path";
 import { globby } from "globby";
 import { compile } from "@mdx-js/mdx";
@@ -9,6 +8,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkDirectives from "remark-directive";
 import remarkGFM from "remark-gfm";
 import remarkComment from "@slorber/remark-comment";
+import chalk from "chalk";
 
 const remarkPlugins = [
   remarkFrontmatter,
@@ -16,6 +16,9 @@ const remarkPlugins = [
   remarkGFM,
   remarkComment,
 ];
+
+const SuccessPrefix = chalk.green("[SUCCESS]");
+const ErrorPrefix = chalk.red("[ERROR]");
 
 ////////////////////////////////////////
 // Script
@@ -28,8 +31,7 @@ export default async function main({ verbose, cwd, format, include, exclude }) {
   });
 
   if (allRelativeFilePaths.length === 0) {
-    console.error("Couldn't find any file to compile!");
-    process.exit(1);
+    throw new Error(`${ErrorPrefix} Couldn't find any file to compile!`);
   }
 
   console.log(
@@ -53,22 +55,17 @@ export default async function main({ verbose, cwd, format, include, exclude }) {
   console.log(`Errors: ${allErrors.length}`);
   console.log(`Success: ${allSuccess.length}`);
 
-  if (allErrors.length === 0) {
-    console.log("All MDX files compile successfully!");
-    process.exit(0);
+  if (allErrors.length > 0) {
+    const outputSeparator = `\n${chalk.yellow("---")}\n`;
+    throw new Error(
+      `${ErrorPrefix} Some MDX files couldn't compile successfully!
+${outputSeparator}${allErrors
+        .map((error) => error.errorMessage)
+        .join(outputSeparator)}${outputSeparator}`
+    );
+  } else {
+    return `${SuccessPrefix} All MDX files compiled successfully!`;
   }
-
-  const outputSeparator = "\n---\n";
-  const outputs = allErrors.map((error) => {
-    return error.errorMessage;
-  });
-
-  console.log("Some MDX files couldn't compile successfully!");
-  console.log(
-    outputSeparator + outputs.join(outputSeparator) + outputSeparator
-  );
-
-  process.exit(1);
 
   ////////////////////////////////////////
   // Functions

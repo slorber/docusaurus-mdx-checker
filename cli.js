@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import process from "node:process";
 import main from "./main.js";
 
 // TODO
@@ -29,10 +30,17 @@ const exclude = [
 
 const format = "mdx";
 
-await main({
-  verbose,
-  cwd,
-  format,
-  include,
-  exclude,
-});
+try {
+  const result = await main({
+    verbose,
+    cwd,
+    format,
+    include,
+    exclude,
+  });
+  console.log(result);
+  process.exit(1);
+} catch (error) {
+  console.error(error);
+  process.exit(1);
+}
