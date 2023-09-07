@@ -198,3 +198,89 @@ describe("Jest", () => {
     });
   });
 });
+
+describe.only("React-Native", () => {
+  async function testJest(options) {
+    return main({
+      // verbose: true,
+      ...options,
+    });
+  }
+
+  const OnlyDocsInclude = "docs/**/*.{md,mdx}";
+
+  describe("v2", () => {
+    async function testSite(options) {
+      return testJest({
+        cwd: SiteFixtures.v2.reactnative,
+        // verbose: true,
+        ...options,
+      });
+    }
+
+    test("does not compile", async () => {
+      await expect(testSite({})).rejects.toThrowErrorMatchingSnapshot();
+    });
+
+    test("does not compile - only docs", async () => {
+      await expect(
+        testSite({
+          include: [OnlyDocsInclude],
+        })
+      ).rejects.toThrowErrorMatchingSnapshot();
+    });
+
+    test("does not compile - exclude versioned docs", async () => {
+      await expect(
+        testSite({
+          exclude: [VersionedDocsExclusion],
+        })
+      ).rejects.toThrowErrorMatchingSnapshot();
+    });
+  });
+
+  describe("v3", () => {
+    async function testSite(options) {
+      return testJest({
+        cwd: SiteFixtures.v3.reactnative,
+        format: "detect",
+        // verbose: true,
+        ...options,
+      });
+    }
+
+    test("compiles", async () => {
+      const result = await testSite({});
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 844 MDX files compiled successfully!"'
+      );
+    });
+
+    test("compiles - website cwd", async () => {
+      const result = await testSite({
+        cwd: `${SiteFixtures.v3.reactnative}/website`,
+      });
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 844 MDX files compiled successfully!"'
+      );
+    });
+
+    test("compiles - only docs", async () => {
+      const result = await testSite({
+        include: [OnlyDocsInclude],
+      });
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 184 MDX files compiled successfully!"'
+      );
+    });
+
+    test("compiles - exclude versioned docs", async () => {
+      const result = await testSite({
+        exclude: [VersionedDocsExclusion],
+      });
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 299 MDX files compiled successfully!"'
+      );
+    });
+  });
+});
