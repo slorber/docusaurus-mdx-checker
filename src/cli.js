@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import process from "node:process";
-import main from "./main.js";
+import main from "src/main.js";
 
 const cwd = "/Users/sebastienlorber/Desktop/projects/jest";
 const verbose = true;

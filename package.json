@@ -18,11 +18,11 @@
   "bugs": {
     "url": "https://github.com/slorber/docusaurus-mdx-checker/issues"
   },
-  "main": "main.js",
-  "bin": "cli.js",
+  "main": "src/main.js",
+  "bin": "src/cli.js",
   "type": "module",
   "scripts": {
-    "launch": "node cli.js",
+    "launch": "node src/cli.js",
     "test": "vitest"
   },
   "dependencies": {

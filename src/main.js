@@ -4,41 +4,25 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { globby } from "globby";
 import { compile } from "@mdx-js/mdx";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkDirectives from "remark-directive";
-import remarkGFM from "remark-gfm";
-import remarkComment from "@slorber/remark-comment";
 import chalk from "chalk";
-import { preprocess } from "./compat";
+
+import { preprocess } from "./compat.js";
+import {
+  DefaultRemarkPlugins,
+  DefaultRehypePlugins,
+  DefaultInclude,
+  DefaultExclude,
+} from "./constants.js";
+
+export {
+  DefaultRemarkPlugins,
+  DefaultRehypePlugins,
+  DefaultInclude,
+  DefaultExclude,
+} from "./constants";
 
 const SuccessPrefix = chalk.green("[SUCCESS]");
 const ErrorPrefix = chalk.red("[ERROR]");
-
-export const DefaultRemarkPlugins = Object.freeze([
-  remarkFrontmatter,
-  remarkDirectives,
-  remarkGFM,
-  remarkComment,
-]);
-
-export const DefaultRehypePlugins = Object.freeze([]);
-
-export const DefaultInclude = Object.freeze([
-  "**/*.{md,mdx}",
-  "../docs/**/*.{md,mdx}",
-]);
-
-export const DefaultExclude = Object.freeze([
-  "packages",
-  "examples",
-  "node_modules",
-  //
-  "CHANGELOG.md",
-  "CODE_OF_CONDUCT.md",
-  "CONTRIBUTING.md",
-  "README.md",
-  "website/README.md",
-]);
 
 ////////////////////////////////////////
 // Script

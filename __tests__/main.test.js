@@ -1,5 +1,9 @@
 import { describe, expect, test } from "vitest";
-import main, { DefaultRemarkPlugins } from "../main.js";
+import main from "../src/main";
+import {
+  DefaultRemarkPlugins,
+  VersionedDocsExclusion,
+} from "../src/constants.js";
 import remarkMath from "remark-math";
 
 const FixtureSitesPath = "./__tests__/__fixtures__/sites";
@@ -55,10 +59,20 @@ describe("Docusaurus", () => {
     );
   });
 
+  test("v3 website compiles", async () => {
+    const result = await testDocusaurusSite({
+      cwd: SiteFixtures.v3.docusaurus,
+    });
+
+    expect(result).toMatchInlineSnapshot(
+      '"[32m[SUCCESS][39m All 694 MDX files compiled successfully!"'
+    );
+  });
+
   test("v3 website compiles without versioned docs", async () => {
     const result = await testDocusaurusSite({
       cwd: SiteFixtures.v3.docusaurus,
-      exclude: "**/versioned_docs",
+      exclude: [VersionedDocsExclusion],
     });
 
     expect(result).toMatchInlineSnapshot(
