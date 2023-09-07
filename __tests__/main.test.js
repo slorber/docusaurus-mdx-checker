@@ -199,7 +199,7 @@ describe("Jest", () => {
   });
 });
 
-describe.only("React-Native", () => {
+describe("React-Native", () => {
   async function testJest(options) {
     return main({
       // verbose: true,
