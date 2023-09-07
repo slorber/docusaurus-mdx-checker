@@ -132,7 +132,7 @@ Unsafe components have a higher risk of breaking changes due to internal refacto
 
 ### `docusaurus deploy [siteDir]` {#docusaurus-deploy-sitedir}
 
-Deploys your site with [GitHub Pages](https://pages.github.com/). Check out the docs on [deployment](deployment.mdx#deploying-to-github-pages) for more details.
+Deploys your site with [GitHub Pages](https://pages.github.com/). Check out the docs on [deployment](__tests__/__fixtures__/sites/docusaurus-v2/docs/deployment.mdx#deploying-to-github-pages) for more details.
 
 #### Options {#options-3}
 
@@ -176,7 +176,7 @@ By default, the files are written in `website/i18n/<defaultLocale>/...`.
 
 ### `docusaurus write-heading-ids [siteDir] [files]` {#docusaurus-write-heading-ids-sitedir}
 
-Add [explicit heading IDs](./guides/markdown-features/markdown-features-toc.mdx#explicit-ids) to the Markdown documents of your site.
+Add [explicit heading IDs](__tests__/__fixtures__/sites/docusaurus-v2/docs/guides/markdown-features/markdown-features-toc.mdx#explicit-ids) to the Markdown documents of your site.
 
 | Name              | Default                      | Description                                              |
 | ----------------- | ---------------------------- | -------------------------------------------------------- |

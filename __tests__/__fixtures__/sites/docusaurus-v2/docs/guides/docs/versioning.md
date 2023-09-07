@@ -242,7 +242,7 @@ As a good rule of thumb, try to keep the number of your versions below 10. You w
 
 :::tip archive older versions
 
-If you deploy your site on a Jamstack provider (e.g. [Netlify](../../deployment.mdx)), the provider will save each production build as a snapshot under an immutable URL. You can include archived versions that will never be rebuilt as external links to these immutable URLs. The Jest website and the Docusaurus website both use such pattern to keep the number of actively built versions low.
+If you deploy your site on a Jamstack provider (e.g. [Netlify](__tests__/__fixtures__/sites/docusaurus-v2/docs/deployment.mdx)), the provider will save each production build as a snapshot under an immutable URL. You can include archived versions that will never be rebuilt as external links to these immutable URLs. The Jest website and the Docusaurus website both use such pattern to keep the number of actively built versions low.
 
 :::
 

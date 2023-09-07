@@ -762,12 +762,12 @@ Accepted fields:
 <APITable name="codeblock">
 ```
 
-| Name              | Type                   | Default     | Description                                                                                                           |
-| ----------------- | ---------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------- |
-| `theme`           | `PrismTheme`           | `palenight` | The Prism theme to use for light-theme code blocks.                                                                   |
-| `darkTheme`       | `PrismTheme`           | `palenight` | The Prism theme to use for dark-theme code blocks.                                                                    |
-| `defaultLanguage` | `string`               | `undefined` | The side of the navbar this item should appear on.                                                                    |
-| `magicComments`   | `MagicCommentConfig[]` | _see below_ | The list of [magic comments](../../guides/markdown-features/markdown-features-code-blocks.mdx#custom-magic-comments). |
+| Name              | Type                   | Default     | Description                                                                                                                                                     |
+| ----------------- | ---------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `theme`           | `PrismTheme`           | `palenight` | The Prism theme to use for light-theme code blocks.                                                                                                             |
+| `darkTheme`       | `PrismTheme`           | `palenight` | The Prism theme to use for dark-theme code blocks.                                                                                                              |
+| `defaultLanguage` | `string`               | `undefined` | The side of the navbar this item should appear on.                                                                                                              |
+| `magicComments`   | `MagicCommentConfig[]` | _see below_ | The list of [magic comments](__tests__/__fixtures__/sites/docusaurus-v2/docs/guides/markdown-features/markdown-features-code-blocks.mdx#custom-magic-comments). |
 
 ```mdx-code-block
 </APITable>
@@ -812,7 +812,7 @@ module.exports = {
 
 :::note
 
-If you use the line highlighting Markdown syntax, you might need to specify a different highlight background color for the dark mode syntax highlighting theme. Refer to the [docs for guidance](../../guides/markdown-features/markdown-features-code-blocks.mdx#line-highlighting).
+If you use the line highlighting Markdown syntax, you might need to specify a different highlight background color for the dark mode syntax highlighting theme. Refer to the [docs for guidance](__tests__/__fixtures__/sites/docusaurus-v2/docs/guides/markdown-features/markdown-features-code-blocks.mdx#line-highlighting).
 
 :::
 

@@ -20,10 +20,33 @@ const remarkPlugins = [
 const SuccessPrefix = chalk.green("[SUCCESS]");
 const ErrorPrefix = chalk.red("[ERROR]");
 
+export const DefaultInclude = Object.freeze([
+  "**/*.{md,mdx}",
+  "../docs/**/*.{md,mdx}",
+]);
+
+export const DefaultExclude = Object.freeze([
+  "packages",
+  "examples",
+  "node_modules",
+  //
+  "CHANGELOG.md",
+  "CODE_OF_CONDUCT.md",
+  "CONTRIBUTING.md",
+  "README.md",
+  "website/README.md",
+]);
+
 ////////////////////////////////////////
 // Script
 
-export default async function main({ verbose, cwd, format, include, exclude }) {
+export default async function main({
+  cwd = undefined,
+  include = DefaultInclude,
+  exclude = DefaultExclude,
+  format = "mdx",
+  verbose = false,
+}) {
   const allRelativeFilePaths = await globby(include, {
     cwd,
     ignore: exclude,
@@ -64,7 +87,7 @@ ${outputSeparator}${allErrors
         .join(outputSeparator)}${outputSeparator}`
     );
   } else {
-    return `${SuccessPrefix} All MDX files compiled successfully!`;
+    return `${SuccessPrefix} All ${allRelativeFilePaths.length} MDX files compiled successfully!`;
   }
 
   ////////////////////////////////////////

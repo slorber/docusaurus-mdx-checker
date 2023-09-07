@@ -433,7 +433,7 @@ Generated IDs are not always a good fit for localized sites, as it requires you 
 + [link](#bonjour-le-monde)
 ```
 
-For localized sites, it is recommended to use **[explicit heading IDs](../guides/markdown-features/markdown-features-toc.mdx#explicit-ids)**.
+For localized sites, it is recommended to use **[explicit heading IDs](__tests__/__fixtures__/sites/docusaurus-v2/docs/guides/markdown-features/markdown-features-toc.mdx#explicit-ids)**.
 
 :::
 
@@ -454,7 +454,7 @@ Docusaurus will build **one single-page application per locale**:
 - `website/build`: for the default, English language
 - `website/build/fr`: for the French language
 
-You can now [deploy](../deployment.mdx) the `build` folder to the static hosting solution of your choice.
+You can now [deploy](__tests__/__fixtures__/sites/docusaurus-v2/docs/deployment.mdx) the `build` folder to the static hosting solution of your choice.
 
 :::note
 
@@ -485,7 +485,7 @@ npm run build -- --locale fr
 
 Docusaurus will not add the `/fr/` URL prefix.
 
-On your [static hosting provider](../deployment.mdx):
+On your [static hosting provider](__tests__/__fixtures__/sites/docusaurus-v2/docs/deployment.mdx):
 
 - create one deployment per locale
 - configure the appropriate build command, using the `--locale` option
@@ -510,4 +510,4 @@ It is also possible to deploy each locale as a separate subdomain, assemble the 
 
 Docusaurus doesn't care about how you manage your translations: all it needs is that all translation files (JSON, Markdown, or other data files) are available in the file system during building. However, as site creators, you would need to consider how translations are managed so your translation contributors could collaborate well.
 
-We will share two common translation collaboration strategies: [**using git**](docs/i18n/i18n-git.md) and [**using Crowdin**](./i18n-crowdin.mdx).
+We will share two common translation collaboration strategies: [**using git**](docs/i18n/i18n-git.md) and [**using Crowdin**](__tests__/__fixtures__/sites/docusaurus-v2/docs/i18n/i18n-crowdin.mdx).

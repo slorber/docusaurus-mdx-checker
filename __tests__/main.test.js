@@ -1,5 +1,25 @@
-import { expect, test } from "vitest";
+import { describe, expect, test } from "vitest";
+import { resolve, dirname, relative } from "node:path";
+import process from "node:process";
+import { fileURLToPath } from "node:url";
 import main from "../main.js";
+
+const FixtureSitesPath = "./__tests__/__fixtures__/sites";
+
+const SiteFixtures = {
+  v2: {
+    docusaurus: `${FixtureSitesPath}/docusaurus-v2`,
+    jest: `${FixtureSitesPath}/jest-v2`,
+    reactnative: `${FixtureSitesPath}/react-native-v2`,
+  },
+  v3: {
+    docusaurus: `${FixtureSitesPath}/docusaurus-v3`,
+    jest: `${FixtureSitesPath}/jest-v3`,
+    reactnative: `${FixtureSitesPath}/react-native-v3`,
+  },
+};
+
+console.log(SiteFixtures);
 
 // TODO
 
@@ -28,6 +48,18 @@ const exclude = [
 
 const format = "mdx";
 
+describe("v3 sites", () => {
+  test("Docusaurus site compiles", async () => {
+    const result = await main({
+      cwd: SiteFixtures.v3.docusaurus,
+    });
+
+    expect(result).toMatchInlineSnapshot(
+      '"[32m[SUCCESS][39m All 58 MDX files compiled successfully!"'
+    );
+  });
+});
+
 test("adds 1 + 2 to equal 3", async () => {
   const result = await main({
     verbose,
@@ -38,6 +70,6 @@ test("adds 1 + 2 to equal 3", async () => {
   });
 
   expect(result).toMatchInlineSnapshot(
-    '"[32m[SUCCESS][39m All MDX files compiled successfully!"'
+    '"[32m[SUCCESS][39m All 58 MDX files compiled successfully!"'
   );
 });

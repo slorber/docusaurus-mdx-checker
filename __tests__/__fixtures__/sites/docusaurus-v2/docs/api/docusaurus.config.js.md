@@ -111,7 +111,7 @@ Allow to customize the presence/absence of a trailing slash at the end of URLs/l
 
 Each static hosting provider serves static files differently (this behavior may even change over time).
 
-Refer to the [deployment guide](../deployment.mdx) and [slorber/trailing-slash-guide](https://github.com/slorber/trailing-slash-guide) to choose the appropriate setting.
+Refer to the [deployment guide](__tests__/__fixtures__/sites/docusaurus-v2/docs/deployment.mdx) and [slorber/trailing-slash-guide](https://github.com/slorber/trailing-slash-guide) to choose the appropriate setting.
 
 :::
 

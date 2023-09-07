@@ -21,7 +21,7 @@ Your site's documentation is organized by four levels, from lowest to highest:
 3. Versions.
 4. Plugin instances.
 
-The guide will introduce them in that order: starting from [how individual pages can be configured](./docs-create-doc.mdx), to [how to create a sidebar or multiple ones](docs/guides/docs/sidebar/index.md), to [how to create and manage versions](docs/guides/docs/versioning.md), to [how to use multiple docs plugin instances](./docs-multi-instance.mdx).
+The guide will introduce them in that order: starting from [how individual pages can be configured](__tests__/__fixtures__/sites/docusaurus-v2/docs/guides/docs/docs-create-doc.mdx), to [how to create a sidebar or multiple ones](docs/guides/docs/sidebar/index.md), to [how to create and manage versions](docs/guides/docs/versioning.md), to [how to use multiple docs plugin instances](__tests__/__fixtures__/sites/docusaurus-v2/docs/guides/docs/docs-multi-instance.mdx).
 
 ## Docs-only mode {#docs-only-mode}
 
@@ -111,6 +111,6 @@ example.com/tutorial-basics/...    -> generated from `docs/tutorial-basics/...`
 
 :::tip
 
-There's also a "blog-only mode" for those who only want to use the blog feature of Docusaurus 2. You can use the same method detailed above. Follow the setup instructions on [Blog-only mode](../../blog.mdx#blog-only-mode).
+There's also a "blog-only mode" for those who only want to use the blog feature of Docusaurus 2. You can use the same method detailed above. Follow the setup instructions on [Blog-only mode](__tests__/__fixtures__/sites/docusaurus-v2/docs/blog.mdx#blog-only-mode).
 
 :::

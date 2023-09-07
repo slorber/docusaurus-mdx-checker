@@ -34,7 +34,7 @@ The goals of the Docusaurus i18n system are:
 
 We don't provide support for:
 
-- **Automatic locale detection**: opinionated, and best done on the [server (your hosting provider)](../deployment.mdx)
+- **Automatic locale detection**: opinionated, and best done on the [server (your hosting provider)](__tests__/__fixtures__/sites/docusaurus-v2/docs/deployment.mdx)
 - **Translation SaaS software**: you are responsible to understand the external tools of your choice
 - **Translation of slugs**: technically complicated, little SEO value
 
@@ -88,7 +88,7 @@ The choice was made for 2 reasons:
 
 #### Data files {#data-files}
 
-Some plugins may read from external data files that are localized as a whole. For example, the blog plugin uses an [`authors.yml`](../blog.mdx#global-authors) file that can be translated by creating a copy under `i18n/[locale]/docusaurus-plugin-content-blog/authors.yml`.
+Some plugins may read from external data files that are localized as a whole. For example, the blog plugin uses an [`authors.yml`](__tests__/__fixtures__/sites/docusaurus-v2/docs/blog.mdx#global-authors) file that can be translated by creating a copy under `i18n/[locale]/docusaurus-plugin-content-blog/authors.yml`.
 
 ### Translation files location {#translation-files-location}
 

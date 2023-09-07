@@ -31,7 +31,7 @@ To read more about types of meta tags, visit [the MDN docs](https://developer.mo
 
 ## Single page metadata {#single-page-metadata}
 
-Similar to [global metadata](#global-metadata), Docusaurus also allows for the addition of meta-information to individual pages. Follow [this guide](./guides/markdown-features/markdown-features-head-metadata.mdx) for configuring the `<head>` tag. In short:
+Similar to [global metadata](#global-metadata), Docusaurus also allows for the addition of meta-information to individual pages. Follow [this guide](__tests__/__fixtures__/sites/docusaurus-v2/docs/guides/markdown-features/markdown-features-head-metadata.mdx) for configuring the `<head>` tag. In short:
 
 ```md title="my-markdown-page.md"
 # A cooking guide
@@ -98,7 +98,7 @@ The alt tag for an image tells the search engine what the image is about, and is
 You may also add a title for your image—this doesn't impact SEO much but is displayed as a tooltip when hovering above the image, usually used to provide hints.
 
 ```md
-![Docusaurus banner](docs/assets/docusaurus-asset-example-banner.png "Image title")
+![Docusaurus banner](__tests__/__fixtures__/sites/docusaurus-v2/docs/assets/docusaurus-asset-example-banner.png "Image title")
 ```
 
 <BrowserWindow>
