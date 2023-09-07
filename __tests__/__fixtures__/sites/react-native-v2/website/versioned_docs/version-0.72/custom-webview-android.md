@@ -9,10 +9,10 @@ While the built-in web view has a lot of features, it is not possible to handle 
 
 :::info
 The React Native WebView component has been extracted to [`react-native-webview`](https://github.com/react-native-webview/react-native-webview) package as part of the [Lean Core effort](https://github.com/facebook/react-native/issues/23313).
-That is the recommended way to use WebView in React Native as of today. You should not use the [WebView](https://reactnative-archive-august-2023.netlify.app/docs/0.61/webview) component as that was deprecated and removed from React Native.
+That is the recommended way to use WebView in React Native as of today. You should not use the [WebView](https://reactnative.dev/docs/0.61/webview) component as that was deprecated and removed from React Native.
 :::
 
-Before you do this, you should be familiar with the concepts in [native UI components](native-components-android). You should also familiarise yourself with the [native code for web views](https://github.com/react-native-webview/react-native-webview/blob/master/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt), as you will have to use this as a reference when implementing new features—although a deep understanding is not required.
+Before you do this, you should be familiar with the concepts in [native UI components](native-components-android). You should also familiarise yourself with the [native code for web views](https://github.com/react-native-webview/react-native-webview/blob/master/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManager.java), as you will have to use this as a reference when implementing new features—although a deep understanding is not required.
 
 ## Native Code
 
@@ -88,7 +88,7 @@ class CustomWebViewManager : RNCWebViewManager() {
 </TabItem>
 </Tabs>
 
-You'll need to follow the usual steps to [register the module](versioned_docs/version-0.72/native-modules-android.md#register-the-module).
+You'll need to follow the usual steps to [register the module](native-modules-android.md#register-the-module).
 
 ### Adding New Properties
 
@@ -196,7 +196,7 @@ class NavigationCompletedEvent(viewTag: Int, val params: WritableMap) :
 
 You can trigger the event in your web view client. You can hook existing handlers if your events are based on them.
 
-You should refer to [RNCWebViewManagerImpl.kt](https://github.com/react-native-webview/react-native-webview/blob/master/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt) in the React Native WebView codebase to see what handlers are available and how they are implemented. You can extend any methods here to provide extra functionality.
+You should refer to [RNCWebViewManager.java](https://github.com/react-native-webview/react-native-webview/blob/master/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManager.java) in the React Native WebView codebase to see what handlers are available and how they are implemented. You can extend any methods here to provide extra functionality.
 
 <Tabs groupId="android-language" queryString defaultValue={constants.defaultAndroidLanguage} values={constants.androidLanguages}>
 <TabItem value="java">
@@ -321,23 +321,26 @@ To use your custom web view, you'll need to create a class for it. Your class mu
 To get your native component, you must use `requireNativeComponent`: the same as for regular custom components. However, you must pass in an extra third argument, `WebView.extraNativeComponentConfig`. This third argument contains prop types that are only required for native code.
 
 ```jsx
-import React, { Component, PropTypes } from "react";
-import { WebView, requireNativeComponent } from "react-native";
+import React, {Component, PropTypes} from 'react';
+import {WebView, requireNativeComponent} from 'react-native';
 
 export default class CustomWebView extends Component {
   static propTypes = WebView.propTypes;
 
   render() {
     return (
-      <WebView {...this.props} nativeConfig={{ component: RCTCustomWebView }} />
+      <WebView
+        {...this.props}
+        nativeConfig={{component: RCTCustomWebView}}
+      />
     );
   }
 }
 
 const RCTCustomWebView = requireNativeComponent(
-  "RCTCustomWebView",
+  'RCTCustomWebView',
   CustomWebView,
-  WebView.extraNativeComponentConfig
+  WebView.extraNativeComponentConfig,
 );
 ```
 
@@ -356,11 +359,11 @@ export default class CustomWebView extends Component {
   };
 
   static defaultProps = {
-    finalUrl: "about:blank",
+    finalUrl: 'about:blank',
   };
 
-  _onNavigationCompleted = (event) => {
-    const { onNavigationCompleted } = this.props;
+  _onNavigationCompleted = event => {
+    const {onNavigationCompleted} = this.props;
     onNavigationCompleted && onNavigationCompleted(event);
   };
 
@@ -387,7 +390,7 @@ For example, if you wanted to add an internal event handler called `onScrollToBo
 
 ```jsx
 const RCTCustomWebView = requireNativeComponent(
-  "RCTCustomWebView",
+  'RCTCustomWebView',
   CustomWebView,
   {
     ...WebView.extraNativeComponentConfig,
@@ -395,6 +398,6 @@ const RCTCustomWebView = requireNativeComponent(
       ...WebView.extraNativeComponentConfig.nativeOnly,
       onScrollToBottom: true,
     },
-  }
+  },
 );
 ```

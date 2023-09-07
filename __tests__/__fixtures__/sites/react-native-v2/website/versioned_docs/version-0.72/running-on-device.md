@@ -9,7 +9,7 @@ import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; import con
 It's always a good idea to test your app on an actual device before releasing it to your users. This document will guide you through the necessary steps to run your React Native app on a device and to get it ready for production.
 
 :::info
-If you used `create-expo-app` to set up your project, you can run your app on a device in Expo Go by scanning the QR code that is displayed when you run `npm start`. Refer to the Expo guide for [running your project on your device](https://docs.expo.dev/get-started/expo-go/) for more information.
+If you used `create-expo-app` to set up your project, you can run your app on a device in Expo Go by scanning the QR code that is displayed when you run `npm start`. Refer to the Expo guide for [running your project on your device](https://docs.expo.dev/workflow/run-on-device/) for more information.
 :::
 
 <Tabs groupId="platform" queryString defaultValue={constants.defaultPlatform} values={constants.platforms} className="pill-tabs">
@@ -22,7 +22,7 @@ If you used `create-expo-app` to set up your project, you can run your app on a 
 <Tabs groupId="os" queryString defaultValue={constants.defaultOs} values={constants.oses} className="pill-tabs">
 <TabItem value="macos">
 
-[//]: # "macOS, Android"
+[//]: # 'macOS, Android'
 
 ### 1. Enable Debugging over USB
 
@@ -70,7 +70,7 @@ yarn android
 </TabItem>
 </Tabs>
 
-> If you get a "bridge configuration isn't available" error, see [Using adb reverse](versioned_docs/version-0.72/running-on-device.md#method-1-using-adb-reverse-recommended).
+> If you get a "bridge configuration isn't available" error, see [Using adb reverse](running-on-device.md#method-1-using-adb-reverse-recommended).
 
 > Hint: You can also use the `React Native CLI` to generate and run a `release` build (e.g. from the root of your project: `yarn android --mode release`).
 
@@ -94,7 +94,7 @@ To find the device name, run the following adb command:
 $ adb devices
 ```
 
-You can now enable Live reloading from the [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
+You can now enable Live reloading from the [Dev Menu](debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
 
 ### Method 2: Connect via Wi-Fi
 
@@ -104,22 +104,22 @@ You can find the IP address in **System Settings (or System Preferences)** → *
 
 1. Make sure your laptop and your phone are on the **same** Wi-Fi network.
 2. Open your React Native app on your device.
-3. You'll see a [red screen with an error](versioned_docs/version-0.72/debugging.md#in-app-errors-and-warnings). This is OK. The following steps will fix that.
-4. Open the in-app [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu).
+3. You'll see a [red screen with an error](debugging.md#in-app-errors-and-warnings). This is OK. The following steps will fix that.
+4. Open the in-app [Dev Menu](debugging.md#accessing-the-dev-menu).
 5. Go to **Dev Settings** → **Debug server host & port for device**.
 6. Type in your machine's IP address and the port of the local dev server (e.g. `10.0.1.1:8081`).
 7. Go back to the **Dev Menu** and select **Reload JS**.
 
-You can now enable Live reloading from the [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
+You can now enable Live reloading from the [Dev Menu](debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
 
 ## Building your app for production
 
-You have built a great app using React Native, and you are now itching to release it in the Play Store. The process is the same as any other native Android app, with some additional considerations to take into account. Follow the guide for [generating a signed APK](versioned_docs/version-0.72/signed-apk-android.md) to learn more.
+You have built a great app using React Native, and you are now itching to release it in the Play Store. The process is the same as any other native Android app, with some additional considerations to take into account. Follow the guide for [generating a signed APK](signed-apk-android.md) to learn more.
 
 </TabItem>
 <TabItem value="windows">
 
-[//]: # "Windows, Android"
+[//]: # 'Windows, Android'
 
 ### 1. Enable Debugging over USB
 
@@ -185,7 +185,7 @@ To find the device name, run the following adb command:
 $ adb devices
 ```
 
-You can now enable Live reloading from the [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
+You can now enable Live reloading from the [Dev Menu](debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
 
 ### Method 2: Connect via Wi-Fi
 
@@ -195,22 +195,22 @@ Open the command prompt and type `ipconfig` to find your machine's IP address ([
 
 1. Make sure your laptop and your phone are on the **same** Wi-Fi network.
 2. Open your React Native app on your device.
-3. You'll see a [red screen with an error](versioned_docs/version-0.72/debugging.md#in-app-errors-and-warnings). This is OK. The following steps will fix that.
-4. Open the in-app [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu).
+3. You'll see a [red screen with an error](debugging.md#in-app-errors-and-warnings). This is OK. The following steps will fix that.
+4. Open the in-app [Dev Menu](debugging.md#accessing-the-dev-menu).
 5. Go to **Dev Settings** → **Debug server host & port for device**.
 6. Type in your machine's IP address and the port of the local dev server (e.g. `10.0.1.1:8081`).
 7. Go back to the **Dev Menu** and select **Reload JS**.
 
-You can now enable Live reloading from the [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
+You can now enable Live reloading from the [Dev Menu](debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
 
 ## Building your app for production
 
-You have built a great app using React Native, and you are now itching to release it in the Play Store. The process is the same as any other native Android app, with some additional considerations to take into account. Follow the guide for [generating a signed APK](versioned_docs/version-0.72/signed-apk-android.md) to learn more.
+You have built a great app using React Native, and you are now itching to release it in the Play Store. The process is the same as any other native Android app, with some additional considerations to take into account. Follow the guide for [generating a signed APK](signed-apk-android.md) to learn more.
 
 </TabItem>
 <TabItem value="linux">
 
-[//]: # "Linux, Android"
+[//]: # 'Linux, Android'
 
 ### 1. Enable Debugging over USB
 
@@ -299,7 +299,7 @@ yarn android
 </TabItem>
 </Tabs>
 
-> If you get a "bridge configuration isn't available" error, see [Using adb reverse](versioned_docs/version-0.72/running-on-device.md#method-1-using-adb-reverse-recommended).
+> If you get a "bridge configuration isn't available" error, see [Using adb reverse](running-on-device.md#method-1-using-adb-reverse-recommended).
 
 > Hint: You can also use the `React Native CLI` to generate and run a `release` build (e.g. from the root of your project: `yarn android --mode release`).
 
@@ -323,7 +323,7 @@ To find the device name, run the following adb command:
 $ adb devices
 ```
 
-You can now enable Live reloading from the [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
+You can now enable Live reloading from the [Dev Menu](debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
 
 ### Method 2: Connect via Wi-Fi
 
@@ -333,17 +333,17 @@ Open a terminal and type `/sbin/ifconfig` to find your machine's IP address.
 
 1. Make sure your laptop and your phone are on the **same** Wi-Fi network.
 2. Open your React Native app on your device.
-3. You'll see a [red screen with an error](versioned_docs/version-0.72/debugging.md#in-app-errors-and-warnings). This is OK. The following steps will fix that.
-4. Open the in-app [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu).
+3. You'll see a [red screen with an error](debugging.md#in-app-errors-and-warnings). This is OK. The following steps will fix that.
+4. Open the in-app [Dev Menu](debugging.md#accessing-the-dev-menu).
 5. Go to **Dev Settings** → **Debug server host & port for device**.
 6. Type in your machine's IP address and the port of the local dev server (e.g. `10.0.1.1:8081`).
 7. Go back to the **Dev Menu** and select **Reload JS**.
 
-You can now enable Live reloading from the [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
+You can now enable Live reloading from the [Dev Menu](debugging.md#accessing-the-dev-menu). Your app will reload whenever your JavaScript code has changed.
 
 ## Building your app for production
 
-You have built a great app using React Native, and you are now itching to release it in the Play Store. The process is the same as any other native Android app, with some additional considerations to take into account. Follow the guide for [generating a signed APK](versioned_docs/version-0.72/signed-apk-android.md) to learn more.
+You have built a great app using React Native, and you are now itching to release it in the Play Store. The process is the same as any other native Android app, with some additional considerations to take into account. Follow the guide for [generating a signed APK](signed-apk-android.md) to learn more.
 
 </TabItem>
 </Tabs>
@@ -358,7 +358,7 @@ You have built a great app using React Native, and you are now itching to releas
 <Tabs groupId="os" queryString defaultValue={constants.defaultOs} values={constants.oses} className="pill-tabs">
 <TabItem value="macos">
 
-[//]: # "macOS, iOS"
+[//]: # 'macOS, iOS'
 
 ### 1. Plug in your device via USB
 
@@ -386,7 +386,7 @@ If everything is set up correctly, your device will be listed as the build targe
 
 <h2>Connecting to the development server</h2>
 
-You can also iterate quickly on a device using the development server. You only have to be on the same Wi-Fi network as your computer. Shake your device to open the [Dev Menu](versioned_docs/version-0.72/debugging.md#accessing-the-dev-menu), then enable Live Reload. Your app will reload whenever your JavaScript code has changed.
+You can also iterate quickly on a device using the development server. You only have to be on the same Wi-Fi network as your computer. Shake your device to open the [Dev Menu](debugging.md#accessing-the-dev-menu), then enable Live Reload. Your app will reload whenever your JavaScript code has changed.
 
 ![](/docs/assets/DevMenu.png)
 
@@ -394,7 +394,7 @@ You can also iterate quickly on a device using the development server. You only 
 
 > If you have any issues, ensure that your Mac and device are on the same network and can reach each other. Many open wireless networks with captive portals are configured to prevent devices from reaching other devices on the network. You may use your device's Personal Hotspot feature in this case. You may also share your internet (Wi-Fi/Ethernet) connection from your Mac to your device via USB and connect to the bundler through this tunnel for very high transfer speeds.
 
-When trying to connect to the development server you might get a [red screen with an error](versioned_docs/version-0.72/debugging.md#in-app-errors-and-warnings) saying:
+When trying to connect to the development server you might get a [red screen with an error](debugging.md#in-app-errors-and-warnings) saying:
 
 > Connection to `http://localhost:8081/debugger-proxy?role=client` timed out. Are you running node proxy? If you are running on the device, check if you have the right IP address in `RCTWebSocketExecutor.m`.
 
@@ -414,19 +414,19 @@ Open the **Report navigator** tab, select the last **Build** and search for `IP=
 
 ## Building your app for production
 
-You have built a great app using React Native, and you are now itching to release it in the App Store. The process is the same as any other native iOS app, with some additional considerations to take into account. Follow the guide for [publishing to the Apple App Store](versioned_docs/version-0.72/publishing-to-app-store.md) to learn more.
+You have built a great app using React Native, and you are now itching to release it in the App Store. The process is the same as any other native iOS app, with some additional considerations to take into account. Follow the guide for [publishing to the Apple App Store](publishing-to-app-store.md) to learn more.
 
 </TabItem>
 <TabItem value="windows">
 
-[//]: # "Windows, iOS"
+[//]: # 'Windows, iOS'
 
 > A Mac is required in order to build your app for iOS devices. Alternatively, you can refer to our [environment setup guide](environment-setup) to learn how to build your app using Expo CLI, which will allow you to run your app using the Expo client app.
 
 </TabItem>
 <TabItem value="linux">
 
-[//]: # "Linux, iOS"
+[//]: # 'Linux, iOS'
 
 > A Mac is required in order to build your app for iOS devices. Alternatively, you can refer to our [environment setup guide](environment-setup) to learn how to build your app using Expo CLI, which will allow you to run your app using the Expo client app.
 

@@ -1,5 +1,5 @@
 ---
-title: "Package Exports Support in React Native"
+title: 'Package Exports Support in React Native'
 authors: [huntie]
 tags: [announcement, metro]
 date: 2023-06-21
@@ -49,13 +49,13 @@ Supporting `"exports"` improves how React Native projects will work with the wid
 Here's some app code consuming the above package by importing different subpaths of `@storybook/addon-actions`.
 
 ```js
-import { action } from "@storybook/addon-actions";
+import {action} from '@storybook/addon-actions';
 // -> '@storybook/addon-actions/dist/index.js'
 
-import { action } from "@storybook/addon-actions/preview";
+import {action} from '@storybook/addon-actions/preview';
 // -> '@storybook/addon-actions/dist/preview.js'
 
-import helpers from "@storybook/addon-actions/src/preset/addArgsHelpers";
+import helpers from '@storybook/addon-actions/src/preset/addArgsHelpers';
 // Inaccessible - not listed in "exports"!
 ```
 
@@ -228,7 +228,7 @@ In the next React Native release, we are aiming to remove the `unstable_` prefix
 
 With `"exports"` enabled for everyone, we can begin taking the React Native community forward — for example, React Native's core packages could be updated to better separate public and internal modules.
 
-![Rollout plan for Package Exports support](static/blog/assets/package-exports-rollout.png)
+![Rollout plan for Package Exports support](../static/blog/assets/package-exports-rollout.png)
 
 ## Thanks
 

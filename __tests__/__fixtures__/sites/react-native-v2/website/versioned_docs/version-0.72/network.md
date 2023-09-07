@@ -16,21 +16,21 @@ React Native provides the [Fetch API](https://developer.mozilla.org/en-US/docs/W
 In order to fetch content from an arbitrary URL, you can pass the URL to fetch:
 
 ```tsx
-fetch("https://mywebsite.com/mydata.json");
+fetch('https://mywebsite.com/mydata.json');
 ```
 
 Fetch also takes an optional second argument that allows you to customize the HTTP request. You may want to specify additional headers, or make a POST request:
 
 ```tsx
-fetch("https://mywebsite.com/endpoint/", {
-  method: "POST",
+fetch('https://mywebsite.com/endpoint/', {
+  method: 'POST',
   headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    firstParam: "yourValue",
-    secondParam: "yourOtherValue",
+    firstParam: 'yourValue',
+    secondParam: 'yourOtherValue',
   }),
 });
 ```
@@ -45,12 +45,12 @@ Networking is an inherently asynchronous operation. Fetch method will return a [
 
 ```tsx
 const getMoviesFromApi = () => {
-  return fetch("https://reactnative.dev/movies.json")
-    .then((response) => response.json())
-    .then((json) => {
+  return fetch('https://reactnative.dev/movies.json')
+    .then(response => response.json())
+    .then(json => {
       return json.movies;
     })
-    .catch((error) => {
+    .catch(error => {
       console.error(error);
     });
 };
@@ -61,7 +61,9 @@ You can also use the `async` / `await` syntax in a React Native app:
 ```tsx
 const getMoviesFromApiAsync = async () => {
   try {
-    const response = await fetch("https://reactnative.dev/movies.json");
+    const response = await fetch(
+      'https://reactnative.dev/movies.json',
+    );
     const json = await response.json();
     return json.movies;
   } catch (error) {
@@ -179,7 +181,7 @@ export default App;
 </TabItem>
 </Tabs>
 
-> By default, iOS 9.0 or later enforce App Transport Secruity (ATS). ATS requires any HTTP connection to use HTTPS. If you need to fetch from a cleartext URL (one that begins with `http`) you will first need to [add an ATS exception](versioned_docs/version-0.72/integration-with-existing-apps.md#test-your-integration). If you know ahead of time what domains you will need access to, it is more secure to add exceptions only for those domains; if the domains are not known until runtime you can [disable ATS completely](versioned_docs/version-0.72/publishing-to-app-store.md#1-enable-app-transport-security). Note however that from January 2017, [Apple's App Store review will require reasonable justification for disabling ATS](https://forums.developer.apple.com/thread/48979). See [Apple's documentation](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for more information.
+> By default, iOS 9.0 or later enforce App Transport Secruity (ATS). ATS requires any HTTP connection to use HTTPS. If you need to fetch from a cleartext URL (one that begins with `http`) you will first need to [add an ATS exception](integration-with-existing-apps.md#test-your-integration). If you know ahead of time what domains you will need access to, it is more secure to add exceptions only for those domains; if the domains are not known until runtime you can [disable ATS completely](publishing-to-app-store.md#1-enable-app-transport-security). Note however that from January 2017, [Apple's App Store review will require reasonable justification for disabling ATS](https://forums.developer.apple.com/thread/48979). See [Apple's documentation](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for more information.
 
 > On Android, as of API Level 28, clear text traffic is also blocked by default. This behaviour can be overridden by setting [`android:usesCleartextTraffic`](https://developer.android.com/guide/topics/manifest/application-element#usesCleartextTraffic) in the app manifest file.
 
@@ -189,19 +191,19 @@ The [XMLHttpRequest API](https://developer.mozilla.org/en-US/docs/Web/API/XMLHtt
 
 ```tsx
 const request = new XMLHttpRequest();
-request.onreadystatechange = (e) => {
+request.onreadystatechange = e => {
   if (request.readyState !== 4) {
     return;
   }
 
   if (request.status === 200) {
-    console.log("success", request.responseText);
+    console.log('success', request.responseText);
   } else {
-    console.warn("error");
+    console.warn('error');
   }
 };
 
-request.open("GET", "https://mywebsite.com/endpoint/");
+request.open('GET', 'https://mywebsite.com/endpoint/');
 request.send();
 ```
 
@@ -212,24 +214,24 @@ request.send();
 React Native also supports [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket), a protocol which provides full-duplex communication channels over a single TCP connection.
 
 ```tsx
-const ws = new WebSocket("ws://host.com/path");
+const ws = new WebSocket('ws://host.com/path');
 
 ws.onopen = () => {
   // connection opened
-  ws.send("something"); // send a message
+  ws.send('something'); // send a message
 };
 
-ws.onmessage = (e) => {
+ws.onmessage = e => {
   // a message was received
   console.log(e.data);
 };
 
-ws.onerror = (e) => {
+ws.onerror = e => {
   // an error occurred
   console.log(e.message);
 };
 
-ws.onclose = (e) => {
+ws.onclose = e => {
   // connection closed
   console.log(e.code, e.reason);
 };

@@ -196,15 +196,15 @@ export default App;
 
 ## Props
 
-### [View Props](versioned_docs/version-0.71/view.md#props)
+### [View Props](view.md#props)
 
-Inherits [View Props](versioned_docs/version-0.71/view.md#props).
+Inherits [View Props](view.md#props).
 
 ---
 
 ### `animated`
 
-> **Deprecated.** Use the [`animationType`](versioned_docs/version-0.71/modal.md#animationtype) prop instead.
+> **Deprecated.** Use the [`animationType`](modal.md#animationtype) prop instead.
 
 ---
 

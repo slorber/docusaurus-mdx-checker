@@ -172,7 +172,7 @@ On the web, the usual way to set a font family and size for the entire document 
 
 ```css
 html {
-  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
   font-size: 11px;
   color: #141823;
 }
@@ -214,7 +214,7 @@ class MyAppHeaderText extends Component {
   render() {
     return (
       <MyAppText>
-        <Text style={{ fontSize: 20 }}>{this.props.children}</Text>
+        <Text style={{fontSize: 20}}>{this.props.children}</Text>
       </MyAppText>
     );
   }
@@ -226,9 +226,9 @@ Composing `MyAppText` in this way ensures that we get the styles from a top-leve
 React Native still has the concept of style inheritance, but limited to text subtrees. In this case, the second part will be both bold and red.
 
 ```tsx
-<Text style={{ fontWeight: "bold" }}>
+<Text style={{fontWeight: 'bold'}}>
   I am bold
-  <Text style={{ color: "red" }}>and red</Text>
+  <Text style={{color: 'red'}}>and red</Text>
 </Text>
 ```
 
@@ -280,7 +280,7 @@ Overrides the text that's read by the screen reader when the user interacts with
 
 Tells the screen reader to treat the currently focused on element as having a specific role.
 
-On iOS, these roles map to corresponding Accessibility Traits. Image button has the same functionality as if the trait was set to both 'image' and 'button'. See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibilitytraits-ios) for more information.
+On iOS, these roles map to corresponding Accessibility Traits. Image button has the same functionality as if the trait was set to both 'image' and 'button'. See the [Accessibility guide](accessibility.md#accessibilitytraits-ios) for more information.
 
 On Android, these roles have similar functionality on TalkBack as adding Accessibility Traits does on Voiceover in iOS
 
@@ -306,7 +306,7 @@ You can provide one state, no state, or multiple states. The states must be pass
 
 Accessibility actions allow an assistive technology to programmatically invoke the actions of a component. The `accessibilityActions` property should contain a list of action objects. Each action object should contain the field name and label.
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibility-actions) for more information.
+See the [Accessibility guide](accessibility.md#accessibility-actions) for more information.
 
 | Type  | Required |
 | ----- | -------- |
@@ -318,7 +318,7 @@ See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#acces
 
 Invoked when the user performs the accessibility actions. The only argument to this function is an event containing the name of the action to perform.
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibility-actions) for more information.
+See the [Accessibility guide](accessibility.md#accessibility-actions) for more information.
 
 | Type     | Required |
 | -------- | -------- |
@@ -527,9 +527,9 @@ This prop is commonly used with `ellipsizeMode`.
 
 Invoked on mount and on layout changes.
 
-| Type                                                     |
-| -------------------------------------------------------- |
-| `md ({nativeEvent: [LayoutEvent](layoutevent)}) => void` |
+| Type                                                |
+| --------------------------------------------------- |
+| ({nativeEvent: [LayoutEvent](layoutevent)}) => void |
 
 ---
 
@@ -537,9 +537,9 @@ Invoked on mount and on layout changes.
 
 This function is called on long press.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -547,9 +547,9 @@ This function is called on long press.
 
 Does this view want to "claim" touch responsiveness? This is called for every touch move on the `View` when it is not the responder.
 
-| Type                                                      |
-| --------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => boolean` |
+| Type                                                 |
+| ---------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => boolean |
 
 ---
 
@@ -557,9 +557,9 @@ Does this view want to "claim" touch responsiveness? This is called for every to
 
 Function called on user press, triggered after `onPressOut`.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -567,9 +567,9 @@ Function called on user press, triggered after `onPressOut`.
 
 Called immediately when a touch is engaged, before `onPressOut` and `onPress`.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -577,9 +577,9 @@ Called immediately when a touch is engaged, before `onPressOut` and `onPress`.
 
 Called when a touch is released.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -589,9 +589,9 @@ The View is now responding to touch events. This is the time to highlight and sh
 
 On Android, return true from this callback to prevent any other native components from becoming responder until this responder terminates.
 
-| Type                                                              |
-| ----------------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void ｜ boolean` |
+| Type                                                         |
+| ------------------------------------------------------------ |
+| ({nativeEvent: [PressEvent](pressevent)}) => void \| boolean |
 
 ---
 
@@ -599,9 +599,9 @@ On Android, return true from this callback to prevent any other native component
 
 The user is moving their finger.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -609,9 +609,9 @@ The user is moving their finger.
 
 Fired at the end of the touch.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -619,9 +619,9 @@ Fired at the end of the touch.
 
 The responder has been taken from the `View`. Might be taken by other views after a call to `onResponderTerminationRequest`, or might be taken by the OS without asking (e.g., happens with control center/ notification center on iOS)
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -629,9 +629,9 @@ The responder has been taken from the `View`. Might be taken by other views afte
 
 Some other `View` wants to become a responder and is asking this `View` to release its responder. Returning `true` allows its release.
 
-| Type                                                      |
-| --------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => boolean` |
+| Type                                                 |
+| ---------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => boolean |
 
 ---
 
@@ -639,9 +639,9 @@ Some other `View` wants to become a responder and is asking this `View` to relea
 
 If a parent `View` wants to prevent a child `View` from becoming a responder on a touch start, it should have this handler which returns `true`.
 
-| Type                                                      |
-| --------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => boolean` |
+| Type                                                 |
+| ---------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => boolean |
 
 ---
 

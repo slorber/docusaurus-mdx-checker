@@ -1,7 +1,7 @@
 ---
 id: intro-react-native-components
 title: Core Components and Native Components
-description: "React Native lets you compose app interfaces using Native Components. Conveniently, it comes with a set of these components for you to get started with right now—the Core Components!"
+description: 'React Native lets you compose app interfaces using Native Components. Conveniently, it comes with a set of these components for you to get started with right now—the Core Components!'
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -23,7 +23,7 @@ In Android development, you write views in Kotlin or Java; in iOS development, y
 
 React Native comes with a set of essential, ready-to-use Native Components you can use to start building your app today. These are React Native's **Core Components**.
 
-React Native also lets you build your own Native Components for [Android](versioned_docs/version-0.71/native-components-android.md) and [iOS](versioned_docs/version-0.71/native-components-ios.md) to suit your app’s unique needs. We also have a thriving ecosystem of these **community-contributed components.** Check out [Native Directory](https://reactnative.directory) to find what the community has been creating.
+React Native also lets you build your own Native Components for [Android](native-components-android.md) and [iOS](native-components-ios.md) to suit your app’s unique needs. We also have a thriving ecosystem of these **community-contributed components.** Check out [Native Directory](https://reactnative.directory) to find what the community has been creating.
 
 ## Core Components
 

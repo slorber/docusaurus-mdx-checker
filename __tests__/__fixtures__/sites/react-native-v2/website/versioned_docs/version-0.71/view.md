@@ -5,7 +5,7 @@ title: View
 
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; import constants from '@site/core/TabsConstants';
 
-The most fundamental component for building a UI, `View` is a container that supports layout with [flexbox](versioned_docs/version-0.71/flexbox.md), [style](versioned_docs/version-0.71/style.md), [some touch handling](versioned_docs/version-0.71/handling-touches.md), and [accessibility](versioned_docs/version-0.71/accessibility.md) controls. `View` maps directly to the native view equivalent on whatever platform React Native is running on, whether that is a `UIView`, `<div>`, `android.view`, etc.
+The most fundamental component for building a UI, `View` is a container that supports layout with [flexbox](flexbox.md), [style](style.md), [some touch handling](handling-touches.md), and [accessibility](accessibility.md) controls. `View` maps directly to the native view equivalent on whatever platform React Native is running on, whether that is a `UIView`, `<div>`, `android.view`, etc.
 
 `View` is designed to be nested inside other views and can have 0 to many children of any type.
 
@@ -66,7 +66,7 @@ export default App;
 </TabItem>
 </Tabs>
 
-> `View`s are designed to be used with [`StyleSheet`](versioned_docs/version-0.71/style.md) for clarity and performance, although inline styles are also supported.
+> `View`s are designed to be used with [`StyleSheet`](style.md) for clarity and performance, although inline styles are also supported.
 
 ### Synthetic Touch Events
 
@@ -84,7 +84,7 @@ For `View` responder props (e.g., `onResponderMove`), the synthetic touch event 
 
 Accessibility actions allow an assistive technology to programmatically invoke the actions of a component. The `accessibilityActions` property should contain a list of action objects. Each action object should contain the field name and label.
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibility-actions) for more information.
+See the [Accessibility guide](accessibility.md#accessibility-actions) for more information.
 
 | Type  |
 | ----- |
@@ -96,7 +96,7 @@ See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#acces
 
 A value indicating whether the accessibility elements contained within this accessibility element are hidden. Default is `false`.
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibilityelementshidden-ios) for more information.
+See the [Accessibility guide](accessibility.md#accessibilityelementshidden-ios) for more information.
 
 | Type |
 | ---- |
@@ -130,7 +130,7 @@ See the [iOS `accessibilityLanguage` doc](https://developer.apple.com/documentat
 
 A value indicating this view should or should not be inverted when color inversion is turned on. A value of `true` will tell the view to not be inverted even if color inversion is turned on.
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibilityignoresinvertcolors) for more information.
+See the [Accessibility guide](accessibility.md#accessibilityignoresinvertcolors) for more information.
 
 | Type |
 | ---- |
@@ -209,11 +209,11 @@ See the [Android `View` docs](http://developer.android.com/reference/android/vie
 
 Describes the current state of a component to the user of an assistive technology.
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibilitystate-ios-android) for more information.
+See the [Accessibility guide](accessibility.md#accessibilitystate-ios-android) for more information.
 
-| Type                                                                                             |
-| ------------------------------------------------------------------------------------------------ |
-| object: `{disabled: bool, selected: bool, checked: bool or 'mixed', busy: bool, expanded: bool}` |
+| Type                                                                                           |
+| ---------------------------------------------------------------------------------------------- |
+| object: {disabled: bool, selected: bool, checked: bool or 'mixed', busy: bool, expanded: bool} |
 
 ---
 
@@ -221,11 +221,11 @@ See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#acces
 
 Represents the current value of a component. It can be a textual description of a component's value, or for range-based components, such as sliders and progress bars, it contains range information (minimum, current, and maximum).
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibilityvalue-ios-android) for more information.
+See the [Accessibility guide](accessibility.md#accessibilityvalue-ios-android) for more information.
 
-| Type                                                            |
-| --------------------------------------------------------------- |
-| object: `{min: number, max: number, now: number, text: string}` |
+| Type                                                          |
+| ------------------------------------------------------------- |
+| object: {min: number, max: number, now: number, text: string} |
 
 ---
 
@@ -233,7 +233,7 @@ See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#acces
 
 A value indicating whether VoiceOver should ignore the elements within views that are siblings of the receiver. Default is `false`.
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibilityviewismodal-ios) for more information.
+See the [Accessibility guide](accessibility.md#accessibilityviewismodal-ios) for more information.
 
 | Type |
 | ---- |
@@ -311,7 +311,7 @@ Defines a string value that labels an interactive element.
 
 ### `aria-labelledby` <div class="label android">Android</div>
 
-Identifies the element that labels the element it is applied to. The value of `aria-labelledby` should match the [`nativeID`](versioned_docs/version-0.71/view.md#nativeid) of the related element:
+Identifies the element that labels the element it is applied to. The value of `aria-labelledby` should match the [`nativeID`](view.md#nativeid) of the related element:
 
 ```tsx
 <View>
@@ -426,9 +426,9 @@ For example, if a touchable view has a height of 20 the touchable height can be 
 
 > The touch area never extends past the parent view bounds and the Z-index of sibling views always takes precedence if a touch hits two overlapping views.
 
-| Type                                                                 |
-| -------------------------------------------------------------------- |
-| object: `{top: number, left: number, bottom: number, right: number}` |
+| Type                                                               |
+| ------------------------------------------------------------------ |
+| object: {top: number, left: number, bottom: number, right: number} |
 
 ---
 
@@ -541,7 +541,7 @@ Designates the next view to receive focus when the user navigates up. See the [A
 
 Invoked when the user performs the accessibility actions. The only argument to this function is an event containing the name of the action to perform.
 
-See the [Accessibility guide](versioned_docs/version-0.71/accessibility.md#accessibility-actions) for more information.
+See the [Accessibility guide](accessibility.md#accessibility-actions) for more information.
 
 | Type     |
 | -------- |
@@ -575,9 +575,9 @@ Invoked on mount and on layout changes.
 
 This event is fired immediately once the layout has been calculated, but the new layout may not yet be reflected on the screen at the time the event is received, especially if a layout animation is in progress.
 
-| Type                                                     |
-| -------------------------------------------------------- |
-| `md ({nativeEvent: [LayoutEvent](layoutevent)}) => void` |
+| Type                                                |
+| --------------------------------------------------- |
+| ({nativeEvent: [LayoutEvent](layoutevent)}) => void |
 
 ---
 
@@ -595,9 +595,9 @@ When `accessible` is `true`, the system will invoke this function when the user 
 
 Does this view want to "claim" touch responsiveness? This is called for every touch move on the `View` when it is not the responder.
 
-| Type                                                      |
-| --------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => boolean` |
+| Type                                                 |
+| ---------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => boolean |
 
 ---
 
@@ -605,9 +605,9 @@ Does this view want to "claim" touch responsiveness? This is called for every to
 
 If a parent `View` wants to prevent a child `View` from becoming responder on a move, it should have this handler which returns `true`.
 
-| Type                                                      |
-| --------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => boolean` |
+| Type                                                 |
+| ---------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => boolean |
 
 ---
 
@@ -617,9 +617,9 @@ The View is now responding for touch events. This is the time to highlight and s
 
 On Android, return true from this callback to prevent any other native components from becoming responder until this responder terminates.
 
-| Type                                                              |
-| ----------------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void ｜ boolean` |
+| Type                                                         |
+| ------------------------------------------------------------ |
+| ({nativeEvent: [PressEvent](pressevent)}) => void \| boolean |
 
 ---
 
@@ -627,9 +627,9 @@ On Android, return true from this callback to prevent any other native component
 
 The user is moving their finger.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -637,9 +637,9 @@ The user is moving their finger.
 
 Another responder is already active and will not release it to that `View` asking to be the responder.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -647,9 +647,9 @@ Another responder is already active and will not release it to that `View` askin
 
 Fired at the end of the touch.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -657,9 +657,9 @@ Fired at the end of the touch.
 
 The responder has been taken from the `View`. Might be taken by other views after a call to `onResponderTerminationRequest`, or might be taken by the OS without asking (e.g., happens with control center/ notification center on iOS)
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -667,9 +667,9 @@ The responder has been taken from the `View`. Might be taken by other views afte
 
 Some other `View` wants to become responder and is asking this `View` to release its responder. Returning `true` allows its release.
 
-| Type                                                   |
-| ------------------------------------------------------ |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => void |
 
 ---
 
@@ -677,9 +677,9 @@ Some other `View` wants to become responder and is asking this `View` to release
 
 Does this view want to become responder on the start of a touch?
 
-| Type                                                      |
-| --------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => boolean` |
+| Type                                                 |
+| ---------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => boolean |
 
 ---
 
@@ -687,9 +687,9 @@ Does this view want to become responder on the start of a touch?
 
 If a parent `View` wants to prevent a child `View` from becoming responder on a touch start, it should have this handler which returns `true`.
 
-| Type                                                      |
-| --------------------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)}) => boolean` |
+| Type                                                 |
+| ---------------------------------------------------- |
+| ({nativeEvent: [PressEvent](pressevent)}) => boolean |
 
 ---
 

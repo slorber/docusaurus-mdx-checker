@@ -13,9 +13,9 @@ Be sure to [enable Hermes in your app](Hermes) before you get started!
 
 Follow the instructions below to get started profiling:
 
-1. [Record a Hermes sampling profile](versioned_docs/version-0.70/profile-hermes.md#record-a-hermes-sampling-profile)
-2. [Execute command from CLI](versioned_docs/version-0.70/profile-hermes.md#execute-command-from-cli)
-3. [Open the downloaded profile on Chrome DevTools](versioned_docs/version-0.70/profile-hermes.md#open-the-downloaded-profile-on-chrome-devtools)
+1. [Record a Hermes sampling profile](profile-hermes.md#record-a-hermes-sampling-profile)
+2. [Execute command from CLI](profile-hermes.md#execute-command-from-cli)
+3. [Open the downloaded profile on Chrome DevTools](profile-hermes.md#open-the-downloaded-profile-on-chrome-devtools)
 
 ## Record a Hermes sampling profile
 
@@ -78,7 +78,7 @@ npx react-native run-android
 #### `There is no file in the cache/ directory`
 
 - **Why this happens** The CLI cannot find any **.cpuprofile** file in your app's **cache/** directory. You might have forgotten to record a profile from the device.
-- **How to fix** Follow the [instructions](versioned_docs/version-0.70/profile-hermes.md#record-a-hermes-sampling-profile) to enable/disable profiler from device.
+- **How to fix** Follow the [instructions](profile-hermes.md#record-a-hermes-sampling-profile) to enable/disable profiler from device.
 
 #### `Error: your_profile_name.cpuprofile is an empty file`
 
@@ -103,7 +103,7 @@ The Hermes Sample Profile is of the `JSON object format`, while the format that 
 export interface HermesCPUProfile {
   traceEvents: SharedEventProperties[];
   samples: HermesSample[];
-  stackFrames: { [key in string]: HermesStackFrame };
+  stackFrames: {[key in string]: HermesStackFrame};
 }
 ```
 

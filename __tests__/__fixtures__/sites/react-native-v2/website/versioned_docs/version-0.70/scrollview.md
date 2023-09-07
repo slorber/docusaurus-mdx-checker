@@ -9,7 +9,7 @@ Keep in mind that ScrollViews must have a bounded height in order to work, since
 
 Doesn't yet support other contained responders from blocking this scroll view from becoming the responder.
 
-`<ScrollView>` vs [`<FlatList>`](versioned_docs/version-0.70/flatlist.md) - which one to use?
+`<ScrollView>` vs [`<FlatList>`](flatlist.md) - which one to use?
 
 `ScrollView` renders all its react child components at once, but this has a performance downside.
 
@@ -66,7 +66,7 @@ export default App;
 
 ## Props
 
-### [View Props](versioned_docs/version-0.70/view.md#props)
+### [View Props](view.md#props)
 
 Inherits [View Props](view#props).
 
@@ -199,9 +199,9 @@ const styles = StyleSheet.create({
 
 The amount by which the scroll view content is inset from the edges of the scroll view.
 
-| Type                                                                 | Default                                  |
-| -------------------------------------------------------------------- | ---------------------------------------- |
-| object: `{top: number, left: number, bottom: number, right: number}` | `{top: 0, left: 0, bottom: 0, right: 0}` |
+| Type                                                               | Default                                  |
+| ------------------------------------------------------------------ | ---------------------------------------- |
+| object: {top: number, left: number, bottom: number, right: number} | `{top: 0, left: 0, bottom: 0, right: 0}` |
 
 ---
 
@@ -369,7 +369,7 @@ Caveat 2: This uses `contentOffset` and `frame.origin` in native code to compute
 
 | Type                                                                     |
 | ------------------------------------------------------------------------ |
-| object: `{minIndexForVisible: number, autoscrollToTopThreshold: number}` |
+| object: { minIndexForVisible: number, autoscrollToTopThreshold: number } |
 
 ---
 
@@ -585,9 +585,9 @@ This controls how often the scroll event will be fired while scrolling (as a tim
 
 The amount by which the scroll view indicators are inset from the edges of the scroll view. This should normally be set to the same value as the `contentInset`.
 
-| Type                                                                 | Default                                  |
-| -------------------------------------------------------------------- | ---------------------------------------- |
-| object: `{top: number, left: number, bottom: number, right: number}` | `{top: 0, left: 0, bottom: 0, right: 0}` |
+| Type                                                               | Default                                  |
+| ------------------------------------------------------------------ | ---------------------------------------- |
+| object: {top: number, left: number, bottom: number, right: number} | `{top: 0, left: 0, bottom: 0, right: 0}` |
 
 ---
 
@@ -762,7 +762,7 @@ Scrolls to a given x, y offset, either immediately, with a smooth animation.
 ### `scrollToEnd()`
 
 ```jsx
-scrollToEnd(([options]: { animated: boolean }));
+scrollToEnd(([options]: {animated: boolean}));
 ```
 
 If this is a vertical ScrollView scrolls to the bottom. If this is a horizontal ScrollView scrolls to the right.

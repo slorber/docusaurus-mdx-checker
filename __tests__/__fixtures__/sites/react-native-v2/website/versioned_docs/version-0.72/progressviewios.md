@@ -1,6 +1,6 @@
 ---
 id: progressviewios
-title: "🚧 ProgressViewIOS"
+title: '🚧 ProgressViewIOS'
 ---
 
 > **Removed.** Use one of the [community packages](https://reactnative.directory/?search=progressview) instead.
@@ -63,7 +63,7 @@ export default App;
 
 ## Props
 
-Inherits [View Props](versioned_docs/version-0.72/view.md#props).
+Inherits [View Props](view.md#props).
 
 ### `progress`
 

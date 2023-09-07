@@ -151,7 +151,7 @@ Setter declaration requirements for methods annotated with `@ReactPropGroup` are
 
 ### 4. Register the `ViewManager`
 
-The final step is to register the ViewManager to the application, this happens in a similar way to [Native Modules](versioned_docs/version-0.70/native-modules-android.md), via the applications package member function `createViewManagers`.
+The final step is to register the ViewManager to the application, this happens in a similar way to [Native Modules](native-modules-android.md), via the applications package member function `createViewManagers`.
 
 <Tabs groupId="android-language" queryString defaultValue={constants.defaultAndroidLanguage} values={constants.androidLanguages}>
 <TabItem value="kotlin">
@@ -183,7 +183,7 @@ The final step is to register the ViewManager to the application, this happens i
 The very final step is to create the JavaScript module that defines the interface layer between Java/Kotlin and JavaScript for the users of your new view. It is recommended for you to document the component interface in this module (e.g. using Flow, TypeScript, or plain old comments).
 
 ```jsx title="ImageView.js"
-import { requireNativeComponent } from "react-native";
+import {requireNativeComponent} from 'react-native';
 
 /**
  * Composes `View`.
@@ -192,7 +192,7 @@ import { requireNativeComponent } from "react-native";
  * - borderRadius: number
  * - resizeMode: 'cover' | 'contain' | 'stretch'
  */
-module.exports = requireNativeComponent("RCTImageView");
+module.exports = requireNativeComponent('RCTImageView');
 ```
 
 The `requireNativeComponent` function takes the name of the native view. Note that if your component needs to do anything more sophisticated (e.g. custom event handling), you should wrap the native component in another React component. This is illustrated in the `MyCustomView` example below.
@@ -816,25 +816,30 @@ public class MyPackage implements ReactPackage {
 I. Start with custom View manager:
 
 ```jsx title="MyViewManager.jsx"
-import { requireNativeComponent } from "react-native";
+import {requireNativeComponent} from 'react-native';
 
-export const MyViewManager = requireNativeComponent("MyViewManager");
+export const MyViewManager =
+  requireNativeComponent('MyViewManager');
 ```
 
 II. Then implement custom View calling the `create` method:
 
 ```jsx title="MyView.jsx"
-import React, { useEffect, useRef } from "react";
-import { PixelRatio, UIManager, findNodeHandle } from "react-native";
+import React, {useEffect, useRef} from 'react';
+import {
+  PixelRatio,
+  UIManager,
+  findNodeHandle,
+} from 'react-native';
 
-import { MyViewManager } from "./my-view-manager";
+import {MyViewManager} from './my-view-manager';
 
-const createFragment = (viewId) =>
+const createFragment = viewId =>
   UIManager.dispatchViewManagerCommand(
     viewId,
     // we are calling the 'create' command
     UIManager.MyViewManager.Commands.create.toString(),
-    [viewId]
+    [viewId],
   );
 
 export const MyView = () => {

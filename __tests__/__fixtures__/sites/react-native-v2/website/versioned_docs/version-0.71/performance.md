@@ -5,7 +5,7 @@ title: Performance Overview
 
 A compelling reason for using React Native instead of WebView-based tools is to achieve 60 frames per second and a native look and feel to your apps. Where possible, we would like for React Native to do the right thing and help you to focus on your app instead of performance optimization, but there are areas where we're not quite there yet, and others where React Native (similar to writing native code directly) cannot possibly determine the best way to optimize for you and so manual intervention will be necessary. We try our best to deliver buttery-smooth UI performance by default, but sometimes that isn't possible.
 
-This guide is intended to teach you some basics to help you to [troubleshoot performance issues](versioned_docs/version-0.71/profiling.md), as well as discuss [common sources of problems and their suggested solutions](versioned_docs/version-0.71/performance.md#common-sources-of-performance-problems).
+This guide is intended to teach you some basics to help you to [troubleshoot performance issues](profiling.md), as well as discuss [common sources of problems and their suggested solutions](performance.md#common-sources-of-performance-problems).
 
 ## What you need to know about frames
 
@@ -33,7 +33,7 @@ Similarly, you can happily scroll up and down through a `ScrollView` when the Ja
 
 ### Running in development mode (`dev=true`)
 
-JavaScript thread performance suffers greatly when running in dev mode. This is unavoidable: a lot more work needs to be done at runtime to provide you with good warnings and error messages, such as validating propTypes and various other assertions. Always make sure to test performance in [release builds](versioned_docs/version-0.71/running-on-device.md#building-your-app-for-production).
+JavaScript thread performance suffers greatly when running in dev mode. This is unavoidable: a lot more work needs to be done at runtime to provide you with good warnings and error messages, such as validating propTypes and various other assertions. Always make sure to test performance in [release builds](running-on-device.md#building-your-app-for-production).
 
 ### Using `console.log` statements
 
@@ -55,9 +55,9 @@ It is recommended to use the plugin even if no `console.*` calls are made in you
 
 ### `ListView` initial rendering is too slow or scroll performance is bad for large lists
 
-Use the new [`FlatList`](versioned_docs/version-0.71/flatlist.md) or [`SectionList`](versioned_docs/version-0.71/sectionlist.md) component instead. Besides simplifying the API, the new list components also have significant performance enhancements, the main one being nearly constant memory usage for any number of rows.
+Use the new [`FlatList`](flatlist.md) or [`SectionList`](sectionlist.md) component instead. Besides simplifying the API, the new list components also have significant performance enhancements, the main one being nearly constant memory usage for any number of rows.
 
-If your [`FlatList`](versioned_docs/version-0.71/flatlist.md) is rendering slow, be sure that you've implemented [`getItemLayout`](versioned_docs/version-0.71/flatlist.md#getitemlayout) to optimize rendering speed by skipping measurement of the rendered items.
+If your [`FlatList`](flatlist.md) is rendering slow, be sure that you've implemented [`getItemLayout`](flatlist.md#getitemlayout) to optimize rendering speed by skipping measurement of the rendered items.
 
 ### JS FPS plunges when re-rendering a view that hardly changes
 
@@ -105,4 +105,4 @@ As mentioned above, `Navigator` animations are controlled by the JavaScript thre
 
 One solution to this is to allow for JavaScript-based animations to be offloaded to the main thread. If we were to do the same thing as in the above example with this approach, we might calculate a list of all x-offsets for the new scene when we are starting the transition and send them to the main thread to execute in an optimized way. Now that the JavaScript thread is freed of this responsibility, it's not a big deal if it drops a few frames while rendering the scene -- you probably won't even notice because you will be too distracted by the pretty transition.
 
-Solving this is one of the main goals behind the new [React Navigation](versioned_docs/version-0.71/navigation.md) library. The views in React Navigation use native components and the [`Animated`](versioned_docs/version-0.71/animated.md) library to deliver 60 FPS animations that are run on the native thread.
+Solving this is one of the main goals behind the new [React Navigation](navigation.md) library. The views in React Navigation use native components and the [`Animated`](animated.md) library to deliver 60 FPS animations that are run on the native thread.

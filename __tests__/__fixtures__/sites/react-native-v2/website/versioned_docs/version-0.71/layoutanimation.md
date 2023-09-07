@@ -12,7 +12,7 @@ A common way to use this API is to call it before updating the state hook in fun
 Note that in order to get this to work on **Android** you need to set the following flags via `UIManager`:
 
 ```js
-if (Platform.OS === "android") {
+if (Platform.OS === 'android') {
   if (UIManager.setLayoutAnimationEnabledExperimental) {
     UIManager.setLayoutAnimationEnabledExperimental(true);
   }
@@ -103,7 +103,7 @@ Schedules an animation to happen on the next layout.
 | onAnimationDidEnd  | function | No       | Called when the animation finished. |
 | onAnimationDidFail | function | No       | Called when the animation failed.   |
 
-The `config` parameter is an object with the keys below. [`create`](versioned_docs/version-0.71/layoutanimation.md#create) returns a valid object for `config`, and the [`Presets`](versioned_docs/version-0.71/layoutanimation.md#presets) objects can also all be passed as the `config`.
+The `config` parameter is an object with the keys below. [`create`](layoutanimation.md#create) returns a valid object for `config`, and the [`Presets`](layoutanimation.md#presets) objects can also all be passed as the `config`.
 
 - `duration` in milliseconds
 - `create`, optional config for animating in new views
@@ -112,8 +112,8 @@ The `config` parameter is an object with the keys below. [`create`](versioned_do
 
 The config that's passed to `create`, `update`, or `delete` has the following keys:
 
-- `type`, the [animation type](versioned_docs/version-0.71/layoutanimation.md#types) to use
-- `property`, the [layout property](versioned_docs/version-0.71/layoutanimation.md#properties) to animate (optional, but recommended for `create` and `delete`)
+- `type`, the [animation type](layoutanimation.md#types) to use
+- `property`, the [layout property](layoutanimation.md#properties) to animate (optional, but recommended for `create` and `delete`)
 - `springDamping` (number, optional and only for use with `type: Type.spring`)
 - `initialVelocity` (number, optional)
 - `delay` (number, optional)
@@ -127,7 +127,7 @@ The config that's passed to `create`, `update`, or `delete` has the following ke
 static create(duration, type, creationProp)
 ```
 
-Helper that creates an object (with `create`, `update`, and `delete` fields) to pass into [`configureNext`](versioned_docs/version-0.71/layoutanimation.md#configurenext). The `type` parameter is an [animation type](versioned_docs/version-0.71/layoutanimation.md#types), and the `creationProp` parameter is a [layout property](versioned_docs/version-0.71/layoutanimation.md#properties).
+Helper that creates an object (with `create`, `update`, and `delete` fields) to pass into [`configureNext`](layoutanimation.md#configurenext). The `type` parameter is an [animation type](layoutanimation.md#types), and the `creationProp` parameter is a [layout property](layoutanimation.md#properties).
 
 **Example:**
 
@@ -291,7 +291,7 @@ export default App;
 
 ### Types
 
-An enumeration of animation types to be used in the [`create`](versioned_docs/version-0.71/layoutanimation.md#create) method, or in the `create`/`update`/`delete` configs for [`configureNext`](versioned_docs/version-0.71/layoutanimation.md#configurenext). (example usage: `LayoutAnimation.Types.easeIn`)
+An enumeration of animation types to be used in the [`create`](layoutanimation.md#create) method, or in the `create`/`update`/`delete` configs for [`configureNext`](layoutanimation.md#configurenext). (example usage: `LayoutAnimation.Types.easeIn`)
 
 | Types         |
 | ------------- |
@@ -306,7 +306,7 @@ An enumeration of animation types to be used in the [`create`](versioned_docs/ve
 
 ### Properties
 
-An enumeration of layout properties to be animated to be used in the [`create`](versioned_docs/version-0.71/layoutanimation.md#create) method, or in the `create`/`update`/`delete` configs for [`configureNext`](versioned_docs/version-0.71/layoutanimation.md#configurenext). (example usage: `LayoutAnimation.Properties.opacity`)
+An enumeration of layout properties to be animated to be used in the [`create`](layoutanimation.md#create) method, or in the `create`/`update`/`delete` configs for [`configureNext`](layoutanimation.md#configurenext). (example usage: `LayoutAnimation.Properties.opacity`)
 
 | Properties |
 | ---------- |
@@ -319,7 +319,7 @@ An enumeration of layout properties to be animated to be used in the [`create`](
 
 ### Presets
 
-A set of predefined animation configs to pass into [`configureNext`](versioned_docs/version-0.71/layoutanimation.md#configurenext).
+A set of predefined animation configs to pass into [`configureNext`](layoutanimation.md#configurenext).
 
 | Presets       | Value                                                                                                                                                          |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |

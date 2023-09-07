@@ -5,33 +5,33 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from "react";
-import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-const versions = require("tests/fixtures/react-native-website/website/versions.json");
-// The versionsArchived mapping is a custom feature, NOT a Docusaurus feature
-const versionsArchived = require("tests/fixtures/react-native-website/website/versionsArchived.json");
+import React from 'react';
+import Layout from '@theme/Layout';
 
-const VersionItem = ({ version, archivedDocumentationUrl, currentVersion }) => {
-  const versionName = version === "next" ? "Master" : version;
+import useBaseUrl from '@docusaurus/useBaseUrl';
+const versions = require('../../versions.json');
+
+const VersionItem = ({version, currentVersion}) => {
+  const versionName = version === 'next' ? 'Master' : version;
 
   const isCurrentVersion = currentVersion === version;
-  const isNext = version === "next";
-  const isRC = version.toUpperCase().indexOf("-RC") !== -1;
+  const isNext = version === 'next';
+  const isRC = version.toUpperCase().indexOf('-RC') !== -1;
 
-  const latestMajorVersion = versions[0].toUpperCase().replace("-RC", "");
-
-  const documentationUrl = useBaseUrl(
-    archivedDocumentationUrl ??
-      `/docs/${isCurrentVersion ? "" : version + "/"}getting-started`
+  const latestMajorVersion = versions[0].toUpperCase().replace('-RC', '');
+  const documentationLink = (
+    <a
+      href={useBaseUrl(
+        'docs/' + (isCurrentVersion ? '' : version + '/') + 'getting-started'
+      )}>
+      Documentation
+    </a>
   );
-  const documentationLink = <a href={documentationUrl}>Documentation</a>;
-
-  let releaseNotesURL = "https://github.com/facebook/react-native/releases";
-  let releaseNotesTitle = "Changelog";
+  let releaseNotesURL = 'https://github.com/facebook/react-native/releases';
+  let releaseNotesTitle = 'Changelog';
   if (isNext) {
     releaseNotesURL = `https://github.com/facebook/react-native/compare/${latestMajorVersion}-stable...main`;
-    releaseNotesTitle = "Commits since " + latestMajorVersion;
+    releaseNotesTitle = 'Commits since ' + latestMajorVersion;
   } else if (!isRC) {
     releaseNotesURL = `https://github.com/facebook/react-native/releases/tag/v${version}.0`;
   }
@@ -49,11 +49,11 @@ const VersionItem = ({ version, archivedDocumentationUrl, currentVersion }) => {
 
 const Versions = () => {
   const currentVersion = versions.length > 0 ? versions[0] : null;
-  const latestVersions = ["next"].concat(
-    versions.filter((version) => version.indexOf("-RC") !== -1)
+  const latestVersions = ['next'].concat(
+    versions.filter(version => version.indexOf('-RC') !== -1)
   );
   const stableVersions = versions.filter(
-    (version) => version.indexOf("-RC") === -1 && version !== currentVersion
+    version => version.indexOf('-RC') === -1 && version !== currentVersion
   );
 
   return (
@@ -61,20 +61,19 @@ const Versions = () => {
       <h1>React Native versions</h1>
       <p>
         Open source React Native releases follow a release train that is
-        coordinated on GitHub through the{" "}
+        coordinated on GitHub through the{' '}
         <a
-          href={"https://github.com/reactwg/react-native-releases/discussions"}
-        >
+          href={'https://github.com/reactwg/react-native-releases/discussions'}>
           <code>react-native-releases</code>
-        </a>{" "}
-        repository. New releases are created off the <code>main</code> branch of{" "}
-        <a href={"https://github.com/facebook/react-native"}>
+        </a>{' '}
+        repository. New releases are created off the <code>main</code> branch of{' '}
+        <a href={'https://github.com/facebook/react-native'}>
           <code>facebook/react-native</code>
         </a>
         . They will follow a Release Candidate process to allow contributors
-        like yourself to{" "}
-        <a href={useBaseUrl("docs/upgrading")}>verify the changes</a> and to
-        identify any issues by{" "}
+        like yourself to{' '}
+        <a href={useBaseUrl('docs/upgrading')}>verify the changes</a> and to
+        identify any issues by{' '}
         <a href="https://github.com/facebook/react-native/issues">
           writing clear, actionable bug reports
         </a>
@@ -90,9 +89,9 @@ const Versions = () => {
       </p>
       <table className="versions">
         <tbody>
-          {latestVersions.map((version) => (
+          {latestVersions.map(version => (
             <VersionItem
-              key={"version_" + version}
+              key={'version_' + version}
               version={version}
               currentVersion={currentVersion}
             />
@@ -107,7 +106,7 @@ const Versions = () => {
       <table className="versions">
         <tbody>
           <VersionItem
-            key={"version_" + currentVersion}
+            key={'version_' + currentVersion}
             version={currentVersion}
             currentVersion={currentVersion}
           />
@@ -116,9 +115,9 @@ const Versions = () => {
       <h2>Previous versions</h2>
       <table className="versions">
         <tbody>
-          {stableVersions.map((version) => (
+          {stableVersions.map(version => (
             <VersionItem
-              key={"version_" + version}
+              key={'version_' + version}
               version={version}
               currentVersion={currentVersion}
             />
@@ -126,23 +125,9 @@ const Versions = () => {
         </tbody>
       </table>
       <h2>Archived versions</h2>
-      <table className="versions">
-        <tbody>
-          {Object.entries(versionsArchived).map(
-            ([version, archivedDocumentationUrl]) => (
-              <VersionItem
-                key={"version_" + version}
-                version={version}
-                archivedDocumentationUrl={archivedDocumentationUrl}
-                currentVersion={currentVersion}
-              />
-            )
-          )}
-        </tbody>
-      </table>
       <p>
         The documentation for versions below <code>0.60</code> can be found on
-        the separate website called{" "}
+        the separate website called{' '}
         <a href="https://archive.reactnative.dev/versions">
           React Native Archive
         </a>

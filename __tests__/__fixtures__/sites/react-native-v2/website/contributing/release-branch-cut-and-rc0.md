@@ -4,12 +4,11 @@ title: Branch Cut & RC0
 ---
 
 import AsyncTestingNote from './\_markdown-async-testing-note.mdx';
-import BumpOSSNote from './\_markdown-older-bump-script.mdx';
 import GHReleasesNotesPrerelease from './\_markdown-GH-release-notes-prerelease.mdx';
 import RoadToReleaseTemplate from './\_markdown-road-to-release-template.mdx';
 
 :::info
-Documents in this section go over steps to run different types of React Native release updates. Its intended audience is those in [relevant release roles](contributing/release-roles-responsibilites.md).
+Documents in this section go over steps to run different types of React Native release updates. Its intended audience is those in [relevant release roles](./release-roles-responsibilites.md).
 :::
 
 ### Pre-requisites
@@ -60,16 +59,14 @@ Before continuing further, follow the [testing guide](/contributing/release-test
 
 <AsyncTestingNote/>
 
-### 5. Kick off the build of `0.{minor}.0-rc.0`
+### 5. Kick off the build of 0.{minor}.0-rc.0
 
 Once you're done with the testing, you can kick-off the bump and publishing of RC0:
 
-```bash
-# This will walk you through what version you are releasing
-yarn trigger-react-native-release --to-version 0.69.0-rc.0 --token <YOUR_CIRCLE_CI_TOKEN>
 ```
-
-<BumpOSSNote/>
+# This will walk you through what version you are releasing
+./scripts/bump-oss-version.js --to-version 0.69.0-rc.0 --token <YOUR_CIRCLE_CI_TOKEN>
+```
 
 - Once you have run that script, head to CircleCI and you should see under the releases workflow, a `prepare-package-for-release` job.
 
@@ -134,7 +131,7 @@ In the `publish_release` CI workflow, the `build_hermes_macos` step produces a `
 
 ### 9. Create a tracking discussion post
 
-Create a "Road to [YOUR_MINOR_VERSION]" discussion post in the [`react-native-releases`](https://github.com/reactwg/react-native-releases/discussions) working group:
+Create a "Road to <YOUR_MINOR_VERSION>" discussion post in the [`react-native-releases`](https://github.com/reactwg/react-native-releases/discussions) working group:
 
 <RoadToReleaseTemplate />
 

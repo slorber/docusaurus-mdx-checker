@@ -47,9 +47,9 @@ export default App;
 
 ## Props
 
-### [View Props](versioned_docs/version-0.72/view.md#props)
+### [View Props](view.md#props)
 
-Inherits [View Props](versioned_docs/version-0.72/view.md#props).
+Inherits [View Props](view.md#props).
 
 ---
 
@@ -67,9 +67,9 @@ If true the user won't be able to toggle the switch.
 
 On iOS, custom color for the background. This background color can be seen either when the switch value is `false` or when the switch is disabled (and the switch is translucent).
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.72/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -97,9 +97,9 @@ Invoked when the user tries to change the value of the switch. Receives the new 
 
 Color of the foreground switch grip. If this is set on iOS, the switch grip will lose its drop shadow.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.72/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -107,11 +107,11 @@ Color of the foreground switch grip. If this is set on iOS, the switch grip will
 
 Custom colors for the switch track.
 
-_iOS_: When the switch value is `false`, the track shrinks into the border. If you want to change the color of the background exposed by the shrunken track, use [`ios_backgroundColor`](versioned_docs/version-0.72/switch.md#ios_backgroundColor).
+_iOS_: When the switch value is `false`, the track shrinks into the border. If you want to change the color of the background exposed by the shrunken track, use [`ios_backgroundColor`](switch.md#ios_backgroundColor).
 
-| Type                                                         |
-| ------------------------------------------------------------ |
-| `md object: {false: [color](colors), true: [color](colors)}` |
+| Type                                                          |
+| ------------------------------------------------------------- |
+| object: {false: [color](colors.md), true: [color](colors.md)} |
 
 ---
 

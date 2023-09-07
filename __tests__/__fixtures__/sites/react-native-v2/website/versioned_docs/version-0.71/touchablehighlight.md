@@ -5,7 +5,7 @@ title: TouchableHighlight
 
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; import constants from '@site/core/TabsConstants';
 
-> If you're looking for a more extensive and future-proof way to handle touch-based input, check out the [Pressable](versioned_docs/version-0.71/pressable.md) API.
+> If you're looking for a more extensive and future-proof way to handle touch-based input, check out the [Pressable](pressable.md) API.
 
 A wrapper for making views respond properly to touches. On press down, the opacity of the wrapped view is decreased, which allows the underlay color to show through, darkening or tinting the view.
 
@@ -16,7 +16,7 @@ TouchableHighlight must have one child (not zero or more than one). If you wish 
 ```tsx
 function MyComponent(props: MyComponentProps) {
   return (
-    <View {...props} style={{ flex: 1, backgroundColor: "#fff" }}>
+    <View {...props} style={{flex: 1, backgroundColor: '#fff'}}>
       <Text>My Component</Text>
     </View>
   );
@@ -25,8 +25,7 @@ function MyComponent(props: MyComponentProps) {
 <TouchableHighlight
   activeOpacity={0.6}
   underlayColor="#DDDDDD"
-  onPress={() => alert("Pressed!")}
->
+  onPress={() => alert('Pressed!')}>
   <MyComponent />
 </TouchableHighlight>;
 ```
@@ -149,9 +148,9 @@ export default App;
 
 ## Props
 
-### [TouchableWithoutFeedback Props](versioned_docs/version-0.71/touchablewithoutfeedback.md#props)
+### [TouchableWithoutFeedback Props](touchablewithoutfeedback.md#props)
 
-Inherits [TouchableWithoutFeedback Props](versioned_docs/version-0.71/touchablewithoutfeedback.md#props).
+Inherits [TouchableWithoutFeedback Props](touchablewithoutfeedback.md#props).
 
 ---
 
@@ -197,9 +196,9 @@ Called immediately after the underlay is shown.
 
 The color of the underlay that will show through when the touch is active.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 

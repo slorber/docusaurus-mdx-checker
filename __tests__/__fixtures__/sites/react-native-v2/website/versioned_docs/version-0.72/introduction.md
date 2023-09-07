@@ -82,4 +82,4 @@ Menu paths are written in bold and use carets to navigate submenus. Example: **A
 
 ---
 
-Now that you know how this guide works, it's time to get to know the foundation of React Native: [Native Components](versioned_docs/version-0.72/intro-react-native-components.md).
+Now that you know how this guide works, it's time to get to know the foundation of React Native: [Native Components](intro-react-native-components.md).

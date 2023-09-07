@@ -37,8 +37,7 @@ To use, set the `accessibilityLabel` property to a custom string on your View, T
 <TouchableOpacity
   accessible={true}
   accessibilityLabel="Tap me!"
-  onPress={onPress}
->
+  onPress={onPress}>
   <View style={styles.button}>
     <Text style={styles.buttonText}>Press me!</Text>
   </View>
@@ -49,13 +48,16 @@ In the above example, the `accessibilityLabel` on the TouchableOpacity element w
 
 ### `accessibilityLabelledBy` <div class="label android">Android</div>
 
-A reference to another element [nativeID](versioned_docs/version-0.71/view.md#nativeid) used to build complex forms.
+A reference to another element [nativeID](view.md#nativeid) used to build complex forms.
 The value of `accessibilityLabelledBy` should match the `nativeID` of the related element:
 
 ```tsx
 <View>
   <Text nativeID="formLabel">Label for Input Field</Text>
-  <TextInput accessibilityLabel="input" accessibilityLabelledBy="formLabel" />
+  <TextInput
+    accessibilityLabel="input"
+    accessibilityLabelledBy="formLabel"
+  />
 </View>
 ```
 
@@ -72,8 +74,7 @@ To use, set the `accessibilityHint` property to a custom string on your View, Te
   accessible={true}
   accessibilityLabel="Go back"
   accessibilityHint="Navigates to the previous screen"
-  onPress={onPress}
->
+  onPress={onPress}>
   <View style={styles.button}>
     <Text style={styles.buttonText}>Back</Text>
   </View>
@@ -96,8 +97,7 @@ By using the `accessibilityLanguage` property, the screen reader will understand
 <View
   accessible={true}
   accessibilityLabel="Pizza"
-  accessibilityLanguage="it-IT"
->
+  accessibilityLanguage="it-IT">
   <Text>🍕</Text>
 </View>
 ```
@@ -272,7 +272,7 @@ Defines a string value that labels an interactive element.
 
 ### `aria-labelledby` <div class="label android">Android</div>
 
-Identifies the element that labels the element it is applied to. The value of `aria-labelledby` should match the [`nativeID`](versioned_docs/version-0.71/view.md#nativeid) of the related element:
+Identifies the element that labels the element it is applied to. The value of `aria-labelledby` should match the [`nativeID`](view.md#nativeid) of the related element:
 
 ```tsx
 <View>
@@ -322,15 +322,13 @@ In the case of two overlapping UI components with the same parent, default acces
 ```tsx
 <View style={styles.container}>
   <View
-    style={[styles.layout, { backgroundColor: "green" }]}
-    importantForAccessibility="yes"
-  >
+    style={[styles.layout, {backgroundColor: 'green'}]}
+    importantForAccessibility="yes">
     <Text>First layout</Text>
   </View>
   <View
-    style={[styles.layout, { backgroundColor: "yellow" }]}
-    importantForAccessibility="no-hide-descendants"
-  >
+    style={[styles.layout, {backgroundColor: 'yellow'}]}
+    importantForAccessibility="no-hide-descendants">
     <Text>Second layout</Text>
   </View>
 </View>
@@ -417,20 +415,20 @@ To handle action requests, a component must implement an `onAccessibilityAction`
 <View
   accessible={true}
   accessibilityActions={[
-    { name: "cut", label: "cut" },
-    { name: "copy", label: "copy" },
-    { name: "paste", label: "paste" },
+    {name: 'cut', label: 'cut'},
+    {name: 'copy', label: 'copy'},
+    {name: 'paste', label: 'paste'},
   ]}
-  onAccessibilityAction={(event) => {
+  onAccessibilityAction={event => {
     switch (event.nativeEvent.actionName) {
-      case "cut":
-        Alert.alert("Alert", "cut action success");
+      case 'cut':
+        Alert.alert('Alert', 'cut action success');
         break;
-      case "copy":
-        Alert.alert("Alert", "copy action success");
+      case 'copy':
+        Alert.alert('Alert', 'copy action success');
         break;
-      case "paste":
-        Alert.alert("Alert", "paste action success");
+      case 'paste':
+        Alert.alert('Alert', 'paste action success');
         break;
     }
   }}
@@ -446,12 +444,12 @@ The `AccessibilityInfo` API allows you to determine whether or not a screen read
 Sometimes it is useful to trigger an accessibility event on a UI component (i.e. when a custom view appears on a screen or set accessibility focus to a view). Native UIManager module exposes a method ‘sendAccessibilityEvent’ for this purpose. It takes two arguments: view tag and a type of an event. The supported event types are `typeWindowStateChanged`, `typeViewFocused` and `typeViewClicked`.
 
 ```tsx
-import { Platform, UIManager, findNodeHandle } from "react-native";
+import {Platform, UIManager, findNodeHandle} from 'react-native';
 
-if (Platform.OS === "android") {
+if (Platform.OS === 'android') {
   UIManager.sendAccessibilityEvent(
     findNodeHandle(this),
-    UIManager.AccessibilityEventTypes.typeViewFocused
+    UIManager.AccessibilityEventTypes.typeViewFocused,
   );
 }
 ```

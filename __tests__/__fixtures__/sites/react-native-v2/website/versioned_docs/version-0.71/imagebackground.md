@@ -52,17 +52,17 @@ export default App;
 
 ## Props
 
-### [Image Props](versioned_docs/version-0.71/image.md#props)
+### [Image Props](image.md#props)
 
-Inherits [Image Props](versioned_docs/version-0.71/image.md#props).
+Inherits [Image Props](image.md#props).
 
 ---
 
 ### `imageStyle`
 
-| Type                                                            |
-| --------------------------------------------------------------- |
-| [Image Style](versioned_docs/version-0.71/image-style-props.md) |
+| Type                                |
+| ----------------------------------- |
+| [Image Style](image-style-props.md) |
 
 ---
 
@@ -78,6 +78,6 @@ Allows to set a reference to the inner `Image` component
 
 ### `style`
 
-| Type                                                          |
-| ------------------------------------------------------------- |
-| [View Style](versioned_docs/version-0.71/view-style-props.md) |
+| Type                              |
+| --------------------------------- |
+| [View Style](view-style-props.md) |

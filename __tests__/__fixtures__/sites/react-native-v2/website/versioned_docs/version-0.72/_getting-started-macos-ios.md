@@ -56,7 +56,7 @@ You can use React Native's built-in command line interface to generate a new pro
 npx react-native@latest init AwesomeProject
 ```
 
-This is not necessary if you are integrating React Native into an existing application, if you "ejected" from Expo, or if you're adding iOS support to an existing React Native project (see [Integration with Existing Apps](versioned_docs/version-0.72/integration-with-existing-apps.md)). You can also use a third-party CLI to init your React Native app, such as [Ignite CLI](https://github.com/infinitered/ignite).
+This is not necessary if you are integrating React Native into an existing application, if you "ejected" from Expo, or if you're adding iOS support to an existing React Native project (see [Integration with Existing Apps](integration-with-existing-apps.md)). You can also use a third-party CLI to init your React Native app, such as [Ignite CLI](https://github.com/infinitered/ignite).
 
 :::info
 
@@ -154,11 +154,11 @@ You should see your new app running in the iOS Simulator shortly.
 
 This is one way to run your app. You can also run it directly from within Xcode.
 
-> If you can't get this to work, see the [Troubleshooting](versioned_docs/version-0.72/troubleshooting.md) page.
+> If you can't get this to work, see the [Troubleshooting](troubleshooting.md) page.
 
 ### Running on a device
 
-The above command will automatically run your app on the iOS Simulator by default. If you want to run the app on an actual physical iOS device, please follow the instructions [here](versioned_docs/version-0.72/running-on-device.md).
+The above command will automatically run your app on the iOS Simulator by default. If you want to run the app on an actual physical iOS device, please follow the instructions [here](running-on-device.md).
 
 ### Modifying your app
 
@@ -175,6 +175,6 @@ Congratulations! You've successfully run and modified your first React Native ap
 
 ## Now what?
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](versioned_docs/version-0.72/integration-with-existing-apps.md).
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](integration-with-existing-apps.md).
 
 If you're curious to learn more about React Native, check out the [Introduction to React Native](getting-started).

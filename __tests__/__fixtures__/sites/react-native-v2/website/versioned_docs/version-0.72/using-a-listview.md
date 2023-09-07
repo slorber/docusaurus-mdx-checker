@@ -3,9 +3,9 @@ id: using-a-listview
 title: Using List Views
 ---
 
-React Native provides a suite of components for presenting lists of data. Generally, you'll want to use either [FlatList](versioned_docs/version-0.72/flatlist.md) or [SectionList](versioned_docs/version-0.72/sectionlist.md).
+React Native provides a suite of components for presenting lists of data. Generally, you'll want to use either [FlatList](flatlist.md) or [SectionList](sectionlist.md).
 
-The `FlatList` component displays a scrolling list of changing, but similarly structured, data. `FlatList` works well for long lists of data, where the number of items might change over time. Unlike the more generic [`ScrollView`](versioned_docs/version-0.72/using-a-scrollview.md), the `FlatList` only renders elements that are currently showing on the screen, not all the elements at once.
+The `FlatList` component displays a scrolling list of changing, but similarly structured, data. `FlatList` works well for long lists of data, where the number of items might change over time. Unlike the more generic [`ScrollView`](using-a-scrollview.md), the `FlatList` only renders elements that are currently showing on the screen, not all the elements at once.
 
 The `FlatList` component requires two props: `data` and `renderItem`. `data` is the source of information for the list. `renderItem` takes one item from the source and returns a formatted component to render.
 
@@ -52,7 +52,7 @@ const FlatListBasics = () => {
 export default FlatListBasics;
 ```
 
-If you want to render a set of data broken into logical sections, maybe with section headers, similar to `UITableView`s on iOS, then a [SectionList](versioned_docs/version-0.72/sectionlist.md) is the way to go.
+If you want to render a set of data broken into logical sections, maybe with section headers, similar to `UITableView`s on iOS, then a [SectionList](sectionlist.md) is the way to go.
 
 ```SnackPlayer name=SectionList%20Basics
 import React from 'react';
@@ -111,4 +111,4 @@ const SectionListBasics = () => {
 export default SectionListBasics;
 ```
 
-One of the most common uses for a list view is displaying data that you fetch from a server. To do that, you will need to [learn about networking in React Native](versioned_docs/version-0.72/network.md).
+One of the most common uses for a list view is displaying data that you fetch from a server. To do that, you will need to [learn about networking in React Native](network.md).

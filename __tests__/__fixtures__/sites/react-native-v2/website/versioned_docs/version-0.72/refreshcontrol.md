@@ -63,9 +63,9 @@ export default App;
 
 ## Props
 
-### [View Props](versioned_docs/version-0.72/view.md#props)
+### [View Props](view.md#props)
 
-Inherits [View Props](versioned_docs/version-0.72/view.md#props).
+Inherits [View Props](view.md#props).
 
 ---
 
@@ -83,9 +83,9 @@ Whether the view should be indicating an active refresh.
 
 The colors (at least one) that will be used to draw the refresh indicator.
 
-| Type                                                     |
-| -------------------------------------------------------- |
-| array of [colors](versioned_docs/version-0.72/colors.md) |
+| Type                         |
+| ---------------------------- |
+| array of [colors](colors.md) |
 
 ---
 
@@ -113,9 +113,9 @@ Called when the view starts refreshing.
 
 The background color of the refresh indicator.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.72/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -143,9 +143,9 @@ Size of the refresh indicator.
 
 The color of the refresh indicator.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.72/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -163,6 +163,6 @@ The title displayed under the refresh indicator.
 
 The color of the refresh indicator title.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.72/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |

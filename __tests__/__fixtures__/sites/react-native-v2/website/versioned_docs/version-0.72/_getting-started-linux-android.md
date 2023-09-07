@@ -70,9 +70,9 @@ Type `source $HOME/.bash_profile` for `bash` or `source $HOME/.zprofile` to load
 
 <h3>Watchman</h3>
 
-Follow the [Watchman installation guide](https://facebook.github.io/watchman/docs/install#buildinstall) to compile and install Watchman from source.
+Follow the [Watchman installation guide](https://facebook.github.io/watchman/docs/install/#buildinstall) to compile and install Watchman from source.
 
-> [Watchman](https://facebook.github.io/watchman/docs/install) is a tool by Facebook for watching changes in the filesystem. It is highly recommended you install it for better performance and increased compatibility in certain edge cases (translation: you may be able to get by without installing this, but your mileage may vary; installing this now may save you from a headache later).
+> [Watchman](https://facebook.github.io/watchman/docs/install/) is a tool by Facebook for watching changes in the filesystem. It is highly recommended you install it for better performance and increased compatibility in certain edge cases (translation: you may be able to get by without installing this, but your mileage may vary; installing this now may save you from a headache later).
 
 <h3>React Native Command Line Interface</h3>
 
@@ -88,7 +88,7 @@ React Native has a built-in command line interface, which you can use to generat
 npx react-native@latest init AwesomeProject
 ```
 
-This is not necessary if you are integrating React Native into an existing application, if you "ejected" from Expo, or if you're adding Android support to an existing React Native project (see [Integration with Existing Apps](versioned_docs/version-0.72/integration-with-existing-apps.md)). You can also use a third-party CLI to init your React Native app, such as [Ignite CLI](https://github.com/infinitered/ignite).
+This is not necessary if you are integrating React Native into an existing application, if you "ejected" from Expo, or if you're adding Android support to an existing React Native project (see [Integration with Existing Apps](integration-with-existing-apps.md)). You can also use a third-party CLI to init your React Native app, such as [Ignite CLI](https://github.com/infinitered/ignite).
 
 <h3>[Optional] Using a specific version or template</h3>
 
@@ -108,7 +108,7 @@ Either way, you will need to prepare the device to run Android apps for developm
 
 <h3>Using a physical device</h3>
 
-If you have a physical Android device, you can use it for development in place of an AVD by plugging it in to your computer using a USB cable and following the instructions [here](versioned_docs/version-0.72/running-on-device.md).
+If you have a physical Android device, you can use it for development in place of an AVD by plugging it in to your computer using a USB cable and following the instructions [here](running-on-device.md).
 
 <h3>Using a virtual device</h3>
 
@@ -174,7 +174,7 @@ If everything is set up correctly, you should see your new app running in your A
 
 This is one way to run your app - you can also run it directly from within Android Studio.
 
-> If you can't get this to work, see the [Troubleshooting](versioned_docs/version-0.72/troubleshooting.md) page.
+> If you can't get this to work, see the [Troubleshooting](troubleshooting.md) page.
 
 <h3>Modifying your app</h3>
 
@@ -191,6 +191,6 @@ Congratulations! You've successfully run and modified your first React Native ap
 
 <h2>Now what?</h2>
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](versioned_docs/version-0.72/integration-with-existing-apps.md).
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](integration-with-existing-apps.md).
 
 If you're curious to learn more about React Native, check out the [Introduction to React Native](getting-started).

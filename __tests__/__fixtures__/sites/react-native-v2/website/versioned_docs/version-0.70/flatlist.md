@@ -16,7 +16,7 @@ A performant interface for rendering basic, flat lists, supporting the most hand
 - ScrollToIndex support.
 - Multiple column support.
 
-If you need section support, use [`<SectionList>`](versioned_docs/version-0.70/sectionlist.md).
+If you need section support, use [`<SectionList>`](sectionlist.md).
 
 ## Example
 
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-To render multiple columns, use the [`numColumns`](versioned_docs/version-0.70/flatlist.md#numcolumns) prop. Using this approach instead of a `flexWrap` layout can prevent conflicts with the item height logic.
+To render multiple columns, use the [`numColumns`](flatlist.md#numcolumns) prop. Using this approach instead of a `flexWrap` layout can prevent conflicts with the item height logic.
 
 More complex, selectable example below.
 
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-This is a convenience wrapper around [`<VirtualizedList>`](versioned_docs/version-0.70/virtualizedlist.md), and thus inherits its props (as well as those of [`<ScrollView>`](versioned_docs/version-0.70/scrollview.md)) that aren't explicitly listed here, along with the following caveats:
+This is a convenience wrapper around [`<VirtualizedList>`](virtualizedlist.md), and thus inherits its props (as well as those of [`<ScrollView>`](scrollview.md)) that aren't explicitly listed here, along with the following caveats:
 
 - Internal state is not preserved when content scrolls out of the render window. Make sure all your data is captured in the item data or external stores like Flux, Redux, or Relay.
 - This is a `PureComponent` which means that it will not re-render if `props` remain shallow-equal. Make sure that everything your `renderItem` function depends on is passed as a prop (e.g. `extraData`) that is not `===` after updates, otherwise your UI may not update on changes. This includes the `data` prop and parent component state.
@@ -172,16 +172,16 @@ This is a convenience wrapper around [`<VirtualizedList>`](versioned_docs/versio
 
 ## Props
 
-### [ScrollView Props](versioned_docs/version-0.70/scrollview.md#props)
+### [ScrollView Props](scrollview.md#props)
 
-Inherits [ScrollView Props](versioned_docs/version-0.70/scrollview.md#props), unless it is nested in another FlatList of same orientation.
+Inherits [ScrollView Props](scrollview.md#props), unless it is nested in another FlatList of same orientation.
 
 ---
 
 ### <div class="label required basic">Required</div> **`renderItem`**
 
 ```jsx
-renderItem({ item, index, separators });
+renderItem({item, index, separators});
 ```
 
 Takes an item from `data` and renders it into the list.
@@ -206,20 +206,21 @@ Example usage:
 ```jsx
 <FlatList
   ItemSeparatorComponent={
-    Platform.OS !== "android" &&
-    (({ highlighted }) => (
-      <View style={[style.separator, highlighted && { marginLeft: 0 }]} />
+    Platform.OS !== 'android' &&
+    (({highlighted}) => (
+      <View
+        style={[style.separator, highlighted && {marginLeft: 0}]}
+      />
     ))
   }
-  data={[{ title: "Title Text", key: "item1" }]}
-  renderItem={({ item, index, separators }) => (
+  data={[{title: 'Title Text', key: 'item1'}]}
+  renderItem={({item, index, separators}) => (
     <TouchableHighlight
       key={item.key}
       onPress={() => this._onPress(item)}
       onShowUnderlay={separators.highlight}
-      onHideUnderlay={separators.unhighlight}
-    >
-      <View style={{ backgroundColor: "white" }}>
+      onHideUnderlay={separators.unhighlight}>
+      <View style={{backgroundColor: 'white'}}>
         <Text>{item.title}</Text>
       </View>
     </TouchableHighlight>
@@ -231,7 +232,7 @@ Example usage:
 
 ### <div class="label required basic">Required</div> **`data`**
 
-For simplicity, data is a plain array. If you want to use something else, like an immutable list, use the underlying [`VirtualizedList`](versioned_docs/version-0.70/virtualizedlist.md) directly.
+For simplicity, data is a plain array. If you want to use something else, like an immutable list, use the underlying [`VirtualizedList`](virtualizedlist.md) directly.
 
 | Type  |
 | ----- |
@@ -447,9 +448,9 @@ If provided, a standard RefreshControl will be added for "Pull to Refresh" funct
 
 Called when the viewability of rows changes, as defined by the `viewabilityConfig` prop.
 
-| Type                                                                                                  |
-| ----------------------------------------------------------------------------------------------------- |
-| `md (callback: {changed: [ViewToken](viewtoken)[], viewableItems: [ViewToken](viewtoken)[]} => void;` |
+| Type                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------ |
+| (callback: { changed: array of [ViewToken](viewtoken)s, viewableItems: array of [ViewToken](viewtoken)s }) => void |
 
 ---
 

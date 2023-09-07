@@ -140,9 +140,9 @@ export default LotsOfGreetings;
 
 Using `name` as a prop lets us customize the `Greeting` component, so we can reuse that component for each of our greetings. This example also uses the `Greeting` component in JSX. The power to do this is what makes React so cool.
 
-The other new thing going on here is the [`View`](versioned_docs/version-0.72/view.md) component. A [`View`](versioned_docs/version-0.72/view.md) is useful as a container for other components, to help control style and layout.
+The other new thing going on here is the [`View`](view.md) component. A [`View`](view.md) is useful as a container for other components, to help control style and layout.
 
-With `props` and the basic [`Text`](versioned_docs/version-0.72/text.md), [`Image`](versioned_docs/version-0.72/image.md), and [`View`](versioned_docs/version-0.72/view.md) components, you can build a wide variety of static screens. To learn how to make your app change over time, you need to [learn about State](#state).
+With `props` and the basic [`Text`](text.md), [`Image`](image.md), and [`View`](view.md) components, you can build a wide variety of static screens. To learn how to make your app change over time, you need to [learn about State](#state).
 
 ## State
 
@@ -190,8 +190,8 @@ const App = () => {
 ```tsx
 // React Native Counter Example using Hooks!
 
-import React, { useState } from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import React, {useState} from 'react';
+import {View, Text, Button, StyleSheet} from 'react-native';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -199,7 +199,10 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Text>You clicked {count} times</Text>
-      <Button onPress={() => setCount(count + 1)} title="Click me!" />
+      <Button
+        onPress={() => setCount(count + 1)}
+        title="Click me!"
+      />
     </View>
   );
 };
@@ -208,8 +211,8 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 ```

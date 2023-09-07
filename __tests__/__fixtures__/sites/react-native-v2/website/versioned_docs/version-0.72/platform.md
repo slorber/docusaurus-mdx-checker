@@ -180,21 +180,21 @@ The `config` parameter is an object with the following keys:
 **Example usage:**
 
 ```tsx
-import { Platform, StyleSheet } from "react-native";
+import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     ...Platform.select({
       android: {
-        backgroundColor: "green",
+        backgroundColor: 'green',
       },
       ios: {
-        backgroundColor: "red",
+        backgroundColor: 'red',
       },
       default: {
         // other platforms, web for example
-        backgroundColor: "blue",
+        backgroundColor: 'blue',
       },
     }),
   },
@@ -203,12 +203,12 @@ const styles = StyleSheet.create({
 
 This will result in a container having `flex: 1` on all platforms, a green background color on Android, a red background color on iOS, and a blue background color on other platforms.
 
-Since the value of the corresponding platform key can be of type `any`, [`select`](versioned_docs/version-0.72/platform.md#select) method can also be used to return platform-specific components, like below:
+Since the value of the corresponding platform key can be of type `any`, [`select`](platform.md#select) method can also be used to return platform-specific components, like below:
 
 ```tsx
 const Component = Platform.select({
-  ios: () => require("ComponentIOS"),
-  android: () => require("ComponentAndroid"),
+  ios: () => require('ComponentIOS'),
+  android: () => require('ComponentAndroid'),
 })();
 
 <Component />;
@@ -216,8 +216,8 @@ const Component = Platform.select({
 
 ```tsx
 const Component = Platform.select({
-  native: () => require("ComponentForNative"),
-  default: () => require("ComponentForWeb"),
+  native: () => require('ComponentForNative'),
+  default: () => require('ComponentForWeb'),
 })();
 
 <Component />;

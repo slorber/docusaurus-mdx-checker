@@ -78,5 +78,5 @@ Writing sourcemap output to:, Build/Intermediates.noindex/ArchiveIntermediates/a
 ## Manual Symbolication
 
 :::info
-You may read about manual symbolication of a stack trace on the [symbolication](versioned_docs/version-0.72/symbolication.md) page.
+You may read about manual symbolication of a stack trace on the [symbolication](symbolication.md) page.
 :::

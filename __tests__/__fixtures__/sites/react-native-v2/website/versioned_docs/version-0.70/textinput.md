@@ -99,9 +99,9 @@ Note that on Android performing text selection in an input can change the app's 
 
 ## Props
 
-### [View Props](versioned_docs/version-0.70/view.md#props)
+### [View Props](view.md#props)
 
-Inherits [View Props](versioned_docs/version-0.70/view.md#props).
+Inherits [View Props](view.md#props).
 
 ---
 
@@ -285,9 +285,9 @@ Provides an initial value that will change when the user starts typing. Useful f
 
 When provided it will set the color of the cursor (or "caret") in the component. Unlike the behavior of `selectionColor` the cursor color will be set independently from the color of the text selection box.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.70/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -365,7 +365,7 @@ Padding between the inline image, if any, and the text input itself.
 
 ### `inputAccessoryViewID` <div class="label ios">iOS</div>
 
-An optional identifier which links a custom [InputAccessoryView](versioned_docs/version-0.70/inputaccessoryview.md) to this text input. The InputAccessoryView is rendered above the keyboard when this text input is focused.
+An optional identifier which links a custom [InputAccessoryView](inputaccessoryview.md) to this text input. The InputAccessoryView is rendered above the keyboard when this text input is focused.
 
 | Type   |
 | ------ |
@@ -527,9 +527,9 @@ Callback that is called when text input ends.
 
 Callback that is called when a touch is engaged.
 
-| Type                                                     |
-| -------------------------------------------------------- |
-| `md ({ nativeEvent: [PressEvent](pressevent) }) => void` |
+| Type                                                |
+| --------------------------------------------------- |
+| ({ nativeEvent: [PressEvent](pressevent) }) => void |
 
 ---
 
@@ -537,9 +537,9 @@ Callback that is called when a touch is engaged.
 
 Callback that is called when a touch is released.
 
-| Type                                                     |
-| -------------------------------------------------------- |
-| `md ({ nativeEvent: [PressEvent](pressevent) }) => void` |
+| Type                                                |
+| --------------------------------------------------- |
+| ({ nativeEvent: [PressEvent](pressevent) }) => void |
 
 ---
 
@@ -547,9 +547,9 @@ Callback that is called when a touch is released.
 
 Callback that is called when the text input is focused.
 
-| Type                                                       |
-| ---------------------------------------------------------- |
-| `md ({ nativeEvent: [LayoutEvent](layoutevent) }) => void` |
+| Type                                                  |
+| ----------------------------------------------------- |
+| ({ nativeEvent: [LayoutEvent](layoutevent) }) => void |
 
 ---
 
@@ -567,9 +567,9 @@ Callback that is called when a key is pressed. This will be called with object w
 
 Invoked on mount and on layout changes.
 
-| Type                                                       |
-| ---------------------------------------------------------- |
-| `md ({ nativeEvent: [LayoutEvent](layoutevent) }) => void` |
+| Type                                                  |
+| ----------------------------------------------------- |
+| ({ nativeEvent: [LayoutEvent](layoutevent) }) => void |
 
 ---
 
@@ -619,9 +619,9 @@ The string that will be rendered before text input has been entered.
 
 The text color of the placeholder string.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.70/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -705,9 +705,9 @@ If `true`, the text input obscures the text entered so that sensitive text like 
 
 The start and end of the text input's selection. Set start and end to the same value to position the cursor.
 
-| Type                                  |
-| ------------------------------------- |
-| object: `{start: number,end: number}` |
+| Type                                |
+| ----------------------------------- |
+| object: {start: number,end: number} |
 
 ---
 
@@ -715,9 +715,9 @@ The start and end of the text input's selection. Set start and end to the same v
 
 The highlight and cursor color of the text input.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.70/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -844,11 +844,11 @@ Note that not all Text styles are supported, an incomplete list of what is not s
 
 see [Issue#7070](https://github.com/facebook/react-native/issues/7070) for more detail.
 
-[Styles](versioned_docs/version-0.70/style.md)
+[Styles](style.md)
 
-| Type                                              |
-| ------------------------------------------------- |
-| [Text](versioned_docs/version-0.70/text.md#style) |
+| Type                  |
+| --------------------- |
+| [Text](text.md#style) |
 
 ---
 
@@ -866,9 +866,9 @@ Set text break strategy on Android API Level 23+, possible values are `simple`, 
 
 The color of the `TextInput` underline.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.70/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 

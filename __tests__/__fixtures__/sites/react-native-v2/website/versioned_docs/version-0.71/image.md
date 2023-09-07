@@ -209,7 +209,7 @@ dependencies {
 
 ## Props
 
-### [View Props](versioned_docs/version-0.71/view.md#props)
+### [View Props](view.md#props)
 
 Inherits [View Props](view#props).
 
@@ -336,9 +336,9 @@ Invoked on load error.
 
 Invoked on mount and on layout changes.
 
-| Type                                                    |
-| ------------------------------------------------------- |
-| `md ({nativeEvent: [LayoutEvent](layoutevent)} => void` |
+| Type                                              |
+| ------------------------------------------------- |
+| ({nativeEvent: [LayoutEvent]layoutevent)} => void |
 
 ---
 
@@ -348,9 +348,9 @@ Invoked when load completes successfully.
 
 **Example:** `onLoad={({nativeEvent: {source: {width, height}}}) => setImageRealSize({width, height})}`
 
-| Type                                                                |
-| ------------------------------------------------------------------- |
-| `md ({nativeEvent: [ImageLoadEvent](image#imageloadevent)} => void` |
+| Type                                                          |
+| ------------------------------------------------------------- |
+| ({nativeEvent: [ImageLoadEvent]image#imageloadevent)} => void |
 
 ---
 
@@ -521,9 +521,9 @@ A unique identifier for this element to be used in UI Automation testing scripts
 
 Changes the color of all non-transparent pixels to the `tintColor`.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 

@@ -219,9 +219,9 @@ Sets the drop shadow color.
 
 This property will only work on Android API 28 and above. For similar functionality on lower Android APIs, use the [`elevation` property](view-style-props#elevation).
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -229,9 +229,9 @@ This property will only work on Android API 28 and above. For similar functional
 
 Sets the drop shadow offset.
 
-| Type                                     |
-| ---------------------------------------- |
-| object: `{width: number,height: number}` |
+| Type                                   |
+| -------------------------------------- |
+| object: {width: number,height: number} |
 
 ---
 

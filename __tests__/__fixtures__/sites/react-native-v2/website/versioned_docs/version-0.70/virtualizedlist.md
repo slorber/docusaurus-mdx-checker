@@ -3,7 +3,7 @@ id: virtualizedlist
 title: VirtualizedList
 ---
 
-Base implementation for the more convenient [`<FlatList>`](versioned_docs/version-0.70/flatlist.md) and [`<SectionList>`](versioned_docs/version-0.70/sectionlist.md) components, which are also better documented. In general, this should only really be used if you need more flexibility than [`FlatList`](versioned_docs/version-0.70/flatlist.md) provides, e.g. for use with immutable data instead of plain arrays.
+Base implementation for the more convenient [`<FlatList>`](flatlist.md) and [`<SectionList>`](sectionlist.md) components, which are also better documented. In general, this should only really be used if you need more flexibility than [`FlatList`](flatlist.md) provides, e.g. for use with immutable data instead of plain arrays.
 
 Virtualization massively improves memory consumption and performance of large lists by maintaining a finite render window of active items and replacing all items outside of the render window with appropriately sized blank space. The window adapts to scrolling behavior, and items are rendered incrementally with low-pri (after any running interactions) if they are far from the visible area, or with hi-pri otherwise to minimize the potential of seeing blank space.
 
@@ -79,9 +79,9 @@ Some caveats:
 
 ## Props
 
-### [ScrollView Props](versioned_docs/version-0.70/scrollview.md#props)
+### [ScrollView Props](scrollview.md#props)
 
-Inherits [ScrollView Props](versioned_docs/version-0.70/scrollview.md#props).
+Inherits [ScrollView Props](scrollview.md#props).
 
 ---
 
@@ -139,7 +139,7 @@ Takes an item from `data` and renders it into the list
 
 ### `CellRendererComponent`
 
-Each cell is rendered using this element. Can be a React Component Class, or a render function. Defaults to using [`View`](versioned_docs/version-0.70/view.md).
+Each cell is rendered using this element. Can be a React Component Class, or a render function. Defaults to using [`View`](view.md).
 
 | Type                |
 | ------------------- |
@@ -396,9 +396,9 @@ Used to handle failures when scrolling to an index that has not been measured ye
 
 Called when the viewability of rows changes, as defined by the `viewabilityConfig` prop.
 
-| Type                                                                                                  |
-| ----------------------------------------------------------------------------------------------------- |
-| `md (callback: {changed: [ViewToken](viewtoken)[], viewableItems: [ViewToken](viewtoken)[]}) => void` |
+| Type                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------ |
+| (callback: { changed: array of [ViewToken](viewtoken)s, viewableItems: array of [ViewToken](viewtoken)s }) => void |
 
 ---
 
@@ -571,7 +571,7 @@ hasMore () => boolean;
 ### `scrollToEnd()`
 
 ```jsx
-scrollToEnd(([options]: { animated: boolean }));
+scrollToEnd(([options]: {animated: boolean}));
 ```
 
 Scrolls to the end of the content. May be janky without `getItemLayout` prop.

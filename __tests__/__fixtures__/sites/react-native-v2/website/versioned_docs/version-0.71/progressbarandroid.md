@@ -1,6 +1,6 @@
 ---
 id: progressbarandroid
-title: "🚧 ProgressBarAndroid"
+title: '🚧 ProgressBarAndroid'
 ---
 
 > **Deprecated.** Use one of the [community packages](https://reactnative.directory/?search=progressbar) instead.
@@ -60,7 +60,7 @@ export default App;
 
 ## Props
 
-Inherits [View Props](versioned_docs/version-0.71/view.md#props).
+Inherits [View Props](view.md#props).
 
 ### `animating`
 
@@ -76,9 +76,9 @@ Whether to show the ProgressBar (true, the default) or hide it (false).
 
 Color of the progress bar.
 
-| Type                                           | Required |
-| ---------------------------------------------- | -------- |
-| [color](versioned_docs/version-0.71/colors.md) | No       |
+| Type               | Required |
+| ------------------ | -------- |
+| [color](colors.md) | No       |
 
 ---
 

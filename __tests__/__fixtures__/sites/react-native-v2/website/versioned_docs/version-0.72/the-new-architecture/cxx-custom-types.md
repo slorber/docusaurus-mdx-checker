@@ -108,8 +108,10 @@ In your app you can call this new native function via:
 
 ```js
 <Section title="Cxx TurboModule">
-  NativeSampleModule.cubicRoot(...) ={" "}
-  {JSON.stringify(NativeSampleModule.cubicRoot("9223372036854775807"))}
+  NativeSampleModule.cubicRoot(...) ={' '}
+  {JSON.stringify(
+    NativeSampleModule.cubicRoot('9223372036854775807'),
+  )}
 </Section>
 ```
 
@@ -235,13 +237,13 @@ In your app you can call this new native function via:
 
 ```js
 <Section title="Cxx TurboModule">
-  NativeSampleModule.passCustomType(...) ={" "}
+  NativeSampleModule.passCustomType(...) ={' '}
   {JSON.stringify(
     NativeSampleModule.passCustomType({
-      key: "123",
+      key: '123',
       enabled: true,
       time: undefined,
-    })
+    }),
   )}
 </Section>
 ```
@@ -252,7 +254,7 @@ This works - but is quite complex.
 
 ### Struct generator
 
-[**Codegen**](versioned_docs/version-0.72/the-new-architecture/pillars-codegen.md) for C++ Turbo Native Modules does support struct generators, so you can simplify the code above in `NativeSampleModule.h` to:
+[**Codegen**](pillars-codegen.md) for C++ Turbo Native Modules does support struct generators, so you can simplify the code above in `NativeSampleModule.h` to:
 
 ```cpp
 using CustomType = NativeSampleModuleBaseCustomType<std::string, bool, std::optional<int32_t>>;

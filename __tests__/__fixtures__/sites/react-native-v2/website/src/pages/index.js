@@ -5,19 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useEffect } from "react";
-import GitHubButton from "react-github-btn";
+import React, {useEffect} from 'react';
+import GitHubButton from 'react-github-btn';
 
-import Head from "@docusaurus/Head";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Head from '@docusaurus/Head';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-import Layout from "@theme/Layout";
-import CodeBlock from "@theme/CodeBlock";
+import Layout from '@theme/Layout';
+import CodeBlock from '@theme/CodeBlock';
 
-import CrossPlatformSVG from "tests/fixtures/react-native-website/website/static/img/homepage/cross-platform.svg";
-import { setupDissectionAnimation } from "tests/fixtures/react-native-website/website/src/pages/animations/_dissectionAnimation";
-import { setupHeaderAnimations } from "tests/fixtures/react-native-website/website/src/pages/animations/_headerAnimation";
+import CrossPlatformSVG from '../../static/img/homepage/cross-platform.svg';
+import {setupDissectionAnimation} from './animations/_dissectionAnimation';
+import {setupHeaderAnimations} from './animations/_headerAnimation';
 
 const textContent = {
   intro: `
@@ -88,11 +88,11 @@ You can follow the latest news from the React Native team on Twitter
   `,
 };
 
-function Heading({ text }) {
+function Heading({text}) {
   return <h2 className="Heading">{text}</h2>;
 }
 
-function ActionButton({ href, type = "primary", target, children }) {
+function ActionButton({href, type = 'primary', target, children}) {
   return (
     <a className={`ActionButton ${type}`} href={href} target={target}>
       {children}
@@ -100,11 +100,11 @@ function ActionButton({ href, type = "primary", target, children }) {
   );
 }
 
-function TextColumn({ title, text, moreContent }) {
+function TextColumn({title, text, moreContent}) {
   return (
     <>
       <Heading text={title} />
-      <div dangerouslySetInnerHTML={{ __html: text }} />
+      <div dangerouslySetInnerHTML={{__html: text}} />
       {moreContent}
     </>
   );
@@ -115,28 +115,25 @@ function HomeCallToAction() {
     <>
       <ActionButton
         type="primary"
-        href={useBaseUrl("docs/environment-setup")}
-        target="_self"
-      >
+        href={useBaseUrl('docs/environment-setup')}
+        target="_self">
         Get started
       </ActionButton>
       <ActionButton
         type="secondary"
-        href={useBaseUrl("docs/getting-started")}
-        target="_self"
-      >
+        href={useBaseUrl('docs/getting-started')}
+        target="_self">
         Learn the basics
       </ActionButton>
     </>
   );
 }
 
-function TwitterButton({ accountName }) {
+function TwitterButton({accountName}) {
   return (
     <a
       href={`https://twitter.com/intent/follow?screen_name=${accountName}&region=follow_link`}
-      className="twitter-follow-button"
-    >
+      className="twitter-follow-button">
       <div className="icon" />
       Follow @{accountName}
     </a>
@@ -150,8 +147,7 @@ function GitHubStarButton() {
         href="https://github.com/facebook/react-native"
         data-icon="octicon-star"
         data-size="large"
-        aria-label="Star facebook/react-native on GitHub"
-      >
+        aria-label="Star facebook/react-native on GitHub">
         Star
       </GitHubButton>
     </div>
@@ -159,10 +155,10 @@ function GitHubStarButton() {
 }
 
 export function Section({
-  element = "section",
+  element = 'section',
   children,
   className,
-  background = "light",
+  background = 'light',
 }) {
   const El = element;
   return (
@@ -171,30 +167,29 @@ export function Section({
         className
           ? `Section ${className} ${background}`
           : `Section ${background}`
-      }
-    >
+      }>
       {children}
     </El>
   );
 }
 
-function TwoColumns({ columnOne, columnTwo, reverse }) {
+function TwoColumns({columnOne, columnTwo, reverse}) {
   return (
-    <div className={`TwoColumns ${reverse ? "reverse" : ""}`}>
-      <div className={`column first ${reverse ? "right" : "left"}`}>
+    <div className={`TwoColumns ${reverse ? 'reverse' : ''}`}>
+      <div className={`column first ${reverse ? 'right' : 'left'}`}>
         {columnOne}
       </div>
-      <div className={`column last ${reverse ? "left" : "right"}`}>
+      <div className={`column last ${reverse ? 'left' : 'right'}`}>
         {columnTwo}
       </div>
     </div>
   );
 }
 
-function ScreenRect({ className, fill, stroke }) {
+function ScreenRect({className, fill, stroke}) {
   return (
     <rect
-      className={`screen ${className || ""}`}
+      className={`screen ${className || ''}`}
       rx="3%"
       width="180"
       height="300"
@@ -213,8 +208,7 @@ function LogoAnimation() {
       width={350}
       height={350}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="-200 -200 400 400"
-    >
+      viewBox="-200 -200 400 400">
       <title>React Logo</title>
       <clipPath id="screen">
         <ScreenRect fill="none" stroke="gray" />
@@ -298,7 +292,7 @@ function NativeApps() {
             text={textContent.intro}
           />
         }
-        columnTwo={<img alt="" src={useBaseUrl("img/homepage/phones.png")} />}
+        columnTwo={<img alt="" src={useBaseUrl('img/homepage/phones.png')} />}
       />
     </Section>
   );
@@ -335,7 +329,7 @@ function NativeDevelopment() {
         }
         columnTwo={
           <div className="dissection">
-            {[0, 1, 2, 3].map((i) => (
+            {[0, 1, 2, 3].map(i => (
               <img
                 alt=""
                 key={i}
@@ -417,10 +411,10 @@ function VideoContent() {
           columnOne={
             <>
               <p>
-                The{" "}
+                The{' '}
                 <a href="https://opensource.facebook.com/">
                   Meta Open Source team
-                </a>{" "}
+                </a>{' '}
                 has put together a short overview of React Native, where they
                 explained the project in beginner's terms.
               </p>
@@ -446,16 +440,16 @@ function VideoContent() {
 /* Community */
 
 function AppList() {
-  const { siteConfig } = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
   const apps = Object.values(siteConfig.customFields.users)
     .flat()
-    .filter((app) => app.pinned);
+    .filter(app => app.pinned);
 
   return (
     <ul className="AppList">
       {apps.map((app, i) => {
-        const imgSource = !app.icon.startsWith("http")
-          ? useBaseUrl("img/showcase/" + app.icon)
+        const imgSource = !app.icon.startsWith('http')
+          ? useBaseUrl('img/showcase/' + app.icon)
           : app.icon;
         return (
           <li key={i} className="item">
@@ -489,37 +483,37 @@ function Community() {
                 </span>
               </p>
               <p>
-                In 2018, React Native had the{" "}
+                In 2018, React Native had the{' '}
                 <a href="https://octoverse.github.com/2018/projects#repositories">
                   2nd highest
-                </a>{" "}
+                </a>{' '}
                 number of contributors for any repository in GitHub. Today,
                 React Native is supported by contributions from individuals and
-                companies around the world including{" "}
+                companies around the world including{' '}
                 <span>
                   <a href="https://callstack.com/">Callstack</a>
                 </span>
-                ,{" "}
+                ,{' '}
                 <span>
                   <a href="https://expo.io/">Expo</a>
                 </span>
-                , <a href="https://infinite.red/">Infinite Red</a>,{" "}
-                <a href="https://www.microsoft.com/">Microsoft</a> and{" "}
+                , <a href="https://infinite.red/">Infinite Red</a>,{' '}
+                <a href="https://www.microsoft.com/">Microsoft</a> and{' '}
                 <a href="https://swmansion.com/">Software Mansion</a>.
               </p>
               <p>
                 Our community is always shipping exciting new projects and
-                exploring platforms beyond Android and iOS with repos like{" "}
+                exploring platforms beyond Android and iOS with repos like{' '}
                 <span>
                   <a href="https://github.com/microsoft/react-native-windows#readme">
                     React Native Windows
                   </a>
                 </span>
-                ,{" "}
+                ,{' '}
                 <a href="https://github.com/microsoft/react-native-macos#readme">
                   React Native macOS
-                </a>{" "}
-                and{" "}
+                </a>{' '}
+                and{' '}
                 <a href="https://github.com/necolas/react-native-web#readme">
                   React Native Web
                 </a>
@@ -577,8 +571,7 @@ const Index = () => {
   return (
     <Layout
       description="A framework for building native apps using React"
-      wrapperClassName="homepage"
-    >
+      wrapperClassName="homepage">
       <Head>
         <title>React Native · Learn once, write anywhere</title>
         <meta

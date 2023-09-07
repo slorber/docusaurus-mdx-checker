@@ -9,7 +9,7 @@ import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; import con
 
 By default, `PanResponder` holds an `InteractionManager` handle to block long-running JS events from interrupting active gestures.
 
-It provides a predictable wrapper of the responder handlers provided by the [gesture responder system](versioned_docs/version-0.72/gesture-responder-system.md). For each handler, it provides a new `gestureState` object alongside the native event object:
+It provides a predictable wrapper of the responder handlers provided by the [gesture responder system](gesture-responder-system.md). For each handler, it provides a new `gestureState` object alongside the native event object:
 
 ```
 onPanResponderMove: (event, gestureState) => {}
@@ -38,9 +38,11 @@ const ExampleComponent = () => {
     PanResponder.create({
       // Ask to be the responder:
       onStartShouldSetPanResponder: (evt, gestureState) => true,
-      onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
+      onStartShouldSetPanResponderCapture: (evt, gestureState) =>
+        true,
       onMoveShouldSetPanResponder: (evt, gestureState) => true,
-      onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
+      onMoveShouldSetPanResponderCapture: (evt, gestureState) =>
+        true,
 
       onPanResponderGrant: (evt, gestureState) => {
         // The gesture has started. Show visual feedback so the user knows
@@ -52,7 +54,8 @@ const ExampleComponent = () => {
         // The accumulated gesture distance since becoming responder is
         // gestureState.d{x,y}
       },
-      onPanResponderTerminationRequest: (evt, gestureState) => true,
+      onPanResponderTerminationRequest: (evt, gestureState) =>
+        true,
       onPanResponderRelease: (evt, gestureState) => {
         // The user has released all touches while this view is the
         // responder. This typically means a gesture has succeeded
@@ -66,7 +69,7 @@ const ExampleComponent = () => {
         // responder. Returns true by default. Is currently only supported on android.
         return true;
       },
-    })
+    }),
   ).current;
 
   return <View {...panResponder.panHandlers} />;

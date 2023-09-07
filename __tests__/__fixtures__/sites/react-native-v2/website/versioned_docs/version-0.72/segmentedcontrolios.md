@@ -1,6 +1,6 @@
 ---
 id: segmentedcontrolios
-title: "🚧 SegmentedControlIOS"
+title: '🚧 SegmentedControlIOS'
 ---
 
 > **Removed from React Native.** Use one of the [community packages](https://reactnative.directory/?search=segmentedcontrol) instead.
@@ -53,7 +53,7 @@ export default App;
 
 ## Props
 
-Inherits [View Props](versioned_docs/version-0.72/view.md#props).
+Inherits [View Props](view.md#props).
 
 ### `enabled`
 

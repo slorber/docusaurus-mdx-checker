@@ -2863,6 +2863,6 @@ export default PositionLayout;
 
 Check out the interactive [yoga playground](https://yogalayout.com/playground) that you can use to get a better understanding of flexbox.
 
-We've covered the basics, but there are many other styles you may need for layouts. The full list of props that control layout is documented [here](versioned_docs/version-0.71/layout-props.md).
+We've covered the basics, but there are many other styles you may need for layouts. The full list of props that control layout is documented [here](./layout-props.md).
 
 Additionally, you can see some examples from [Wix Engineers](https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c).

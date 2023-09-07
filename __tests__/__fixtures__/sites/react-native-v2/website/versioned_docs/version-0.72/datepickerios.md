@@ -1,6 +1,6 @@
 ---
 id: datepickerios
-title: "🚧 DatePickerIOS"
+title: '🚧 DatePickerIOS'
 ---
 
 > **Removed.** Use one of the [community packages](https://reactnative.directory/?search=datepicker) instead.
@@ -39,7 +39,7 @@ export default App;
 
 ## Props
 
-Inherits [View Props](versioned_docs/version-0.72/view.md#props).
+Inherits [View Props](view.md#props).
 
 ### `date`
 

@@ -7,8 +7,8 @@ When building a cross-platform app, you'll want to re-use as much code as possib
 
 React Native provides two ways to organize your code and separate it by platform:
 
-- Using the [`Platform` module](versioned_docs/version-0.72/platform-specific-code.md#platform-module).
-- Using [platform-specific file extensions](versioned_docs/version-0.72/platform-specific-code.md#platform-specific-extensions).
+- Using the [`Platform` module](platform-specific-code.md#platform-module).
+- Using [platform-specific file extensions](platform-specific-code.md#platform-specific-extensions).
 
 Certain components may have properties that work on one platform only. All of these props are annotated with `@platform` and have a small badge next to them on the website.
 
@@ -17,10 +17,10 @@ Certain components may have properties that work on one platform only. All of th
 React Native provides a module that detects the platform in which the app is running. You can use the detection logic to implement platform-specific code. Use this option when only small parts of a component are platform-specific.
 
 ```tsx
-import { Platform, StyleSheet } from "react-native";
+import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  height: Platform.OS === "ios" ? 200 : 100,
+  height: Platform.OS === 'ios' ? 200 : 100,
 });
 ```
 
@@ -29,21 +29,21 @@ const styles = StyleSheet.create({
 There is also a `Platform.select` method available, that given an object where keys can be one of `'ios' | 'android' | 'native' | 'default'`, returns the most fitting value for the platform you are currently running on. That is, if you're running on a phone, `ios` and `android` keys will take preference. If those are not specified, `native` key will be used and then the `default` key.
 
 ```tsx
-import { Platform, StyleSheet } from "react-native";
+import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     ...Platform.select({
       ios: {
-        backgroundColor: "red",
+        backgroundColor: 'red',
       },
       android: {
-        backgroundColor: "green",
+        backgroundColor: 'green',
       },
       default: {
         // other platforms, web for example
-        backgroundColor: "blue",
+        backgroundColor: 'blue',
       },
     }),
   },
@@ -56,8 +56,8 @@ Since it accepts `any` value, you can also use it to return platform-specific co
 
 ```tsx
 const Component = Platform.select({
-  ios: () => require("ComponentIOS"),
-  android: () => require("ComponentAndroid"),
+  ios: () => require('ComponentIOS'),
+  android: () => require('ComponentAndroid'),
 })();
 
 <Component />;
@@ -65,8 +65,8 @@ const Component = Platform.select({
 
 ```tsx
 const Component = Platform.select({
-  native: () => require("ComponentForNative"),
-  default: () => require("ComponentForWeb"),
+  native: () => require('ComponentForNative'),
+  default: () => require('ComponentForWeb'),
 })();
 
 <Component />;
@@ -77,10 +77,10 @@ const Component = Platform.select({
 On Android, the `Platform` module can also be used to detect the version of the Android Platform in which the app is running:
 
 ```tsx
-import { Platform } from "react-native";
+import {Platform} from 'react-native';
 
 if (Platform.Version === 25) {
-  console.log("Running on Nougat!");
+  console.log('Running on Nougat!');
 }
 ```
 
@@ -91,11 +91,11 @@ if (Platform.Version === 25) {
 On iOS, the `Version` is a result of `-[UIDevice systemVersion]`, which is a string with the current version of the operating system. An example of the system version is "10.3". For example, to detect the major version number on iOS:
 
 ```tsx
-import { Platform } from "react-native";
+import {Platform} from 'react-native';
 
 const majorVersionIOS = parseInt(Platform.Version, 10);
 if (majorVersionIOS <= 9) {
-  console.log("Work around a change in behavior");
+  console.log('Work around a change in behavior');
 }
 ```
 
@@ -113,7 +113,7 @@ BigButton.android.js
 You can then import the component as follows:
 
 ```tsx
-import BigButton from "./BigButton";
+import BigButton from './BigButton';
 ```
 
 React Native will automatically pick up the right file based on the running platform.
@@ -125,14 +125,14 @@ You can also use the `.native.js` extension when a module needs to be shared bet
 For example, say you have the following files in your project:
 
 ```shell
-Container.js # picked up by webpack, Rollup or any other Web bundler
+Container.js # picked up by Webpack, Rollup or any other Web bundler
 Container.native.js # picked up by the React Native bundler for both Android and iOS (Metro)
 ```
 
 You can still import it without the `.native` extension, as follows:
 
 ```tsx
-import Container from "./Container";
+import Container from './Container';
 ```
 
 **Pro tip:** Configure your Web bundler to ignore `.native.js` extensions in order to avoid having unused code in your production bundle, thus reducing the final bundle size.

@@ -764,9 +764,9 @@ export default App;
 
 ### `color`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -862,9 +862,9 @@ Specifies text alignment. On Android, the value 'justify' is only supported on O
 
 ### `textDecorationColor` <div class="label ios">iOS</div>
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -886,17 +886,17 @@ Specifies text alignment. On Android, the value 'justify' is only supported on O
 
 ### `textShadowColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
 ### `textShadowOffset`
 
-| Type                                        |
-| ------------------------------------------- |
-| object: `{width?: number, height?: number}` |
+| Type                                      |
+| ----------------------------------------- |
+| object: {width?: number, height?: number} |
 
 ---
 

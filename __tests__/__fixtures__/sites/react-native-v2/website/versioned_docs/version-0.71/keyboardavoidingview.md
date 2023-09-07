@@ -73,9 +73,9 @@ export default KeyboardAvoidingComponent;
 
 ## Props
 
-### [View Props](versioned_docs/version-0.71/view.md#props)
+### [View Props](view.md#props)
 
-Inherits [View Props](versioned_docs/version-0.71/view.md#props).
+Inherits [View Props](view.md#props).
 
 ---
 
@@ -95,9 +95,9 @@ Specify how to react to the presence of the keyboard.
 
 The style of the content container (View) when behavior is `'position'`.
 
-| Type                                                          |
-| ------------------------------------------------------------- |
-| [View Style](versioned_docs/version-0.71/view-style-props.md) |
+| Type                              |
+| --------------------------------- |
+| [View Style](view-style-props.md) |
 
 ---
 

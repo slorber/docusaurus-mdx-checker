@@ -65,17 +65,17 @@ export default ViewStyleProps;
 
 ### `backgroundColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
 ### `borderBottomColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -121,9 +121,9 @@ export default ViewStyleProps;
 
 ### `borderColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -139,17 +139,17 @@ On iOS 13+, it is possible to change the corner curve of borders.
 
 ### `borderEndColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
 ### `borderLeftColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -173,9 +173,9 @@ If the rounded border is not visible, try applying `overflow: 'hidden'` as well.
 
 ### `borderRightColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -189,9 +189,9 @@ If the rounded border is not visible, try applying `overflow: 'hidden'` as well.
 
 ### `borderStartColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -205,9 +205,9 @@ If the rounded border is not visible, try applying `overflow: 'hidden'` as well.
 
 ### `borderTopColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.71/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 

@@ -12,12 +12,12 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build && yarn run update-redirect ./build/_redirects versions.json",
+    "build": "docusaurus build && yarn run update-redirect ./build/_redirects ./versions.json",
     "build:fast": "PREVIEW_DEPLOY=true yarn run build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear",
+    "clean": "docusaurus clear",
     "test": "yarn build",
     "version:cut": "docusaurus docs:version",
     "format:source": "prettier --write {{core,src}/**/*.js,*.js}",
@@ -29,11 +29,10 @@
     "lint:examples": "eslint-examples-js && eslint-examples-tsx && tsc-examples",
     "lint:versioned": "eslint versioned_docs/**",
     "lint:markdown": "remark ../docs --quiet -r .remarkrc.mjs",
-    "lint:markdown:versioned": "remark versioned_docs --quiet -r .remarkrc.mjs",
-    "language:lint": "cd ../../../../../../../Downloads/react-native-website-main && alex && case-police 'docs/*.md' -p brands,general,products,softwares -d ./website/react-native-dict.json",
-    "language:lint:versioned": "cd ../../../../../../../Downloads/react-native-website-main && alex . && case-police '**/*.md' -p brands,general,products,softwares -d ./website/react-native-dict.json",
+    "language:lint": "cd ../ && alex && case-police 'docs/*.md' -p brands,general,products,softwares -d ./website/react-native-dict.json",
+    "language:lint:versioned": "cd ../ && alex . && case-police '**/*.md' -p brands,general,products,softwares -d ./website/react-native-dict.json",
     "ci:lint": "yarn lint && yarn lint:examples && yarn lint:versioned && yarn language:lint:versioned && yarn lint:markdown",
-    "pwa:generate": "npx pwa-asset-generator static/img/header_logo.svg ./static/img/pwa --padding '40px' --background 'rgb(32, 35, 42)' --icon-only --opaque true"
+    "pwa:generate": "npx pwa-asset-generator ./static/img/header_logo.svg ./static/img/pwa --padding '40px' --background 'rgb(32, 35, 42)' --icon-only --opaque true"
   },
   "browserslist": {
     "production": [

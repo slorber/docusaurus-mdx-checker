@@ -12,7 +12,7 @@ import NewArchitectureWarning from '../\_markdown-new-architecture-warning.mdx';
 
 This guide shows you how to implement a Turbo Native Module using C++ only, a way to share the same implementation with any supported platform (Android, iOS, macOS or Windows).
 
-Before continuing with this guide, please read the [Turbo Native Modules](versioned_docs/version-0.72/the-new-architecture/pillars-turbomodule.md) section. As a further reference, we prepared an example for the RNTester app ([NativeCxxModuleExample](https://github.com/facebook/react-native/tree/main/packages/rn-tester/NativeCxxModuleExample)) and a sample run in our community repository ([run/pure-cxx-module](https://github.com/react-native-community/RNNewArchitectureApp/tree/run/pure-cxx-module)).
+Before continuing with this guide, please read the [Turbo Native Modules](./pillars-turbomodule.md) section. As a further reference, we prepared an example for the RNTester app ([NativeCxxModuleExample](https://github.com/facebook/react-native/tree/main/packages/rn-tester/NativeCxxModuleExample)) and a sample run in our community repository ([run/pure-cxx-module](https://github.com/react-native-community/RNNewArchitectureApp/tree/run/pure-cxx-module)).
 
 :::caution
 C++ Turbo Native Modules work with the **New Architecture** enabled.
@@ -71,15 +71,17 @@ Create the following spec inside the `tm` folder:
 <TabItem value="typescript">
 
 ```typescript title="NativeSampleModule.ts"
-import type { TurboModule } from "react-native/Libraries/TurboModule/RCTExport";
+import type {TurboModule} from 'react-native/Libraries/TurboModule/RCTExport';
 // import type {TurboModule} from 'react-native'; in future versions
-import { TurboModuleRegistry } from "react-native";
+import {TurboModuleRegistry} from 'react-native';
 
 export interface Spec extends TurboModule {
   readonly reverseString: (input: string) => string;
 }
 
-export default TurboModuleRegistry.getEnforcing<Spec>("NativeSampleModule");
+export default TurboModuleRegistry.getEnforcing<Spec>(
+  'NativeSampleModule',
+);
 ```
 
 </TabItem>
@@ -87,16 +89,16 @@ export default TurboModuleRegistry.getEnforcing<Spec>("NativeSampleModule");
 
 ```js title="NativeSampleModule.js"
 // @flow
-import type { TurboModule } from "react-native/Libraries/TurboModule/RCTExport";
+import type {TurboModule} from 'react-native/Libraries/TurboModule/RCTExport';
 // import type {TurboModule} from 'react-native'; in future versions
-import { TurboModuleRegistry } from "react-native";
+import {TurboModuleRegistry} from 'react-native';
 
 export interface Spec extends TurboModule {
   +reverseString: (input: string) => string;
 }
 
 export default (TurboModuleRegistry.getEnforcing<Spec>(
-  "NativeSampleModule"
+  'NativeSampleModule',
 ): Spec);
 ```
 
@@ -105,7 +107,7 @@ export default (TurboModuleRegistry.getEnforcing<Spec>(
 
 ## 2. Codegen Configuration
 
-Next, you need to add some configuration for [**Codegen**](versioned_docs/version-0.72/the-new-architecture/pillars-codegen.md).
+Next, you need to add some configuration for [**Codegen**](pillars-codegen.md).
 
 # Application
 
@@ -370,7 +372,7 @@ class NativeSampleModule : public NativeSampleModuleCxxSpec<NativeSampleModule> 
 } // namespace facebook::react
 ```
 
-In this case you can use any C++ type which `bridges` to a `jsi::String` - default or [custom one](versioned_docs/version-0.72/the-new-architecture/cxx-custom-types.md). You can't specify an incompatible type such as `bool`, `float` or `std::vector<>` as it does not `bridge` to `jsi::String` and hence results in a compilation error.
+In this case you can use any C++ type which `bridges` to a `jsi::String` - default or [custom one](./cxx-custom-types.md). You can't specify an incompatible type such as `bool`, `float` or `std::vector<>` as it does not `bridge` to `jsi::String` and hence results in a compilation error.
 
 Now add a `NativeSampleModule.cpp` file with an implementation for it:
 
@@ -517,4 +519,4 @@ For Apple specific APIs you need to change the extension of your implementation 
 
 ## Extending C++ Turbo Native Modules
 
-If you need to support some types that are not supported yet, have a look at [this other guide](versioned_docs/version-0.72/the-new-architecture/cxx-custom-types.md).
+If you need to support some types that are not supported yet, have a look at [this other guide](./cxx-custom-types.md).

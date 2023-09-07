@@ -5,20 +5,20 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useEffect, useState } from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import ThemedImage from "@theme/ThemedImage";
+import React, {useEffect, useState} from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import ThemedImage from '@theme/ThemedImage';
 
-import { Section } from "tests/fixtures/react-native-website/website/src/pages/index";
-import IconExternalLink from "tests/fixtures/react-native-website/website/src/theme/Icon/ExternalLink";
+import {Section} from './index';
+import IconExternalLink from '../theme/Icon/ExternalLink';
 
 const renderApp = (app, i) => <AppBox app={app} key={`app-${app.name}-${i}`} />;
 
-const AppBox = ({ app }) => {
+const AppBox = ({app}) => {
   const imgSource = useBaseUrl(
-    app.icon.startsWith("http") ? app.icon : "img/showcase/" + app.icon
+    app.icon.startsWith('http') ? app.icon : 'img/showcase/' + app.icon
   );
 
   return (
@@ -37,10 +37,9 @@ const AppBox = ({ app }) => {
             className="articleButton"
             href={app.infoLink}
             target="_blank"
-            title={app.infoTitle}
-          >
-            Learn more{" "}
-            <IconExternalLink width={12} height={12} style={{ opacity: 0.5 }} />
+            title={app.infoTitle}>
+            Learn more{' '}
+            <IconExternalLink width={12} height={12} style={{opacity: 0.5}} />
           </a>
         )}
       </div>
@@ -48,7 +47,7 @@ const AppBox = ({ app }) => {
   );
 };
 
-const renderLinks = (app) => {
+const renderLinks = app => {
   if (!app.linkAppStore && !app.linkPlayStore && !app.linkDesktop) {
     return <p />;
   }
@@ -78,27 +77,25 @@ const renderLinks = (app) => {
   return <p className="showcaseLinks">{links}</p>;
 };
 
-const randomizeApps = (apps) =>
-  [...apps].filter((app) => !app.group).sort(() => 0.5 - Math.random());
+const randomizeApps = apps =>
+  [...apps].filter(app => !app.group).sort(() => 0.5 - Math.random());
 
 const Showcase = () => {
-  const { siteConfig } = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
 
-  const { meta, microsoft, shopify, wix, others } =
-    siteConfig.customFields.users;
+  const {meta, microsoft, shopify, wix, others} = siteConfig.customFields.users;
   const [pinnedRandomizedApps, setPinnedRandomizedApps] = useState([]);
   const [randomizedApps, setRandomizedApps] = useState([]);
 
   useEffect(() => {
-    setRandomizedApps(randomizeApps(others.filter((app) => !app.pinned)));
-    setPinnedRandomizedApps(randomizeApps(others.filter((app) => app.pinned)));
+    setRandomizedApps(randomizeApps(others.filter(app => !app.pinned)));
+    setPinnedRandomizedApps(randomizeApps(others.filter(app => app.pinned)));
   }, []);
 
   return (
     <Layout
       title="Showcase"
-      description="Thousands of apps are using React Native, check out these apps!"
-    >
+      description="Thousands of apps are using React Native, check out these apps!">
       <Section background="dark">
         <div className="sectionContainer headerContainer">
           <h1>
@@ -118,8 +115,8 @@ const Showcase = () => {
               alt="Meta logo"
               width={140}
               sources={{
-                light: useBaseUrl("/img/meta_positive_primary.svg"),
-                dark: useBaseUrl("/img/meta_negative_primary.svg"),
+                light: useBaseUrl('/img/meta_positive_primary.svg'),
+                dark: useBaseUrl('/img/meta_negative_primary.svg'),
               }}
             />
           </h2>
@@ -136,8 +133,8 @@ const Showcase = () => {
               alt="Microsoft logo"
               width={180}
               sources={{
-                light: useBaseUrl("/img/microsoft-logo-gray.png"),
-                dark: useBaseUrl("/img/microsoft-logo-white.png"),
+                light: useBaseUrl('/img/microsoft-logo-gray.png'),
+                dark: useBaseUrl('/img/microsoft-logo-white.png'),
               }}
             />
           </h2>
@@ -146,13 +143,12 @@ const Showcase = () => {
             customer experiences in some of its most well known apps.
             <br />
             Microsoft doesn't stop at mobile platforms either -- Microsoft
-            leverages React Native to target desktop too! Find out more in the{" "}
+            leverages React Native to target desktop too! Find out more in the{' '}
             <a
               href="https://microsoft.github.io/react-native-windows/resources-showcase"
-              target="_blank"
-            >
+              target="_blank">
               dedicated showcase
-            </a>{" "}
+            </a>{' '}
             for React Native Windows and macOS.
           </p>
           <div className="logos">{microsoft.map(renderApp)}</div>
@@ -163,8 +159,8 @@ const Showcase = () => {
               alt="Shopify logo"
               width={160}
               sources={{
-                light: useBaseUrl("/img/shopify_logo_whitebg.svg"),
-                dark: useBaseUrl("/img/shopify_logo_darkbg.svg"),
+                light: useBaseUrl('/img/shopify_logo_whitebg.svg'),
+                dark: useBaseUrl('/img/shopify_logo_darkbg.svg'),
               }}
             />
           </h2>
@@ -172,7 +168,7 @@ const Showcase = () => {
             All new mobile apps at Shopify are React Native and we are actively
             migrating our flagship merchant admin app Shopify Mobile to React
             Native as well. You can read more about React Native development at
-            Shopify on our{" "}
+            Shopify on our{' '}
             <a href="https://shopify.engineering/topics/mobile" target="_blank">
               blog
             </a>
@@ -186,8 +182,8 @@ const Showcase = () => {
               alt="Wix logo"
               width={80}
               sources={{
-                light: useBaseUrl("/img/showcase/wix_logo_lightbg.svg"),
-                dark: useBaseUrl("/img/showcase/wix_logo_darkbg.svg"),
+                light: useBaseUrl('/img/showcase/wix_logo_lightbg.svg'),
+                dark: useBaseUrl('/img/showcase/wix_logo_darkbg.svg'),
               }}
             />
           </h2>
@@ -212,18 +208,16 @@ const Showcase = () => {
           <a
             className="formButton"
             href="https://forms.gle/BdNf3v5hemV9D5c86"
-            target="_blank"
-          >
+            target="_blank">
             Apply to the Showcase by filling out this form
           </a>
           <p>
-            A curated list of{" "}
+            A curated list of{' '}
             <a
               key="demo-apps"
-              href="https://github.com/ReactNativeNews/React-Native-Apps"
-            >
+              href="https://github.com/ReactNativeNews/React-Native-Apps">
               open source React Native apps
-            </a>{" "}
+            </a>{' '}
             is maintained by <a href="https://infinite.red">Infinite Red</a>.
           </p>
         </div>

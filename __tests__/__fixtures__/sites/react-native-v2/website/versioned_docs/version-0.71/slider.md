@@ -1,6 +1,6 @@
 ---
 id: slider
-title: "🚧 Slider"
+title: '🚧 Slider'
 ---
 
 > **Deprecated.** Use one of the [community packages](https://reactnative.directory/?search=slider) instead.
@@ -13,7 +13,7 @@ A component used to select a single value from a range of values.
 
 ## Props
 
-Inherits [View Props](versioned_docs/version-0.71/view.md#props).
+Inherits [View Props](view.md#props).
 
 ### `style`
 
@@ -49,9 +49,9 @@ Initial maximum value of the slider. Default value is 1.
 
 The color used for the track to the left of the button. Overrides the default blue gradient image on iOS.
 
-| Type                                           | Required |
-| ---------------------------------------------- | -------- |
-| [color](versioned_docs/version-0.71/colors.md) | No       |
+| Type               | Required |
+| ------------------ | -------- |
+| [color](colors.md) | No       |
 
 ---
 
@@ -99,9 +99,9 @@ Step value of the slider. The value should be between 0 and (maximumValue - mini
 
 The color used for the track to the right of the button. Overrides the default gray gradient image on iOS.
 
-| Type                                           | Required |
-| ---------------------------------------------- | -------- |
-| [color](versioned_docs/version-0.71/colors.md) | No       |
+| Type               | Required |
+| ------------------ | -------- |
+| [color](colors.md) | No       |
 
 ---
 
@@ -131,9 +131,9 @@ _This is not a controlled component_, you don't need to update the value during 
 
 The color used to tint the default thumb images on iOS, or the color of the foreground switch grip on Android.
 
-| Type                                           | Required |
-| ---------------------------------------------- | -------- |
-| [color](versioned_docs/version-0.71/colors.md) | No       |
+| Type               | Required |
+| ------------------ | -------- |
+| [color](colors.md) | No       |
 
 ---
 

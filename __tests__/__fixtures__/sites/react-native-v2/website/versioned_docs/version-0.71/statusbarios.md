@@ -1,8 +1,8 @@
 ---
 id: statusbarios
-title: "🚧 StatusBarIOS"
+title: '🚧 StatusBarIOS'
 ---
 
-> **Deleted.** Use [`StatusBar`](versioned_docs/version-0.71/statusbar.md) for mutating the status bar.
+> **Deleted.** Use [`StatusBar`](statusbar.md) for mutating the status bar.
 
 ---

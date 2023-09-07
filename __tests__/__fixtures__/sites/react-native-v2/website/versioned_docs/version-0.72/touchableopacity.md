@@ -3,7 +3,7 @@ id: touchableopacity
 title: TouchableOpacity
 ---
 
-> If you're looking for a more extensive and future-proof way to handle touch-based input, check out the [Pressable](versioned_docs/version-0.72/pressable.md) API.
+> If you're looking for a more extensive and future-proof way to handle touch-based input, check out the [Pressable](pressable.md) API.
 
 A wrapper for making views respond properly to touches. On press down, the opacity of the wrapped view is decreased, dimming it.
 
@@ -57,9 +57,9 @@ export default App;
 
 ## Props
 
-### [TouchableWithoutFeedback Props](versioned_docs/version-0.72/touchablewithoutfeedback.md#props)
+### [TouchableWithoutFeedback Props](touchablewithoutfeedback.md#props)
 
-Inherits [TouchableWithoutFeedback Props](versioned_docs/version-0.72/touchablewithoutfeedback.md#props).
+Inherits [TouchableWithoutFeedback Props](touchablewithoutfeedback.md#props).
 
 ---
 

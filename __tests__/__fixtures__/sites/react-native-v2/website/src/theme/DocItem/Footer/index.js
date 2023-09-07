@@ -1,22 +1,21 @@
-import React from "react";
-import clsx from "clsx";
-import { ThemeClassNames } from "@docusaurus/theme-common";
-import { useDoc } from "@docusaurus/theme-common/internal";
-import LastUpdated from "@theme/LastUpdated";
-import EditThisPage from "@theme/EditThisPage";
-import TagsListInline from "@theme/TagsListInline";
+import React from 'react';
+import clsx from 'clsx';
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import {useDoc} from '@docusaurus/theme-common/internal';
+import LastUpdated from '@theme/LastUpdated';
+import EditThisPage from '@theme/EditThisPage';
+import TagsListInline from '@theme/TagsListInline';
 
-import styles from "tests/fixtures/react-native-website/website/src/theme/DocItem/Footer/styles.module.css";
-import DocsRating from "tests/fixtures/react-native-website/website/core/DocsRating";
+import styles from './styles.module.css';
+import DocsRating from '../../../../core/DocsRating';
 
 function TagsRow(props) {
   return (
     <div
       className={clsx(
         ThemeClassNames.docs.docFooterTagsRow,
-        "row margin-bottom--sm"
-      )}
-    >
+        'row margin-bottom--sm'
+      )}>
       <div className="col">
         <TagsListInline {...props} />
       </div>
@@ -30,10 +29,10 @@ function EditMetaRow({
   formattedLastUpdatedAt,
 }) {
   return (
-    <div className={clsx(ThemeClassNames.docs.docFooterEditMetaRow, "row")}>
+    <div className={clsx(ThemeClassNames.docs.docFooterEditMetaRow, 'row')}>
       <div className="col">{editUrl && <EditThisPage editUrl={editUrl} />}</div>
 
-      <div className={clsx("col", styles.lastUpdated)}>
+      <div className={clsx('col', styles.lastUpdated)}>
         {(lastUpdatedAt || lastUpdatedBy) && (
           <LastUpdated
             lastUpdatedAt={lastUpdatedAt}
@@ -46,14 +45,9 @@ function EditMetaRow({
   );
 }
 export default function DocItemFooter() {
-  const { metadata } = useDoc();
-  const {
-    editUrl,
-    lastUpdatedAt,
-    formattedLastUpdatedAt,
-    lastUpdatedBy,
-    tags,
-  } = metadata;
+  const {metadata} = useDoc();
+  const {editUrl, lastUpdatedAt, formattedLastUpdatedAt, lastUpdatedBy, tags} =
+    metadata;
   const canDisplayTagsRow = tags.length > 0;
   const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
   const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
@@ -65,8 +59,7 @@ export default function DocItemFooter() {
     <>
       <DocsRating label={metadata.unversionedId} />
       <footer
-        className={clsx(ThemeClassNames.docs.docFooter, "docusaurus-mt-lg")}
-      >
+        className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
         {canDisplayTagsRow && <TagsRow tags={tags} />}
         {canDisplayEditMetaRow && (
           <EditMetaRow

@@ -18,7 +18,7 @@ A performant interface for rendering sectioned lists, supporting the most handy 
 - Pull to Refresh.
 - Scroll loading.
 
-If you don't need section support and want a simpler interface, use [`<FlatList>`](versioned_docs/version-0.70/flatlist.md).
+If you don't need section support and want a simpler interface, use [`<FlatList>`](flatlist.md).
 
 ## Example
 
@@ -165,7 +165,7 @@ export default App;
 </TabItem>
 </Tabs>
 
-This is a convenience wrapper around [`<VirtualizedList>`](versioned_docs/version-0.70/virtualizedlist.md), and thus inherits its props (as well as those of [`<ScrollView>`](versioned_docs/version-0.70/scrollview.md)) that aren't explicitly listed here, along with the following caveats:
+This is a convenience wrapper around [`<VirtualizedList>`](virtualizedlist.md), and thus inherits its props (as well as those of [`<ScrollView>`](scrollview.md)) that aren't explicitly listed here, along with the following caveats:
 
 - Internal state is not preserved when content scrolls out of the render window. Make sure all your data is captured in the item data or external stores like Flux, Redux, or Relay.
 - This is a `PureComponent` which means that it will not re-render if `props` remain shallow-equal. Make sure that everything your `renderItem` function depends on is passed as a prop (e.g. `extraData`) that is not `===` after updates, otherwise your UI may not update on changes. This includes the `data` prop and parent component state.
@@ -178,9 +178,9 @@ This is a convenience wrapper around [`<VirtualizedList>`](versioned_docs/versio
 
 ## Props
 
-### [VirtualizedList Props](versioned_docs/version-0.70/virtualizedlist.md#props)
+### [VirtualizedList Props](virtualizedlist.md#props)
 
-Inherits [VirtualizedList Props](versioned_docs/version-0.70/virtualizedlist.md#props).
+Inherits [VirtualizedList Props](virtualizedlist.md#props).
 
 ---
 
@@ -208,11 +208,11 @@ The render function will be passed an object with the following keys:
 
 ### <div class="label required basic">Required</div>**`sections`**
 
-The actual data to render, akin to the `data` prop in [`FlatList`](versioned_docs/version-0.70/flatlist.md).
+The actual data to render, akin to the `data` prop in [`FlatList`](flatlist.md).
 
-| Type                                                                    |
-| ----------------------------------------------------------------------- |
-| array of [Section](versioned_docs/version-0.70/sectionlist.md#section)s |
+| Type                                        |
+| ------------------------------------------- |
+| array of [Section](sectionlist.md#section)s |
 
 ---
 
@@ -300,9 +300,9 @@ Rendered at the very beginning of the list. Can be a React Component (e.g. `Some
 
 Called once when the scroll position gets within `onEndReachedThreshold` of the rendered content.
 
-| Type                                          |
-| --------------------------------------------- |
-| `(info: { distanceFromEnd: number }) => void` |
+| Type                                        |
+| ------------------------------------------- |
+| (info: { distanceFromEnd: number }) => void |
 
 ---
 
@@ -330,9 +330,9 @@ If provided, a standard RefreshControl will be added for "Pull to Refresh" funct
 
 Called when the viewability of rows changes, as defined by the `viewabilityConfig` prop.
 
-| Type                                                                                                  |
-| ----------------------------------------------------------------------------------------------------- |
-| `md (callback: {changed: [ViewToken](viewtoken)[], viewableItems: [ViewToken](viewtoken)[]}) => void` |
+| Type                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------ |
+| (callback: { changed: array of [ViewToken](viewtoken)s, viewableItems: array of [ViewToken](viewtoken)s }) => void |
 
 ---
 
@@ -362,9 +362,9 @@ This may improve scroll performance for large lists.
 
 Rendered at the bottom of each section.
 
-| Type                                                                      |
-| ------------------------------------------------------------------------- |
-| `md (info: {section: [Section](sectionlist#section)}) => element ｜ null` |
+| Type                                                                   |
+| ---------------------------------------------------------------------- |
+| (info: { section: [Section](sectionlist#section) }) => element, `null` |
 
 ---
 
@@ -372,9 +372,9 @@ Rendered at the bottom of each section.
 
 Rendered at the top of each section. These stick to the top of the `ScrollView` by default on iOS. See `stickySectionHeadersEnabled`.
 
-| Type                                                                      |
-| ------------------------------------------------------------------------- |
-| `md (info: {section: [Section](sectionlist#section)}) => element ｜ null` |
+| Type                                                                   |
+| ---------------------------------------------------------------------- |
+| (info: { section: [Section](sectionlist#section) }) => element, `null` |
 
 ---
 

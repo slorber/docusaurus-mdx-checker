@@ -15,7 +15,7 @@ You can access the developer menu by shaking your device or by selecting "Shake 
 
 ## Enabling Fast Refresh
 
-Fast Refresh is a React Native feature that allows you to get near-instant feedback for changes in your React components. While debugging, it can help to have [Fast Refresh](versioned_docs/version-0.71/fast-refresh.md) enabled. Fast Refresh is enabled by default, and you can toggle "Enable Fast Refresh" in the React Native developer menu. When enabled, most of your edits should be visible within a second or two.
+Fast Refresh is a React Native feature that allows you to get near-instant feedback for changes in your React components. While debugging, it can help to have [Fast Refresh](fast-refresh.md) enabled. Fast Refresh is enabled by default, and you can toggle "Enable Fast Refresh" in the React Native developer menu. When enabled, most of your edits should be visible within a second or two.
 
 ## Enabling Keyboard Shortcuts
 
@@ -36,10 +36,10 @@ These notifications can be hidden using `LogBox.ignoreAllLogs()`. This is useful
 > Ignore logs as a last resort and create a task to fix any logs that are ignored.
 
 ```tsx
-import { LogBox } from "react-native";
+import {LogBox} from 'react-native';
 
 // Ignore log notification by message:
-LogBox.ignoreLogs(["Warning: ..."]);
+LogBox.ignoreLogs(['Warning: ...']);
 
 // Ignore all log notifications:
 LogBox.ignoreAllLogs();
@@ -61,7 +61,7 @@ Select `Tools → Developer Tools` from the Chrome Menu to open the [Developer T
 
 > Note: on Android, if the times between the debugger and device have drifted; things such as animation, event behavior, etc., might not work properly or the results may not be accurate. Please correct this by running `` adb shell "date `date +%m%d%H%M%Y.%S%3N`" `` on your debugger machine. Root access is required for the use in real device.
 
-> Note: the React Developer Tools Chrome extension does not work with React Native, but you can use its standalone version instead. Read [this section](versioned_docs/version-0.71/debugging.md#react-developer-tools) to learn how.
+> Note: the React Developer Tools Chrome extension does not work with React Native, but you can use its standalone version instead. Read [this section](debugging.md#react-developer-tools) to learn how.
 
 ### Debugging using a custom JavaScript debugger
 

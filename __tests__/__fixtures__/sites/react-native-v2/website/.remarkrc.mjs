@@ -1,4 +1,4 @@
-import packageJson from "tests/fixtures/react-native-website/website/package.json" assert { type: "json" };
+import packageJson from "./package.json" assert { type: "json" };
 
 export default {
   plugins: [

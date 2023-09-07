@@ -112,9 +112,9 @@ export default App;
 
 Handler to be called when the user taps the button.
 
-| Type                                           |
-| ---------------------------------------------- |
-| `md ({nativeEvent: [PressEvent](pressevent)})` |
+| Type                                        |
+| ------------------------------------------- |
+| ({ nativeEvent: [PressEvent](pressevent) }) |
 
 ---
 
@@ -154,7 +154,7 @@ See the [iOS `accessibilityLanguage` doc](https://developer.apple.com/documentat
 
 Accessibility actions allow an assistive technology to programmatically invoke the actions of a component. The `accessibilityActions` property should contain a list of action objects. Each action object should contain the field name and label.
 
-See the [Accessibility guide](versioned_docs/version-0.70/accessibility.md#accessibility-actions) for more information.
+See the [Accessibility guide](accessibility.md#accessibility-actions) for more information.
 
 | Type  | Required |
 | ----- | -------- |
@@ -166,7 +166,7 @@ See the [Accessibility guide](versioned_docs/version-0.70/accessibility.md#acces
 
 Invoked when the user performs the accessibility actions. The only argument to this function is an event containing the name of the action to perform.
 
-See the [Accessibility guide](versioned_docs/version-0.70/accessibility.md#accessibility-actions) for more information.
+See the [Accessibility guide](accessibility.md#accessibility-actions) for more information.
 
 | Type     | Required |
 | -------- | -------- |

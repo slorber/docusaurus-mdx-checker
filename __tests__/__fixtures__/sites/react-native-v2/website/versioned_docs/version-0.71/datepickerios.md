@@ -1,6 +1,6 @@
 ---
 id: datepickerios
-title: "🚧 DatePickerIOS"
+title: '🚧 DatePickerIOS'
 ---
 
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; import constants from '@site/core/TabsConstants';
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
 
 ## Props
 
-Inherits [View Props](versioned_docs/version-0.71/view.md#props).
+Inherits [View Props](view.md#props).
 
 ### `date`
 

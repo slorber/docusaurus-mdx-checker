@@ -5,17 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from "react";
-import Link from "@docusaurus/Link";
-import { NavbarSecondaryMenuFiller } from "@docusaurus/theme-common";
-import styles from "tests/fixtures/react-native-website/website/src/theme/BlogSidebar/Mobile/styles.module.css";
+import React from 'react';
+import Link from '@docusaurus/Link';
+import {NavbarSecondaryMenuFiller} from '@docusaurus/theme-common';
+import styles from './styles.module.css';
 
-function BlogSidebarMobileSecondaryMenu({ sidebar }) {
+function BlogSidebarMobileSecondaryMenu({sidebar}) {
   let cachedYear = null;
   return (
     <ul className="menu__list blog-menu__list">
-      {sidebar.items.map((item) => {
-        const postYear = item.permalink.split("/")[2];
+      {sidebar.items.map(item => {
+        const postYear = item.permalink.split('/')[2];
         const yearHeader = cachedYear !== postYear && (
           <h5 className={styles.sidebarItemTitle}>{postYear}</h5>
         );
@@ -28,8 +28,7 @@ function BlogSidebarMobileSecondaryMenu({ sidebar }) {
                 isNavLink
                 to={item.permalink}
                 className="menu__link"
-                activeClassName="menu__link--active"
-              >
+                activeClassName="menu__link--active">
                 {item.title}
               </Link>
             </li>

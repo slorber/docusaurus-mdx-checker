@@ -78,7 +78,7 @@ const FlexDimensionsBasics = () => {
 export default FlexDimensionsBasics;
 ```
 
-After you can control a component's size, the next step is to [learn how to lay it out on the screen](versioned_docs/version-0.72/flexbox.md).
+After you can control a component's size, the next step is to [learn how to lay it out on the screen](flexbox.md).
 
 ## Percentage Dimensions
 

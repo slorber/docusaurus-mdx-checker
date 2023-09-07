@@ -248,9 +248,9 @@ The property defines whether or not the back face of a rotated image should be v
 
 ### `backgroundColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.72/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -272,9 +272,9 @@ The property defines whether or not the back face of a rotated image should be v
 
 ### `borderColor`
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.72/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
 
 ---
 
@@ -382,6 +382,6 @@ Determines how to resize the image when the frame doesn't match the raw image di
 
 Changes the color of all the non-transparent pixels to the tintColor.
 
-| Type                                           |
-| ---------------------------------------------- |
-| [color](versioned_docs/version-0.72/colors.md) |
+| Type               |
+| ------------------ |
+| [color](colors.md) |
