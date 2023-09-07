@@ -227,6 +227,11 @@
   dependencies:
     "@types/unist" "^2"
 
+"@types/katex@^0.16.0":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/katex/-/katex-0.16.2.tgz#aa56983b722ccbc4aa81d11d117aa9c687b69b73"
+  integrity sha512-dHsSjSlU/EWEEbeNADr3FtZZOAXPkFPUO457QCnoNqcZQXNqNEu/svQd0Nritvd3wNff4vvC/f4e6xgX3Llt8A==
+
 "@types/mdast@^3.0.0":
   version "3.0.12"
   resolved "https://registry.yarnpkg.com/@types/mdast/-/mdast-3.0.12.tgz#beeb511b977c875a5b0cc92eab6fcac2f0895514"
@@ -396,6 +401,11 @@ comma-separated-tokens@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz#4e89c9458acb61bc8fef19f4529973b2392839ee"
   integrity sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==
+
+commander@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
+  integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
 
 debug@^4.0.0, debug@^4.3.4:
   version "4.3.4"
@@ -686,6 +696,13 @@ jsonc-parser@^3.2.0:
   resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.2.0.tgz#31ff3f4c2b9793f89c67212627c51c6394f88e76"
   integrity sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==
 
+katex@^0.16.0:
+  version "0.16.8"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.16.8.tgz#89b453f40e8557f423f31a1009e9298dd99d5ceb"
+  integrity sha512-ftuDnJbcbOckGY11OO+zg3OofESlbR5DRl2cmN8HeWeeFIV7wTXvAOx8kEjZjobhA+9wh2fbKeO6cdcA9Mnovg==
+  dependencies:
+    commander "^8.3.0"
+
 kleur@^4.0.3:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
@@ -846,6 +863,15 @@ mdast-util-gfm@^2.0.0:
     mdast-util-gfm-table "^1.0.0"
     mdast-util-gfm-task-list-item "^1.0.0"
     mdast-util-to-markdown "^1.0.0"
+
+mdast-util-math@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/mdast-util-math/-/mdast-util-math-2.0.2.tgz#19a06a81f31643f48cc805e7c31edb7ce739242c"
+  integrity sha512-8gmkKVp9v6+Tgjtq6SYx9kGPpTf6FVYRa53/DLh479aldR9AyP48qeVOgNZ5X7QUK7nOy4yw7vg6mbiGcs9jWQ==
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    longest-streak "^3.0.0"
+    mdast-util-to-markdown "^1.3.0"
 
 mdast-util-mdx-expression@^1.0.0:
   version "1.3.2"
@@ -1069,6 +1095,19 @@ micromark-extension-gfm@^2.0.0:
     micromark-extension-gfm-task-list-item "^1.0.0"
     micromark-util-combine-extensions "^1.0.0"
     micromark-util-types "^1.0.0"
+
+micromark-extension-math@^2.0.0:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/micromark-extension-math/-/micromark-extension-math-2.1.2.tgz#52c70cc8266cd20ada1ef5a479bfed9a19b789bf"
+  integrity sha512-es0CcOV89VNS9wFmyn+wyFTKweXGW4CEvdaAca6SWRWPyYCbBisnjaHLjWO4Nszuiud84jCpkHsqAJoa768Pvg==
+  dependencies:
+    "@types/katex" "^0.16.0"
+    katex "^0.16.0"
+    micromark-factory-space "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    uvu "^0.5.0"
 
 micromark-extension-mdx-expression@^1.0.0:
   version "1.0.8"
@@ -1499,6 +1538,16 @@ remark-gfm@^3.0.1:
     "@types/mdast" "^3.0.0"
     mdast-util-gfm "^2.0.0"
     micromark-extension-gfm "^2.0.0"
+    unified "^10.0.0"
+
+remark-math@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/remark-math/-/remark-math-5.1.1.tgz#459e798d978d4ca032e745af0bac81ddcdf94964"
+  integrity sha512-cE5T2R/xLVtfFI4cCePtiRn+e6jKMtFDR3P8V3qpv8wpKjwvHoBA4eJzvX+nVrnlNy0911bdGmuspCSwetfYHw==
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    mdast-util-math "^2.0.0"
+    micromark-extension-math "^2.0.0"
     unified "^10.0.0"
 
 remark-mdx@^2.0.0:

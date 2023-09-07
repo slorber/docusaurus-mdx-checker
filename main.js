@@ -9,16 +9,19 @@ import remarkDirectives from "remark-directive";
 import remarkGFM from "remark-gfm";
 import remarkComment from "@slorber/remark-comment";
 import chalk from "chalk";
+import { preprocess } from "./compat";
 
-const remarkPlugins = [
+const SuccessPrefix = chalk.green("[SUCCESS]");
+const ErrorPrefix = chalk.red("[ERROR]");
+
+export const DefaultRemarkPlugins = Object.freeze([
   remarkFrontmatter,
   remarkDirectives,
   remarkGFM,
   remarkComment,
-];
+]);
 
-const SuccessPrefix = chalk.green("[SUCCESS]");
-const ErrorPrefix = chalk.red("[ERROR]");
+export const DefaultRehypePlugins = Object.freeze([]);
 
 export const DefaultInclude = Object.freeze([
   "**/*.{md,mdx}",
@@ -44,6 +47,8 @@ export default async function main({
   cwd = undefined,
   include = DefaultInclude,
   exclude = DefaultExclude,
+  remarkPlugins = DefaultRemarkPlugins,
+  rehypePlugins = DefaultRehypePlugins,
   format = "mdx",
   verbose = false,
 }) {
@@ -52,6 +57,7 @@ export default async function main({
     ignore: exclude,
     // gitignore: true, // Does not work well with relative paths like ../docs
   });
+  allRelativeFilePaths.sort();
 
   if (allRelativeFilePaths.length === 0) {
     throw new Error(`${ErrorPrefix} Couldn't find any file to compile!`);
@@ -97,9 +103,19 @@ ${outputSeparator}${allErrors
     const filePath = path.resolve(cwd, relativeFilePath);
     try {
       // console.log("filePath", filePath);
-      const fileContent = await fs.readFile(filePath);
+      const fileContent = await fs.readFile(filePath, "utf8");
       // console.log("fileContent", fileContent);
-      const result = await compile(fileContent, { format, remarkPlugins });
+      const contentPreprocessed = preprocess(fileContent);
+      const result = await compile(contentPreprocessed, {
+        format:
+          format === "detect"
+            ? filePath.endsWith(".md")
+              ? "md"
+              : "mdx"
+            : "mdx",
+        remarkPlugins,
+        rehypePlugins,
+      });
       // TODO generate warnings for compat options here?
       return { relativeFilePath, status: "success", result };
     } catch (error) {

@@ -1,8 +1,6 @@
 import { describe, expect, test } from "vitest";
-import { resolve, dirname, relative } from "node:path";
-import process from "node:process";
-import { fileURLToPath } from "node:url";
-import main from "../main.js";
+import main, { DefaultRemarkPlugins } from "../main.js";
+import remarkMath from "remark-math";
 
 const FixtureSitesPath = "./__tests__/__fixtures__/sites";
 
@@ -23,14 +21,6 @@ console.log(SiteFixtures);
 
 // TODO
 
-const verbose = false;
-
-const excludeVersionedDocs = true;
-
-const cwd = "/Users/sebastienlorber/Desktop/projects/jest";
-
-const include = ["**/*.{md,mdx}", "../docs/**/*.{md,mdx}"];
-
 const exclude = [
   "packages",
   "examples",
@@ -43,33 +33,36 @@ const exclude = [
   "website/README.md",
   "benchmarks/test-file-overhead/README.md",
   //
-  excludeVersionedDocs ? "**/versioned_docs" : null,
+  // excludeVersionedDocs ? "**/versioned_docs" : null,
 ].filter(Boolean);
 
-const format = "mdx";
+describe("Docusaurus", () => {
+  async function testDocusaurusSite(options) {
+    return main({
+      format: "detect",
+      remarkPlugins: [...DefaultRemarkPlugins, remarkMath],
+      ...options,
+    });
+  }
 
-describe("v3 sites", () => {
-  test("Docusaurus site compiles", async () => {
-    const result = await main({
+  test("v3 website compiles", async () => {
+    const result = await testDocusaurusSite({
       cwd: SiteFixtures.v3.docusaurus,
     });
 
     expect(result).toMatchInlineSnapshot(
-      '"[32m[SUCCESS][39m All 58 MDX files compiled successfully!"'
+      '"[32m[SUCCESS][39m All 694 MDX files compiled successfully!"'
     );
   });
-});
 
-test("adds 1 + 2 to equal 3", async () => {
-  const result = await main({
-    verbose,
-    cwd,
-    format,
-    include,
-    exclude,
+  test("v3 website compiles without versioned docs", async () => {
+    const result = await testDocusaurusSite({
+      cwd: SiteFixtures.v3.docusaurus,
+      exclude: "**/versioned_docs",
+    });
+
+    expect(result).toMatchInlineSnapshot(
+      '"[32m[SUCCESS][39m All 204 MDX files compiled successfully!"'
+    );
   });
-
-  expect(result).toMatchInlineSnapshot(
-    '"[32m[SUCCESS][39m All 58 MDX files compiled successfully!"'
-  );
 });
