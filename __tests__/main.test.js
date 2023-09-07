@@ -36,12 +36,9 @@ const exclude = [
   // excludeVersionedDocs ? "**/versioned_docs" : null,
 ].filter(Boolean);
 
-const OnlyDocsInclude = "docs/**/*.{md,mdx}";
-
-describe("Docusaurus v2", () => {
-  async function testSite(options) {
+describe("Docusaurus", () => {
+  async function testDocusaurus(options) {
     return main({
-      cwd: SiteFixtures.v2.docusaurus,
       format: "mdx",
       remarkPlugins: [...DefaultRemarkPlugins, remarkMath],
       // verbose: true,
@@ -49,63 +46,155 @@ describe("Docusaurus v2", () => {
     });
   }
 
-  test("does not compile", async () => {
-    await expect(testSite({})).rejects.toThrowErrorMatchingSnapshot();
+  const OnlyDocsInclude = "docs/**/*.{md,mdx}";
+
+  describe("v2", () => {
+    async function testSite(options) {
+      return testDocusaurus({
+        cwd: SiteFixtures.v2.docusaurus,
+        // verbose: true,
+        ...options,
+      });
+    }
+
+    test("does not compile", async () => {
+      await expect(testSite({})).rejects.toThrowErrorMatchingSnapshot();
+    });
+
+    test("does not compile - only docs", async () => {
+      await expect(
+        testSite({
+          include: [OnlyDocsInclude],
+        })
+      ).rejects.toThrowErrorMatchingSnapshot();
+    });
+
+    test("does not compile - exclude versioned docs", async () => {
+      await expect(
+        testSite({
+          exclude: [VersionedDocsExclusion],
+        })
+      ).rejects.toThrowErrorMatchingSnapshot();
+    });
   });
 
-  test("does not compile - only docs", async () => {
-    await expect(
-      testSite({
+  describe("v3", () => {
+    async function testSite(options) {
+      return testDocusaurus({
+        cwd: SiteFixtures.v3.docusaurus,
+        format: "detect",
+        // verbose: true,
+        ...options,
+      });
+    }
+
+    test("compiles", async () => {
+      const result = await testSite({});
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 694 MDX files compiled successfully!"'
+      );
+    });
+
+    test("compiles - only docs", async () => {
+      const result = await testSite({
         include: [OnlyDocsInclude],
-      })
-    ).rejects.toThrowErrorMatchingSnapshot();
-  });
+      });
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 85 MDX files compiled successfully!"'
+      );
+    });
 
-  test("does not compile - exclude versioned docs", async () => {
-    await expect(
-      testSite({
+    test("compiles - exclude versioned docs", async () => {
+      const result = await testSite({
         exclude: [VersionedDocsExclusion],
-      })
-    ).rejects.toThrowErrorMatchingSnapshot();
+      });
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 204 MDX files compiled successfully!"'
+      );
+    });
   });
 });
 
-describe("Docusaurus v3", () => {
-  async function testSite(options) {
+describe("Jest", () => {
+  async function testJest(options) {
     return main({
-      cwd: SiteFixtures.v3.docusaurus,
-      format: "detect",
-      remarkPlugins: [...DefaultRemarkPlugins, remarkMath],
       // verbose: true,
       ...options,
     });
   }
 
-  test("compiles", async () => {
-    const result = await testSite({});
+  const OnlyDocsInclude = "docs/**/*.{md,mdx}";
 
-    expect(result).toMatchInlineSnapshot(
-      '"[32m[SUCCESS][39m All 694 MDX files compiled successfully!"'
-    );
-  });
+  describe("v2", () => {
+    async function testSite(options) {
+      return testJest({
+        cwd: SiteFixtures.v2.jest,
+        // verbose: true,
+        ...options,
+      });
+    }
 
-  test("compiles - only docs", async () => {
-    const result = await testSite({
-      include: [OnlyDocsInclude],
+    test("does not compile", async () => {
+      await expect(testSite({})).rejects.toThrowErrorMatchingSnapshot();
     });
 
-    expect(result).toMatchInlineSnapshot(
-      '"[32m[SUCCESS][39m All 85 MDX files compiled successfully!"'
-    );
-  });
-
-  test("compiles - exclude versioned docs", async () => {
-    const result = await testSite({
-      exclude: [VersionedDocsExclusion],
+    test("does not compile - only docs", async () => {
+      await expect(
+        testSite({
+          include: [OnlyDocsInclude],
+        })
+      ).rejects.toThrowErrorMatchingSnapshot();
     });
 
-    expect(result).toMatchInlineSnapshot(
-      '"[32m[SUCCESS][39m All 204 MDX files compiled successfully!"'
-    );
+    test("does not compile - exclude versioned docs", async () => {
+      await expect(
+        testSite({
+          exclude: [VersionedDocsExclusion],
+        })
+      ).rejects.toThrowErrorMatchingSnapshot();
+    });
+  });
+
+  describe("v3", () => {
+    async function testSite(options) {
+      return testJest({
+        cwd: SiteFixtures.v3.jest,
+        format: "detect",
+        // verbose: true,
+        ...options,
+      });
+    }
+
+    test("compiles", async () => {
+      const result = await testSite({});
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 169 MDX files compiled successfully!"'
+      );
+    });
+
+    test("compiles - website cwd", async () => {
+      const result = await testSite({ cwd: `${SiteFixtures.v3.jest}/website` });
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 169 MDX files compiled successfully!"'
+      );
+    });
+
+    test("compiles - only docs", async () => {
+      const result = await testSite({
+        include: [OnlyDocsInclude],
+      });
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 37 MDX files compiled successfully!"'
+      );
+    });
+
+    test("compiles - exclude versioned docs", async () => {
+      const result = await testSite({
+        exclude: [VersionedDocsExclusion],
+      });
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 59 MDX files compiled successfully!"'
+      );
+    });
   });
 });

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Docusaurus v2 > does not compile - exclude versioned docs 1`] = `
+exports[`Docusaurus > v2 > does not compile - exclude versioned docs 1`] = `
 "[31m[ERROR][39m Some MDX files couldn't compile successfully!
 
 [33m---[39m
@@ -19,7 +19,7 @@ Line=57 Column=6
 "
 `;
 
-exports[`Docusaurus v2 > does not compile - only docs 1`] = `
+exports[`Docusaurus > v2 > does not compile - only docs 1`] = `
 "[31m[ERROR][39m Some MDX files couldn't compile successfully!
 
 [33m---[39m
@@ -38,7 +38,7 @@ Line=57 Column=6
 "
 `;
 
-exports[`Docusaurus v2 > does not compile 1`] = `
+exports[`Docusaurus > v2 > does not compile 1`] = `
 "[31m[ERROR][39m Some MDX files couldn't compile successfully!
 
 [33m---[39m
@@ -77,6 +77,55 @@ Line=443 Column=1
 Error while compiling file versioned_docs/version-2.0.0-rc.1/introduction.md:
 Details: Unexpected character \`/\` (U+002F) after self-closing slash, expected \`>\` to end the tag (note: JS comments in JSX tags are not supported in MDX)
 Line=57 Column=6
+[33m---[39m
+"
+`;
+
+exports[`Jest > v2 > does not compile - exclude versioned docs 1`] = `
+"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+
+[33m---[39m
+Error while compiling file docs/Configuration.md:
+Details: Unexpected character \`-\` (U+002D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
+Line=1756 Column=44
+[33m---[39m
+Error while compiling file docs/GettingStarted.md:
+Details: Expected a closing tag for \`</summary>\` (92:1-92:10) before the end of \`paragraph\`
+Line=92 Column=1
+[33m---[39m
+Error while compiling file website/README.md:
+Details: Unexpected character \`=\` (U+003D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
+Line=43 Column=49
+[33m---[39m
+"
+`;
+
+exports[`Jest > v2 > does not compile - only docs 1`] = `
+"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+
+[33m---[39m
+Error while compiling file docs/Configuration.md:
+Details: Unexpected character \`-\` (U+002D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
+Line=1756 Column=44
+[33m---[39m
+Error while compiling file docs/GettingStarted.md:
+Details: Expected a closing tag for \`</summary>\` (92:1-92:10) before the end of \`paragraph\`
+Line=92 Column=1
+[33m---[39m
+"
+`;
+
+exports[`Jest > v2 > does not compile 1`] = `
+"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+
+[33m---[39m
+Error while compiling file docs/Configuration.md:
+Details: Unexpected character \`-\` (U+002D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
+Line=1756 Column=44
+[33m---[39m
+Error while compiling file docs/GettingStarted.md:
+Details: Expected a closing tag for \`</summary>\` (92:1-92:10) before the end of \`paragraph\`
+Line=92 Column=1
 [33m---[39m
 "
 `;
