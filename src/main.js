@@ -43,11 +43,10 @@ export default async function main({
     throw new Error(`${ErrorPrefix} Couldn't find any file to compile!`);
   }
 
-  console.log(
-    "Found " + allRelativeFilePaths.length + " files to compile with MDX"
-  );
-
   if (verbose) {
+    console.log(
+      "Found " + allRelativeFilePaths.length + " files to compile with MDX"
+    );
     console.log(
       "List of files:\n",
       JSON.stringify(allRelativeFilePaths, null, 2)
@@ -61,16 +60,17 @@ export default async function main({
   const allErrors = allResults.filter((r) => r.status === "error");
   const allSuccess = allResults.filter((r) => r.status === "success");
 
-  console.log(`Errors: ${allErrors.length}`);
-  console.log(`Success: ${allSuccess.length}`);
+  if (verbose) {
+    console.log(`Errors: ${allErrors.length}`);
+    console.log(`Success: ${allSuccess.length}`);
+  }
 
   if (allErrors.length > 0) {
     const outputSeparator = `\n${chalk.yellow("---")}\n`;
     throw new Error(
-      `${ErrorPrefix} ${
-        allErrors.length
-      } MDX files couldn't compile successfully!
-${outputSeparator}${allErrors
+      `${ErrorPrefix} ${allErrors.length}/${
+        allRelativeFilePaths.length
+      } MDX files couldn't compile!${outputSeparator}${allErrors
         .map((error) => error.errorMessage)
         .join(outputSeparator)}${outputSeparator}`
     );
@@ -125,9 +125,9 @@ ${outputSeparator}${allErrors
       // TODO generate warnings for compat options here?
       return { relativeFilePath, status: "success", result };
     } catch (error) {
-      const errorMessage = `Error while compiling file ${chalk.blue(
-        relativeFilePath
-      )} ${formatMDXLineColumn(error)}
+      const errorMessage = `${chalk.red(
+        "Error while compiling file"
+      )} ${chalk.blue(relativeFilePath)}${formatMDXLineColumn(error)}
 Details: ${error.message}`;
       return { relativeFilePath, status: "error", error, errorMessage };
     }

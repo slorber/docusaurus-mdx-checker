@@ -15,7 +15,9 @@ program
 program.parse();
 
 const options = program.opts();
-console.log("Options: ", options);
+if (options.verbose) {
+  console.log("Options: ", options);
+}
 
 const { cwd, verbose, checkUnknownGlobals } = options;
 
@@ -34,6 +36,6 @@ try {
   console.log(result);
   process.exit(1);
 } catch (error) {
-  console.error(error);
+  console.error(error.message);
   process.exit(1);
 }
