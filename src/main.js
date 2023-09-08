@@ -6,12 +6,14 @@ import { globby } from "globby";
 import { compile } from "@mdx-js/mdx";
 import chalk from "chalk";
 
+import { getUnknownGlobals } from "./globals.js";
 import { preprocess } from "./compat.js";
 import {
   DefaultRemarkPlugins,
   DefaultRehypePlugins,
   DefaultInclude,
   DefaultExclude,
+  DefaultGlobals,
 } from "./constants.js";
 
 export {
@@ -35,6 +37,7 @@ export default async function main({
   rehypePlugins = DefaultRehypePlugins,
   format = "mdx",
   verbose = false,
+  globals = DefaultGlobals,
 }) {
   const allRelativeFilePaths = await globby(include, {
     cwd,
@@ -99,6 +102,16 @@ ${outputSeparator}${allErrors
       };
       const result = await compile(contentPreprocessed, compilerOptions);
 
+      const unknownGlobals = getUnknownGlobals(result.value, globals);
+      if (unknownGlobals.length > 0) {
+        throw new Error(
+          `These MDX global variables do not seem to be available in scope: ${unknownGlobals.join(
+            " "
+          )}`
+        );
+      }
+
+      /*
       // const fileToDebug = "docs/introduction.md";
       const fileToDebug = undefined;
       if (relativeFilePath === fileToDebug) {
@@ -110,6 +123,7 @@ ${outputSeparator}${allErrors
           compilerOptions,
         });
       }
+       */
 
       // TODO generate warnings for compat options here?
       return { relativeFilePath, status: "success", result };

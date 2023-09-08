@@ -6,7 +6,9 @@ import {
 } from "../src/constants.js";
 import remarkMath from "remark-math";
 
-const FixtureSitesPath = "./__tests__/__fixtures__/sites";
+const FixturePath = "./__tests__/__fixtures__";
+const FixtureSitesPath = `${FixturePath}/sites`;
+const FixtureCustomPath = `${FixturePath}/custom`;
 
 const SiteFixtures = {
   v2: {
@@ -35,6 +37,20 @@ const exclude = [
   //
   // excludeVersionedDocs ? "**/versioned_docs" : null,
 ].filter(Boolean);
+
+describe.only("Custom fixture", () => {
+  async function testSite(options) {
+    return main({
+      cwd: FixtureCustomPath,
+      // verbose: true,
+      ...options,
+    });
+  }
+
+  test("does not compile", async () => {
+    await expect(testSite({})).rejects.toThrowErrorMatchingSnapshot();
+  });
+});
 
 describe("Docusaurus", () => {
   async function testDocusaurus(options) {
