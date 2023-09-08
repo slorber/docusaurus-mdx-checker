@@ -38,7 +38,7 @@ const exclude = [
   // excludeVersionedDocs ? "**/versioned_docs" : null,
 ].filter(Boolean);
 
-describe.only("Custom fixture", () => {
+describe("Custom fixture", () => {
   async function testCustom(name, options) {
     return main({
       cwd: `${FixtureCustomPath}/${name}`,
@@ -47,7 +47,7 @@ describe.only("Custom fixture", () => {
     });
   }
 
-  describe.only("globals", () => {
+  describe("globals", () => {
     test("does not compile", async () => {
       await expect(
         testCustom("globals", {})
@@ -55,7 +55,9 @@ describe.only("Custom fixture", () => {
     });
     test("compiles with globals=null", async () => {
       const result = await testCustom("globals", { globals: null });
-      expect(result).toMatchInlineSnapshot('"[32m[SUCCESS][39m All 1 MDX files compiled successfully!"');
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 1 MDX files compiled successfully!"'
+      );
     });
   });
 });
@@ -65,6 +67,7 @@ describe("Docusaurus", () => {
     return main({
       format: "mdx",
       remarkPlugins: [...DefaultRemarkPlugins, remarkMath],
+      globals: null,
       // verbose: true,
       ...options,
     });
@@ -142,6 +145,7 @@ describe("Docusaurus", () => {
 describe("Jest", () => {
   async function testJest(options) {
     return main({
+      globals: null,
       // verbose: true,
       ...options,
     });
@@ -224,8 +228,9 @@ describe("Jest", () => {
 });
 
 describe("React-Native", () => {
-  async function testJest(options) {
+  async function testReactNative(options) {
     return main({
+      globals: null,
       // verbose: true,
       ...options,
     });
@@ -235,7 +240,7 @@ describe("React-Native", () => {
 
   describe("v2", () => {
     async function testSite(options) {
-      return testJest({
+      return testReactNative({
         cwd: SiteFixtures.v2.reactnative,
         // verbose: true,
         ...options,
@@ -265,7 +270,7 @@ describe("React-Native", () => {
 
   describe("v3", () => {
     async function testSite(options) {
-      return testJest({
+      return testReactNative({
         cwd: SiteFixtures.v3.reactnative,
         format: "detect",
         // verbose: true,

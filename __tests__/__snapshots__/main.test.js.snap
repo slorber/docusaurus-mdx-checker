@@ -1,7 +1,17 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Custom fixture > globals > does not compile 1`] = `
+"[31m[ERROR][39m 1 MDX files couldn't compile successfully!
+
+[33m---[39m
+Error while compiling file globals.mdx:
+Details: These MDX global variables do not seem to be available in scope: unknownVariable1 unknownVariable2 unknownVariable3
+[33m---[39m
+"
+`;
+
 exports[`Docusaurus > v2 > does not compile - exclude versioned docs 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 3 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/api/plugins/plugin-pwa.md:
@@ -20,7 +30,7 @@ Line=57 Column=6
 `;
 
 exports[`Docusaurus > v2 > does not compile - only docs 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 3 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/api/plugins/plugin-pwa.md:
@@ -39,7 +49,7 @@ Line=57 Column=6
 `;
 
 exports[`Docusaurus > v2 > does not compile 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 9 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/api/plugins/plugin-pwa.md:
@@ -82,7 +92,7 @@ Line=57 Column=6
 `;
 
 exports[`Jest > v2 > does not compile - exclude versioned docs 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 3 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/Configuration.md:
@@ -101,7 +111,7 @@ Line=43 Column=49
 `;
 
 exports[`Jest > v2 > does not compile - only docs 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 2 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/Configuration.md:
@@ -116,7 +126,7 @@ Line=92 Column=1
 `;
 
 exports[`Jest > v2 > does not compile 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 2 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/Configuration.md:
@@ -131,7 +141,7 @@ Line=92 Column=1
 `;
 
 exports[`React-Native > v2 > does not compile - exclude versioned docs 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 28 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/_integration-with-existing-apps-java.md:
@@ -250,7 +260,7 @@ Line=32 Column=1
 `;
 
 exports[`React-Native > v2 > does not compile - only docs 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 22 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/_integration-with-existing-apps-java.md:
@@ -345,7 +355,7 @@ Line=428 Column=26
 `;
 
 exports[`React-Native > v2 > does not compile 1`] = `
-"[31m[ERROR][39m Some MDX files couldn't compile successfully!
+"[31m[ERROR][39m 134 MDX files couldn't compile successfully!
 
 [33m---[39m
 Error while compiling file docs/_integration-with-existing-apps-java.md:
