@@ -74,7 +74,9 @@ export default async function main({
   if (allErrors.length > 0) {
     const outputSeparator = `\n${chalk.yellow("---")}\n`;
     throw new Error(
-      `${ErrorPrefix} Some MDX files couldn't compile successfully!
+      `${ErrorPrefix} ${
+        allErrors.length
+      } MDX files couldn't compile successfully!
 ${outputSeparator}${allErrors
         .map((error) => error.errorMessage)
         .join(outputSeparator)}${outputSeparator}`
@@ -102,13 +104,15 @@ ${outputSeparator}${allErrors
       };
       const result = await compile(contentPreprocessed, compilerOptions);
 
-      const unknownGlobals = getUnknownGlobals(result.value, globals);
-      if (unknownGlobals.length > 0) {
-        throw new Error(
-          `These MDX global variables do not seem to be available in scope: ${unknownGlobals.join(
-            " "
-          )}`
-        );
+      if (globals !== null) {
+        const unknownGlobals = getUnknownGlobals(result.value, globals);
+        if (unknownGlobals.length > 0) {
+          throw new Error(
+            `These MDX global variables do not seem to be available in scope: ${unknownGlobals.join(
+              " "
+            )}`
+          );
+        }
       }
 
       /*

@@ -39,16 +39,24 @@ const exclude = [
 ].filter(Boolean);
 
 describe.only("Custom fixture", () => {
-  async function testSite(options) {
+  async function testCustom(name, options) {
     return main({
-      cwd: FixtureCustomPath,
+      cwd: `${FixtureCustomPath}/${name}`,
       // verbose: true,
       ...options,
     });
   }
 
-  test("does not compile", async () => {
-    await expect(testSite({})).rejects.toThrowErrorMatchingSnapshot();
+  describe.only("globals", () => {
+    test("does not compile", async () => {
+      await expect(
+        testCustom("globals", {})
+      ).rejects.toThrowErrorMatchingSnapshot();
+    });
+    test("compiles with globals=null", async () => {
+      const result = await testCustom("globals", { globals: null });
+      expect(result).toMatchInlineSnapshot('"[32m[SUCCESS][39m All 1 MDX files compiled successfully!"');
+    });
   });
 });
 
