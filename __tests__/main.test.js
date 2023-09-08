@@ -118,7 +118,7 @@ describe("Docusaurus", () => {
     test("compiles", async () => {
       const result = await testSite({});
       expect(result).toMatchInlineSnapshot(
-        '"[32m[SUCCESS][39m All 694 MDX files compiled successfully!"'
+        '"[32m[SUCCESS][39m All 289 MDX files compiled successfully!"'
       );
     });
 
@@ -196,14 +196,14 @@ describe("Jest", () => {
     test("compiles", async () => {
       const result = await testSite({});
       expect(result).toMatchInlineSnapshot(
-        '"[32m[SUCCESS][39m All 169 MDX files compiled successfully!"'
+        '"[32m[SUCCESS][39m All 95 MDX files compiled successfully!"'
       );
     });
 
     test("compiles - website cwd", async () => {
       const result = await testSite({ cwd: `${SiteFixtures.v3.jest}/website` });
       expect(result).toMatchInlineSnapshot(
-        '"[32m[SUCCESS][39m All 169 MDX files compiled successfully!"'
+        '"[32m[SUCCESS][39m All 95 MDX files compiled successfully!"'
       );
     });
 
@@ -281,7 +281,7 @@ describe("React-Native", () => {
     test("compiles", async () => {
       const result = await testSite({});
       expect(result).toMatchInlineSnapshot(
-        '"[32m[SUCCESS][39m All 844 MDX files compiled successfully!"'
+        '"[32m[SUCCESS][39m All 483 MDX files compiled successfully!"'
       );
     });
 
@@ -290,7 +290,7 @@ describe("React-Native", () => {
         cwd: `${SiteFixtures.v3.reactnative}/website`,
       });
       expect(result).toMatchInlineSnapshot(
-        '"[32m[SUCCESS][39m All 844 MDX files compiled successfully!"'
+        '"[32m[SUCCESS][39m All 483 MDX files compiled successfully!"'
       );
     });
 
