@@ -22,7 +22,8 @@
   "bin": "src/cli.js",
   "type": "module",
   "scripts": {
-    "launch": "node src/cli.js",
+    "launch:docusaurus-v2": "node src/cli.js --cwd ./__tests__/__fixtures__/sites/docusaurus-v2",
+    "launch:docusaurus-v3": "node src/cli.js --cwd ./__tests__/__fixtures__/sites/docusaurus-v3",
     "test": "vitest --test-timeout 15000"
   },
   "dependencies": {
@@ -30,16 +31,17 @@
     "@slorber/remark-comment": "^1.0.0",
     "acorn": "^8.10.0",
     "chalk": "^5.3.0",
+    "commander": "^11.0.0",
     "globby": "^13.2.2",
     "lodash": "^4.17.21",
     "periscopic": "^3.1.0",
     "remark-directive": "^2.0.1",
     "remark-frontmatter": "^4.0.1",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1"
   },
   "devDependencies": {
     "prettier": "^3.0.3",
-    "remark-math": "^5.1.1",
     "vitest": "^0.34.3"
   }
 }

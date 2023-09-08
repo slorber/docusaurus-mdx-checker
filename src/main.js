@@ -16,13 +16,6 @@ import {
   DefaultGlobals,
 } from "./constants.js";
 
-export {
-  DefaultRemarkPlugins,
-  DefaultRehypePlugins,
-  DefaultInclude,
-  DefaultExclude,
-} from "./constants";
-
 const SuccessPrefix = chalk.green("[SUCCESS]");
 const ErrorPrefix = chalk.red("[ERROR]");
 
@@ -151,5 +144,6 @@ Details: ${error.message}`;
       }
       return ` (${lineColumn})`;
     }
+    return "";
   }
 }

@@ -5,7 +5,6 @@ import {
   DefaultRemarkPlugins,
   VersionedDocsExclusion,
 } from "../src/constants.js";
-import remarkMath from "remark-math";
 
 const FixturePath = "./__tests__/__fixtures__";
 const FixtureSitesPath = `${FixturePath}/sites`;
@@ -67,7 +66,6 @@ describe("Docusaurus", () => {
   async function testDocusaurus(options) {
     return main({
       format: "mdx",
-      remarkPlugins: [...DefaultRemarkPlugins, remarkMath],
       globals: null,
       // verbose: true,
       ...options,

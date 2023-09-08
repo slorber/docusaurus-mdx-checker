@@ -1,6 +1,6 @@
 import * as periscopic from "periscopic";
 import * as acorn from "acorn";
-import * as _ from "lodash";
+import _ from "lodash";
 
 function getGlobals(str) {
   const ast = acorn.parse(str, {
