@@ -1,6 +1,7 @@
 import { describe, expect, test } from "vitest";
 import main from "../src/main";
 import {
+  DefaultGlobals,
   DefaultRemarkPlugins,
   VersionedDocsExclusion,
 } from "../src/constants.js";
@@ -251,6 +252,12 @@ describe("React-Native", () => {
       await expect(testSite({})).rejects.toThrowErrorMatchingSnapshot();
     });
 
+    test("does not compile - with globals", async () => {
+      await expect(
+        testSite({ globals: DefaultGlobals })
+      ).rejects.toThrowErrorMatchingSnapshot();
+    });
+
     test("does not compile - only docs", async () => {
       await expect(
         testSite({
@@ -280,6 +287,13 @@ describe("React-Native", () => {
 
     test("compiles", async () => {
       const result = await testSite({});
+      expect(result).toMatchInlineSnapshot(
+        '"[32m[SUCCESS][39m All 483 MDX files compiled successfully!"'
+      );
+    });
+
+    test("compiles - with globals", async () => {
+      const result = await testSite({ globals: DefaultGlobals });
       expect(result).toMatchInlineSnapshot(
         '"[32m[SUCCESS][39m All 483 MDX files compiled successfully!"'
       );
