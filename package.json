@@ -2,7 +2,7 @@
   "name": "docusaurus-mdx-checker",
   "author": "slorber",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Check your Docusaurus content for MDX v2 parsing errors",
   "homepage": "https://github.com/slorber/docusaurus-mdx-checker#readme",
   "keywords": [
@@ -26,6 +26,7 @@
     "launch:docusaurus-v3": "node src/cli.js --cwd ./__tests__/__fixtures__/sites/docusaurus-v3",
     "test": "vitest --test-timeout 15000"
   },
+
   "dependencies": {
     "@mdx-js/mdx": "^2.3.0",
     "@slorber/remark-comment": "^1.0.0",

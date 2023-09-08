@@ -8,8 +8,8 @@ program
   .option("-c --cwd <cwd>", "the CWD dir containing your MDX files")
   .option("-v --verbose", "enables more verbose logging")
   .option(
-    "-g --check-unknown-globals",
-    "attempt to report usage of unknown global variables in MDX"
+    "-g --globals",
+    "Attempt to report usage of unknown global variables in MDX"
   );
 
 program.parse();
@@ -19,13 +19,11 @@ if (options.verbose) {
   console.log("Options: ", options);
 }
 
-const { cwd, verbose, checkUnknownGlobals } = options;
-
-const globals = checkUnknownGlobals
-  ? // Default globals
-    undefined
-  : // Check disabled
-    null;
+const {
+  cwd = process.cwd(),
+  verbose = false,
+  checkUnknownGlobals: globals = undefined,
+} = options;
 
 try {
   const result = await main({
@@ -34,7 +32,7 @@ try {
     globals,
   });
   console.log(result);
-  process.exit(1);
+  process.exit(0);
 } catch (error) {
   console.error(error.message);
   process.exit(1);
