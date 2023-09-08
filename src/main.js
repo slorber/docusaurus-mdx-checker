@@ -132,16 +132,15 @@ ${outputSeparator}${allErrors
       // TODO generate warnings for compat options here?
       return { relativeFilePath, status: "success", result };
     } catch (error) {
-      const errorMessage = `Error while compiling file ${relativeFilePath}:\n${formatMDXErrorMessage(
-        error
-      )}`;
+      const errorMessage = `Error while compiling file ${chalk.blue(
+        relativeFilePath
+      )} ${formatMDXLineColumn(error)}
+Details: ${error.message}`;
       return { relativeFilePath, status: "error", error, errorMessage };
     }
   }
 
-  function formatMDXErrorMessage(error) {
-    let message = `Details: ${error.message}`;
-
+  function formatMDXLineColumn(error) {
     if (error.line || error.column) {
       let lineColumn = "";
       if (error.line) {
@@ -150,9 +149,7 @@ ${outputSeparator}${allErrors
       if (error.column) {
         lineColumn = lineColumn + "Column=" + error.column;
       }
-      message = message + "\n" + lineColumn;
+      return ` (${lineColumn})`;
     }
-
-    return message;
   }
 }

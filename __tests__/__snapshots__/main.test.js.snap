@@ -4,7 +4,7 @@ exports[`Custom fixture > globals > does not compile 1`] = `
 "[31m[ERROR][39m 1 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file globals.mdx:
+Error while compiling file [34mglobals.mdx[39m undefined
 Details: These MDX global variables do not seem to be available in scope: unknownVariable1 unknownVariable2 unknownVariable3
 [33m---[39m
 "
@@ -14,17 +14,14 @@ exports[`Docusaurus > v2 > does not compile - exclude versioned docs 1`] = `
 "[31m[ERROR][39m 3 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/api/plugins/plugin-pwa.md:
+Error while compiling file [34mdocs/api/plugins/plugin-pwa.md[39m  (Line=123 Column=48)
 Details: Unexpected character \`=\` (U+003D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=123 Column=48
 [33m---[39m
-Error while compiling file docs/deployment.mdx:
+Error while compiling file [34mdocs/deployment.mdx[39m  (Line=443 Column=1)
 Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
-Line=443 Column=1
 [33m---[39m
-Error while compiling file docs/introduction.md:
+Error while compiling file [34mdocs/introduction.md[39m  (Line=57 Column=6)
 Details: Unexpected character \`/\` (U+002F) after self-closing slash, expected \`>\` to end the tag (note: JS comments in JSX tags are not supported in MDX)
-Line=57 Column=6
 [33m---[39m
 "
 `;
@@ -33,17 +30,14 @@ exports[`Docusaurus > v2 > does not compile - only docs 1`] = `
 "[31m[ERROR][39m 3 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/api/plugins/plugin-pwa.md:
+Error while compiling file [34mdocs/api/plugins/plugin-pwa.md[39m  (Line=123 Column=48)
 Details: Unexpected character \`=\` (U+003D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=123 Column=48
 [33m---[39m
-Error while compiling file docs/deployment.mdx:
+Error while compiling file [34mdocs/deployment.mdx[39m  (Line=443 Column=1)
 Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
-Line=443 Column=1
 [33m---[39m
-Error while compiling file docs/introduction.md:
+Error while compiling file [34mdocs/introduction.md[39m  (Line=57 Column=6)
 Details: Unexpected character \`/\` (U+002F) after self-closing slash, expected \`>\` to end the tag (note: JS comments in JSX tags are not supported in MDX)
-Line=57 Column=6
 [33m---[39m
 "
 `;
@@ -52,29 +46,23 @@ exports[`Docusaurus > v2 > does not compile 1`] = `
 "[31m[ERROR][39m 6 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/api/plugins/plugin-pwa.md:
+Error while compiling file [34mdocs/api/plugins/plugin-pwa.md[39m  (Line=123 Column=48)
 Details: Unexpected character \`=\` (U+003D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=123 Column=48
 [33m---[39m
-Error while compiling file docs/deployment.mdx:
+Error while compiling file [34mdocs/deployment.mdx[39m  (Line=443 Column=1)
 Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
-Line=443 Column=1
 [33m---[39m
-Error while compiling file docs/introduction.md:
+Error while compiling file [34mdocs/introduction.md[39m  (Line=57 Column=6)
 Details: Unexpected character \`/\` (U+002F) after self-closing slash, expected \`>\` to end the tag (note: JS comments in JSX tags are not supported in MDX)
-Line=57 Column=6
 [33m---[39m
-Error while compiling file versioned_docs/version-2.0.0-rc.1/api/plugins/plugin-pwa.md:
+Error while compiling file [34mversioned_docs/version-2.0.0-rc.1/api/plugins/plugin-pwa.md[39m  (Line=123 Column=48)
 Details: Unexpected character \`=\` (U+003D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=123 Column=48
 [33m---[39m
-Error while compiling file versioned_docs/version-2.0.0-rc.1/deployment.mdx:
+Error while compiling file [34mversioned_docs/version-2.0.0-rc.1/deployment.mdx[39m  (Line=443 Column=1)
 Details: Unexpected closing tag \`</details>\`, expected corresponding closing tag for \`<TabItem>\` (320:1-320:48)
-Line=443 Column=1
 [33m---[39m
-Error while compiling file versioned_docs/version-2.0.0-rc.1/introduction.md:
+Error while compiling file [34mversioned_docs/version-2.0.0-rc.1/introduction.md[39m  (Line=57 Column=6)
 Details: Unexpected character \`/\` (U+002F) after self-closing slash, expected \`>\` to end the tag (note: JS comments in JSX tags are not supported in MDX)
-Line=57 Column=6
 [33m---[39m
 "
 `;
@@ -83,17 +71,14 @@ exports[`Jest > v2 > does not compile - exclude versioned docs 1`] = `
 "[31m[ERROR][39m 3 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/Configuration.md:
+Error while compiling file [34mdocs/Configuration.md[39m  (Line=1756 Column=44)
 Details: Unexpected character \`-\` (U+002D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=1756 Column=44
 [33m---[39m
-Error while compiling file docs/GettingStarted.md:
+Error while compiling file [34mdocs/GettingStarted.md[39m  (Line=92 Column=1)
 Details: Expected a closing tag for \`</summary>\` (92:1-92:10) before the end of \`paragraph\`
-Line=92 Column=1
 [33m---[39m
-Error while compiling file website/README.md:
+Error while compiling file [34mwebsite/README.md[39m  (Line=43 Column=49)
 Details: Unexpected character \`=\` (U+003D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=43 Column=49
 [33m---[39m
 "
 `;
@@ -102,13 +87,11 @@ exports[`Jest > v2 > does not compile - only docs 1`] = `
 "[31m[ERROR][39m 2 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/Configuration.md:
+Error while compiling file [34mdocs/Configuration.md[39m  (Line=1756 Column=44)
 Details: Unexpected character \`-\` (U+002D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=1756 Column=44
 [33m---[39m
-Error while compiling file docs/GettingStarted.md:
+Error while compiling file [34mdocs/GettingStarted.md[39m  (Line=92 Column=1)
 Details: Expected a closing tag for \`</summary>\` (92:1-92:10) before the end of \`paragraph\`
-Line=92 Column=1
 [33m---[39m
 "
 `;
@@ -117,13 +100,11 @@ exports[`Jest > v2 > does not compile 1`] = `
 "[31m[ERROR][39m 2 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/Configuration.md:
+Error while compiling file [34mdocs/Configuration.md[39m  (Line=1756 Column=44)
 Details: Unexpected character \`-\` (U+002D) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=1756 Column=44
 [33m---[39m
-Error while compiling file docs/GettingStarted.md:
+Error while compiling file [34mdocs/GettingStarted.md[39m  (Line=92 Column=1)
 Details: Expected a closing tag for \`</summary>\` (92:1-92:10) before the end of \`paragraph\`
-Line=92 Column=1
 [33m---[39m
 "
 `;
@@ -132,117 +113,89 @@ exports[`React-Native > v2 > does not compile - exclude versioned docs 1`] = `
 "[31m[ERROR][39m 28 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/_integration-with-existing-apps-java.md:
+Error while compiling file [34mdocs/_integration-with-existing-apps-java.md[39m  (Line=267 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=267 Column=41
 [33m---[39m
-Error while compiling file docs/_integration-with-existing-apps-kotlin.md:
+Error while compiling file [34mdocs/_integration-with-existing-apps-kotlin.md[39m  (Line=268 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=268 Column=41
 [33m---[39m
-Error while compiling file docs/animated.md:
+Error while compiling file [34mdocs/animated.md[39m  (Line=468 Column=32)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=468 Column=32
 [33m---[39m
-Error while compiling file docs/animatedvaluexy.md:
+Error while compiling file [34mdocs/animatedvaluexy.md[39m  (Line=79 Column=13)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=79 Column=13
 [33m---[39m
-Error while compiling file docs/button.md:
+Error while compiling file [34mdocs/button.md[39m  (Line=125 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=125 Column=16
 [33m---[39m
-Error while compiling file docs/flatlist.md:
+Error while compiling file [34mdocs/flatlist.md[39m  (Line=623 Column=22)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=623 Column=22
 [33m---[39m
-Error while compiling file docs/image.md:
+Error while compiling file [34mdocs/image.md[39m  (Line=249 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=249 Column=16
 [33m---[39m
-Error while compiling file docs/javascript-environment.md:
+Error while compiling file [34mdocs/javascript-environment.md[39m  (Line=95 Column=32)
 Details: Could not parse expression with acorn: Unexpected token
-Line=95 Column=32
 [33m---[39m
-Error while compiling file docs/new-architecture-appendix.md:
+Error while compiling file [34mdocs/new-architecture-appendix.md[39m  (Line=43 Column=11)
 Details: Could not parse expression with acorn: Unexpected token
-Line=43 Column=11
 [33m---[39m
-Error while compiling file docs/pressable.md:
+Error while compiling file [34mdocs/pressable.md[39m  (Line=170 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=170 Column=17
 [33m---[39m
-Error while compiling file docs/pushnotificationios.md:
+Error while compiling file [34mdocs/pushnotificationios.md[39m  (Line=324 Column=204)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=324 Column=204
 [33m---[39m
-Error while compiling file docs/scrollview.md:
+Error while compiling file [34mdocs/scrollview.md[39m  (Line=210 Column=15)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=210 Column=15
 [33m---[39m
-Error while compiling file docs/sectionlist.md:
+Error while compiling file [34mdocs/sectionlist.md[39m  (Line=240 Column=22)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=240 Column=22
 [33m---[39m
-Error while compiling file docs/shadow-props.md:
+Error while compiling file [34mdocs/shadow-props.md[39m  (Line=233 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=233 Column=17
 [33m---[39m
-Error while compiling file docs/switch.md:
+Error while compiling file [34mdocs/switch.md[39m  (Line=114 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=114 Column=17
 [33m---[39m
-Error while compiling file docs/text-style-props.md:
+Error while compiling file [34mdocs/text-style-props.md[39m  (Line=899 Column=18)
 Details: Could not parse expression with acorn: Unexpected token
-Line=899 Column=18
 [33m---[39m
-Error while compiling file docs/text.md:
+Error while compiling file [34mdocs/text.md[39m  (Line=490 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=490 Column=16
 [33m---[39m
-Error while compiling file docs/textinput.md:
+Error while compiling file [34mdocs/textinput.md[39m  (Line=594 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=594 Column=16
 [33m---[39m
-Error while compiling file docs/touchablewithoutfeedback.md:
+Error while compiling file [34mdocs/touchablewithoutfeedback.md[39m  (Line=182 Column=20)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=182 Column=20
 [33m---[39m
-Error while compiling file docs/transforms.md:
+Error while compiling file [34mdocs/transforms.md[39m  (Line=193 Column=28)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=193 Column=28
 [33m---[39m
-Error while compiling file docs/view.md:
+Error while compiling file [34mdocs/view.md[39m  (Line=181 Column=20)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=181 Column=20
 [33m---[39m
-Error while compiling file docs/virtualizedlist.md:
+Error while compiling file [34mdocs/virtualizedlist.md[39m  (Line=428 Column=26)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=428 Column=26
 [33m---[39m
-Error while compiling file website/architecture/render-pipeline.md:
+Error while compiling file [34mwebsite/architecture/render-pipeline.md[39m  (Line=163 Column=42)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=163 Column=42
 [33m---[39m
-Error while compiling file website/blog/2018-01-18-implementing-twitters-app-loading-animation-in-react-native.md:
+Error while compiling file [34mwebsite/blog/2018-01-18-implementing-twitters-app-loading-animation-in-react-native.md[39m  (Line=75 Column=3)
 Details: Expected the closing tag \`</a>\` either after the end of \`paragraph\` (78:44) or another opening tag after the start of \`paragraph\` (74:5)
-Line=75 Column=3
 [33m---[39m
-Error while compiling file website/blog/2018-08-13-react-native-accessibility-updates.md:
+Error while compiling file [34mwebsite/blog/2018-08-13-react-native-accessibility-updates.md[39m  (Line=113 Column=27)
 Details: Could not parse expression with acorn: Unexpected character '“'
-Line=113 Column=27
 [33m---[39m
-Error while compiling file website/contributing/how-to-open-a-pull-request.md:
+Error while compiling file [34mwebsite/contributing/how-to-open-a-pull-request.md[39m  (Line=23 Column=17)
 Details: Unexpected character \`/\` (U+002F) before local name, expected a character that can start a name, such as a letter, \`$\`, or \`_\` (note: to create a link in MDX, use \`[text](url)\`)
-Line=23 Column=17
 [33m---[39m
-Error while compiling file website/contributing/release-branch-cut-and-rc0.md:
+Error while compiling file [34mwebsite/contributing/release-branch-cut-and-rc0.md[39m  (Line=134 Column=1)
 Details: Expected a closing tag for \`<YOUR_MINOR_VERSION>\` (134:19-134:39) before the end of \`paragraph\`
-Line=134 Column=1
 [33m---[39m
-Error while compiling file website/contributing/release-faq.md:
+Error while compiling file [34mwebsite/contributing/release-faq.md[39m  (Line=32 Column=1)
 Details: Expected a closing tag for \`<COMMIT_HASH>\` (32:294-32:307) before the end of \`paragraph\`
-Line=32 Column=1
 [33m---[39m
 "
 `;
@@ -251,93 +204,71 @@ exports[`React-Native > v2 > does not compile - only docs 1`] = `
 "[31m[ERROR][39m 22 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/_integration-with-existing-apps-java.md:
+Error while compiling file [34mdocs/_integration-with-existing-apps-java.md[39m  (Line=267 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=267 Column=41
 [33m---[39m
-Error while compiling file docs/_integration-with-existing-apps-kotlin.md:
+Error while compiling file [34mdocs/_integration-with-existing-apps-kotlin.md[39m  (Line=268 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=268 Column=41
 [33m---[39m
-Error while compiling file docs/animated.md:
+Error while compiling file [34mdocs/animated.md[39m  (Line=468 Column=32)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=468 Column=32
 [33m---[39m
-Error while compiling file docs/animatedvaluexy.md:
+Error while compiling file [34mdocs/animatedvaluexy.md[39m  (Line=79 Column=13)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=79 Column=13
 [33m---[39m
-Error while compiling file docs/button.md:
+Error while compiling file [34mdocs/button.md[39m  (Line=125 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=125 Column=16
 [33m---[39m
-Error while compiling file docs/flatlist.md:
+Error while compiling file [34mdocs/flatlist.md[39m  (Line=623 Column=22)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=623 Column=22
 [33m---[39m
-Error while compiling file docs/image.md:
+Error while compiling file [34mdocs/image.md[39m  (Line=249 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=249 Column=16
 [33m---[39m
-Error while compiling file docs/javascript-environment.md:
+Error while compiling file [34mdocs/javascript-environment.md[39m  (Line=95 Column=32)
 Details: Could not parse expression with acorn: Unexpected token
-Line=95 Column=32
 [33m---[39m
-Error while compiling file docs/new-architecture-appendix.md:
+Error while compiling file [34mdocs/new-architecture-appendix.md[39m  (Line=43 Column=11)
 Details: Could not parse expression with acorn: Unexpected token
-Line=43 Column=11
 [33m---[39m
-Error while compiling file docs/pressable.md:
+Error while compiling file [34mdocs/pressable.md[39m  (Line=170 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=170 Column=17
 [33m---[39m
-Error while compiling file docs/pushnotificationios.md:
+Error while compiling file [34mdocs/pushnotificationios.md[39m  (Line=324 Column=204)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=324 Column=204
 [33m---[39m
-Error while compiling file docs/scrollview.md:
+Error while compiling file [34mdocs/scrollview.md[39m  (Line=210 Column=15)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=210 Column=15
 [33m---[39m
-Error while compiling file docs/sectionlist.md:
+Error while compiling file [34mdocs/sectionlist.md[39m  (Line=240 Column=22)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=240 Column=22
 [33m---[39m
-Error while compiling file docs/shadow-props.md:
+Error while compiling file [34mdocs/shadow-props.md[39m  (Line=233 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=233 Column=17
 [33m---[39m
-Error while compiling file docs/switch.md:
+Error while compiling file [34mdocs/switch.md[39m  (Line=114 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=114 Column=17
 [33m---[39m
-Error while compiling file docs/text-style-props.md:
+Error while compiling file [34mdocs/text-style-props.md[39m  (Line=899 Column=18)
 Details: Could not parse expression with acorn: Unexpected token
-Line=899 Column=18
 [33m---[39m
-Error while compiling file docs/text.md:
+Error while compiling file [34mdocs/text.md[39m  (Line=490 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=490 Column=16
 [33m---[39m
-Error while compiling file docs/textinput.md:
+Error while compiling file [34mdocs/textinput.md[39m  (Line=594 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=594 Column=16
 [33m---[39m
-Error while compiling file docs/touchablewithoutfeedback.md:
+Error while compiling file [34mdocs/touchablewithoutfeedback.md[39m  (Line=182 Column=20)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=182 Column=20
 [33m---[39m
-Error while compiling file docs/transforms.md:
+Error while compiling file [34mdocs/transforms.md[39m  (Line=193 Column=28)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=193 Column=28
 [33m---[39m
-Error while compiling file docs/view.md:
+Error while compiling file [34mdocs/view.md[39m  (Line=181 Column=20)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=181 Column=20
 [33m---[39m
-Error while compiling file docs/virtualizedlist.md:
+Error while compiling file [34mdocs/virtualizedlist.md[39m  (Line=428 Column=26)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=428 Column=26
 [33m---[39m
 "
 `;
@@ -346,205 +277,155 @@ exports[`React-Native > v2 > does not compile 1`] = `
 "[31m[ERROR][39m 50 MDX files couldn't compile successfully!
 
 [33m---[39m
-Error while compiling file docs/_integration-with-existing-apps-java.md:
+Error while compiling file [34mdocs/_integration-with-existing-apps-java.md[39m  (Line=267 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=267 Column=41
 [33m---[39m
-Error while compiling file docs/_integration-with-existing-apps-kotlin.md:
+Error while compiling file [34mdocs/_integration-with-existing-apps-kotlin.md[39m  (Line=268 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=268 Column=41
 [33m---[39m
-Error while compiling file docs/animated.md:
+Error while compiling file [34mdocs/animated.md[39m  (Line=468 Column=32)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=468 Column=32
 [33m---[39m
-Error while compiling file docs/animatedvaluexy.md:
+Error while compiling file [34mdocs/animatedvaluexy.md[39m  (Line=79 Column=13)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=79 Column=13
 [33m---[39m
-Error while compiling file docs/button.md:
+Error while compiling file [34mdocs/button.md[39m  (Line=125 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=125 Column=16
 [33m---[39m
-Error while compiling file docs/flatlist.md:
+Error while compiling file [34mdocs/flatlist.md[39m  (Line=623 Column=22)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=623 Column=22
 [33m---[39m
-Error while compiling file docs/image.md:
+Error while compiling file [34mdocs/image.md[39m  (Line=249 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=249 Column=16
 [33m---[39m
-Error while compiling file docs/javascript-environment.md:
+Error while compiling file [34mdocs/javascript-environment.md[39m  (Line=95 Column=32)
 Details: Could not parse expression with acorn: Unexpected token
-Line=95 Column=32
 [33m---[39m
-Error while compiling file docs/new-architecture-appendix.md:
+Error while compiling file [34mdocs/new-architecture-appendix.md[39m  (Line=43 Column=11)
 Details: Could not parse expression with acorn: Unexpected token
-Line=43 Column=11
 [33m---[39m
-Error while compiling file docs/pressable.md:
+Error while compiling file [34mdocs/pressable.md[39m  (Line=170 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=170 Column=17
 [33m---[39m
-Error while compiling file docs/pushnotificationios.md:
+Error while compiling file [34mdocs/pushnotificationios.md[39m  (Line=324 Column=204)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=324 Column=204
 [33m---[39m
-Error while compiling file docs/scrollview.md:
+Error while compiling file [34mdocs/scrollview.md[39m  (Line=210 Column=15)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=210 Column=15
 [33m---[39m
-Error while compiling file docs/sectionlist.md:
+Error while compiling file [34mdocs/sectionlist.md[39m  (Line=240 Column=22)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=240 Column=22
 [33m---[39m
-Error while compiling file docs/shadow-props.md:
+Error while compiling file [34mdocs/shadow-props.md[39m  (Line=233 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=233 Column=17
 [33m---[39m
-Error while compiling file docs/switch.md:
+Error while compiling file [34mdocs/switch.md[39m  (Line=114 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=114 Column=17
 [33m---[39m
-Error while compiling file docs/text-style-props.md:
+Error while compiling file [34mdocs/text-style-props.md[39m  (Line=899 Column=18)
 Details: Could not parse expression with acorn: Unexpected token
-Line=899 Column=18
 [33m---[39m
-Error while compiling file docs/text.md:
+Error while compiling file [34mdocs/text.md[39m  (Line=490 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=490 Column=16
 [33m---[39m
-Error while compiling file docs/textinput.md:
+Error while compiling file [34mdocs/textinput.md[39m  (Line=594 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=594 Column=16
 [33m---[39m
-Error while compiling file docs/touchablewithoutfeedback.md:
+Error while compiling file [34mdocs/touchablewithoutfeedback.md[39m  (Line=182 Column=20)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=182 Column=20
 [33m---[39m
-Error while compiling file docs/transforms.md:
+Error while compiling file [34mdocs/transforms.md[39m  (Line=193 Column=28)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=193 Column=28
 [33m---[39m
-Error while compiling file docs/view.md:
+Error while compiling file [34mdocs/view.md[39m  (Line=181 Column=20)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=181 Column=20
 [33m---[39m
-Error while compiling file docs/virtualizedlist.md:
+Error while compiling file [34mdocs/virtualizedlist.md[39m  (Line=428 Column=26)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=428 Column=26
 [33m---[39m
-Error while compiling file website/architecture/render-pipeline.md:
+Error while compiling file [34mwebsite/architecture/render-pipeline.md[39m  (Line=163 Column=42)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=163 Column=42
 [33m---[39m
-Error while compiling file website/blog/2018-01-18-implementing-twitters-app-loading-animation-in-react-native.md:
+Error while compiling file [34mwebsite/blog/2018-01-18-implementing-twitters-app-loading-animation-in-react-native.md[39m  (Line=75 Column=3)
 Details: Expected the closing tag \`</a>\` either after the end of \`paragraph\` (78:44) or another opening tag after the start of \`paragraph\` (74:5)
-Line=75 Column=3
 [33m---[39m
-Error while compiling file website/blog/2018-08-13-react-native-accessibility-updates.md:
+Error while compiling file [34mwebsite/blog/2018-08-13-react-native-accessibility-updates.md[39m  (Line=113 Column=27)
 Details: Could not parse expression with acorn: Unexpected character '“'
-Line=113 Column=27
 [33m---[39m
-Error while compiling file website/contributing/how-to-open-a-pull-request.md:
+Error while compiling file [34mwebsite/contributing/how-to-open-a-pull-request.md[39m  (Line=23 Column=17)
 Details: Unexpected character \`/\` (U+002F) before local name, expected a character that can start a name, such as a letter, \`$\`, or \`_\` (note: to create a link in MDX, use \`[text](url)\`)
-Line=23 Column=17
 [33m---[39m
-Error while compiling file website/contributing/release-branch-cut-and-rc0.md:
+Error while compiling file [34mwebsite/contributing/release-branch-cut-and-rc0.md[39m  (Line=134 Column=1)
 Details: Expected a closing tag for \`<YOUR_MINOR_VERSION>\` (134:19-134:39) before the end of \`paragraph\`
-Line=134 Column=1
 [33m---[39m
-Error while compiling file website/contributing/release-faq.md:
+Error while compiling file [34mwebsite/contributing/release-faq.md[39m  (Line=32 Column=1)
 Details: Expected a closing tag for \`<COMMIT_HASH>\` (32:294-32:307) before the end of \`paragraph\`
-Line=32 Column=1
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/_integration-with-existing-apps-java.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/_integration-with-existing-apps-java.md[39m  (Line=267 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=267 Column=41
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/_integration-with-existing-apps-kotlin.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/_integration-with-existing-apps-kotlin.md[39m  (Line=268 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
-Line=268 Column=41
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/animated.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/animated.md[39m  (Line=468 Column=32)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=468 Column=32
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/animatedvaluexy.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/animatedvaluexy.md[39m  (Line=79 Column=13)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=79 Column=13
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/button.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/button.md[39m  (Line=125 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=125 Column=16
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/flatlist.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/flatlist.md[39m  (Line=623 Column=22)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=623 Column=22
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/image.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/image.md[39m  (Line=249 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=249 Column=16
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/javascript-environment.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/javascript-environment.md[39m  (Line=95 Column=32)
 Details: Could not parse expression with acorn: Unexpected token
-Line=95 Column=32
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/new-architecture-appendix.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/new-architecture-appendix.md[39m  (Line=43 Column=11)
 Details: Could not parse expression with acorn: Unexpected token
-Line=43 Column=11
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/pressable.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/pressable.md[39m  (Line=170 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=170 Column=17
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/pushnotificationios.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/pushnotificationios.md[39m  (Line=324 Column=204)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=324 Column=204
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/scrollview.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/scrollview.md[39m  (Line=210 Column=15)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=210 Column=15
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/sectionlist.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/sectionlist.md[39m  (Line=240 Column=22)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=240 Column=22
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/shadow-props.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/shadow-props.md[39m  (Line=233 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=233 Column=17
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/switch.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/switch.md[39m  (Line=114 Column=17)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=114 Column=17
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/text-style-props.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/text-style-props.md[39m  (Line=899 Column=18)
 Details: Could not parse expression with acorn: Unexpected token
-Line=899 Column=18
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/text.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/text.md[39m  (Line=490 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=490 Column=16
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/textinput.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/textinput.md[39m  (Line=594 Column=16)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=594 Column=16
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/touchablewithoutfeedback.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/touchablewithoutfeedback.md[39m  (Line=182 Column=20)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=182 Column=20
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/transforms.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/transforms.md[39m  (Line=193 Column=28)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=193 Column=28
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/view.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/view.md[39m  (Line=181 Column=20)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=181 Column=20
 [33m---[39m
-Error while compiling file website/versioned_docs/version-0.72/virtualizedlist.md:
+Error while compiling file [34mwebsite/versioned_docs/version-0.72/virtualizedlist.md[39m  (Line=428 Column=26)
 Details: Could not parse expression with acorn: Unexpected content after expression
-Line=428 Column=26
 [33m---[39m
 "
 `;
