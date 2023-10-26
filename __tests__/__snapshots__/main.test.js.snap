@@ -103,7 +103,7 @@ Details: Expected a closing tag for \`</summary>\` (92:1-92:10) before the end o
 `;
 
 exports[`React-Native > v2 > does not compile - exclude versioned docs 1`] = `
-"[31m[ERROR][39m 28/298 MDX files couldn't compile!
+"[31m[ERROR][39m 27/298 MDX files couldn't compile!
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/_integration-with-existing-apps-java.md[39m (Line=267 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
@@ -112,73 +112,70 @@ Details: Unexpected character \`5\` (U+0035) before name, expected a character t
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/animated.md[39m (Line=468 Column=32)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/animatedvaluexy.md[39m (Line=79 Column=13)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/button.md[39m (Line=125 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/flatlist.md[39m (Line=623 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/image.md[39m (Line=249 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/javascript-environment.md[39m (Line=95 Column=32)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/new-architecture-appendix.md[39m (Line=43 Column=11)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/pressable.md[39m (Line=170 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/pushnotificationios.md[39m (Line=324 Column=204)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/scrollview.md[39m (Line=210 Column=15)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/sectionlist.md[39m (Line=240 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/shadow-props.md[39m (Line=233 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/switch.md[39m (Line=114 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/text-style-props.md[39m (Line=899 Column=18)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/text.md[39m (Line=490 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/textinput.md[39m (Line=594 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/touchablewithoutfeedback.md[39m (Line=182 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/transforms.md[39m (Line=193 Column=28)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/view.md[39m (Line=181 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/virtualizedlist.md[39m (Line=428 Column=26)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/architecture/render-pipeline.md[39m (Line=163 Column=42)
-Details: Could not parse expression with acorn: Unexpected content after expression
-[33m---[39m
-[31mError while compiling file[39m [34mwebsite/blog/2018-01-18-implementing-twitters-app-loading-animation-in-react-native.md[39m (Line=75 Column=3)
-Details: Expected the closing tag \`</a>\` either after the end of \`paragraph\` (78:44) or another opening tag after the start of \`paragraph\` (74:5)
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/blog/2018-08-13-react-native-accessibility-updates.md[39m (Line=113 Column=27)
-Details: Could not parse expression with acorn: Unexpected character '“'
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/contributing/how-to-open-a-pull-request.md[39m (Line=23 Column=17)
 Details: Unexpected character \`/\` (U+002F) before local name, expected a character that can start a name, such as a letter, \`$\`, or \`_\` (note: to create a link in MDX, use \`[text](url)\`)
@@ -202,70 +199,70 @@ Details: Unexpected character \`5\` (U+0035) before name, expected a character t
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/animated.md[39m (Line=468 Column=32)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/animatedvaluexy.md[39m (Line=79 Column=13)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/button.md[39m (Line=125 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/flatlist.md[39m (Line=623 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/image.md[39m (Line=249 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/javascript-environment.md[39m (Line=95 Column=32)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/new-architecture-appendix.md[39m (Line=43 Column=11)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/pressable.md[39m (Line=170 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/pushnotificationios.md[39m (Line=324 Column=204)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/scrollview.md[39m (Line=210 Column=15)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/sectionlist.md[39m (Line=240 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/shadow-props.md[39m (Line=233 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/switch.md[39m (Line=114 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/text-style-props.md[39m (Line=899 Column=18)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/text.md[39m (Line=490 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/textinput.md[39m (Line=594 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/touchablewithoutfeedback.md[39m (Line=182 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/transforms.md[39m (Line=193 Column=28)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/view.md[39m (Line=181 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/virtualizedlist.md[39m (Line=428 Column=26)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 "
 `;
 
 exports[`React-Native > v2 > does not compile - with globals 1`] = `
-"[31m[ERROR][39m 50/482 MDX files couldn't compile!
+"[31m[ERROR][39m 49/482 MDX files couldn't compile!
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/_integration-with-existing-apps-java.md[39m (Line=267 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
@@ -274,73 +271,70 @@ Details: Unexpected character \`5\` (U+0035) before name, expected a character t
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/animated.md[39m (Line=468 Column=32)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/animatedvaluexy.md[39m (Line=79 Column=13)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/button.md[39m (Line=125 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/flatlist.md[39m (Line=623 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/image.md[39m (Line=249 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/javascript-environment.md[39m (Line=95 Column=32)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/new-architecture-appendix.md[39m (Line=43 Column=11)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/pressable.md[39m (Line=170 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/pushnotificationios.md[39m (Line=324 Column=204)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/scrollview.md[39m (Line=210 Column=15)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/sectionlist.md[39m (Line=240 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/shadow-props.md[39m (Line=233 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/switch.md[39m (Line=114 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/text-style-props.md[39m (Line=899 Column=18)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/text.md[39m (Line=490 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/textinput.md[39m (Line=594 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/touchablewithoutfeedback.md[39m (Line=182 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/transforms.md[39m (Line=193 Column=28)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/view.md[39m (Line=181 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/virtualizedlist.md[39m (Line=428 Column=26)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/architecture/render-pipeline.md[39m (Line=163 Column=42)
-Details: Could not parse expression with acorn: Unexpected content after expression
-[33m---[39m
-[31mError while compiling file[39m [34mwebsite/blog/2018-01-18-implementing-twitters-app-loading-animation-in-react-native.md[39m (Line=75 Column=3)
-Details: Expected the closing tag \`</a>\` either after the end of \`paragraph\` (78:44) or another opening tag after the start of \`paragraph\` (74:5)
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/blog/2018-08-13-react-native-accessibility-updates.md[39m (Line=113 Column=27)
-Details: Could not parse expression with acorn: Unexpected character '“'
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/contributing/how-to-open-a-pull-request.md[39m (Line=23 Column=17)
 Details: Unexpected character \`/\` (U+002F) before local name, expected a character that can start a name, such as a letter, \`$\`, or \`_\` (note: to create a link in MDX, use \`[text](url)\`)
@@ -358,70 +352,70 @@ Details: Unexpected character \`5\` (U+0035) before name, expected a character t
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/animated.md[39m (Line=468 Column=32)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/animatedvaluexy.md[39m (Line=79 Column=13)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/button.md[39m (Line=125 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/flatlist.md[39m (Line=623 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/image.md[39m (Line=249 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/javascript-environment.md[39m (Line=95 Column=32)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/new-architecture-appendix.md[39m (Line=43 Column=11)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/pressable.md[39m (Line=170 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/pushnotificationios.md[39m (Line=324 Column=204)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/scrollview.md[39m (Line=210 Column=15)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/sectionlist.md[39m (Line=240 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/shadow-props.md[39m (Line=233 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/switch.md[39m (Line=114 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/text-style-props.md[39m (Line=899 Column=18)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/text.md[39m (Line=490 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/textinput.md[39m (Line=594 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/touchablewithoutfeedback.md[39m (Line=182 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/transforms.md[39m (Line=193 Column=28)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/view.md[39m (Line=181 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/virtualizedlist.md[39m (Line=428 Column=26)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 "
 `;
 
 exports[`React-Native > v2 > does not compile 1`] = `
-"[31m[ERROR][39m 50/482 MDX files couldn't compile!
+"[31m[ERROR][39m 49/482 MDX files couldn't compile!
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/_integration-with-existing-apps-java.md[39m (Line=267 Column=41)
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
@@ -430,73 +424,70 @@ Details: Unexpected character \`5\` (U+0035) before name, expected a character t
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/animated.md[39m (Line=468 Column=32)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/animatedvaluexy.md[39m (Line=79 Column=13)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/button.md[39m (Line=125 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/flatlist.md[39m (Line=623 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/image.md[39m (Line=249 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/javascript-environment.md[39m (Line=95 Column=32)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/new-architecture-appendix.md[39m (Line=43 Column=11)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/pressable.md[39m (Line=170 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/pushnotificationios.md[39m (Line=324 Column=204)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/scrollview.md[39m (Line=210 Column=15)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/sectionlist.md[39m (Line=240 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/shadow-props.md[39m (Line=233 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/switch.md[39m (Line=114 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/text-style-props.md[39m (Line=899 Column=18)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/text.md[39m (Line=490 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/textinput.md[39m (Line=594 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/touchablewithoutfeedback.md[39m (Line=182 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/transforms.md[39m (Line=193 Column=28)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/view.md[39m (Line=181 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mdocs/virtualizedlist.md[39m (Line=428 Column=26)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/architecture/render-pipeline.md[39m (Line=163 Column=42)
-Details: Could not parse expression with acorn: Unexpected content after expression
-[33m---[39m
-[31mError while compiling file[39m [34mwebsite/blog/2018-01-18-implementing-twitters-app-loading-animation-in-react-native.md[39m (Line=75 Column=3)
-Details: Expected the closing tag \`</a>\` either after the end of \`paragraph\` (78:44) or another opening tag after the start of \`paragraph\` (74:5)
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/blog/2018-08-13-react-native-accessibility-updates.md[39m (Line=113 Column=27)
-Details: Could not parse expression with acorn: Unexpected character '“'
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/contributing/how-to-open-a-pull-request.md[39m (Line=23 Column=17)
 Details: Unexpected character \`/\` (U+002F) before local name, expected a character that can start a name, such as a letter, \`$\`, or \`_\` (note: to create a link in MDX, use \`[text](url)\`)
@@ -514,64 +505,64 @@ Details: Unexpected character \`5\` (U+0035) before name, expected a character t
 Details: Unexpected character \`5\` (U+0035) before name, expected a character that can start a name, such as a letter, \`$\`, or \`_\`
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/animated.md[39m (Line=468 Column=32)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/animatedvaluexy.md[39m (Line=79 Column=13)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/button.md[39m (Line=125 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/flatlist.md[39m (Line=623 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/image.md[39m (Line=249 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/javascript-environment.md[39m (Line=95 Column=32)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/new-architecture-appendix.md[39m (Line=43 Column=11)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/pressable.md[39m (Line=170 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/pushnotificationios.md[39m (Line=324 Column=204)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/scrollview.md[39m (Line=210 Column=15)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/sectionlist.md[39m (Line=240 Column=22)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/shadow-props.md[39m (Line=233 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/switch.md[39m (Line=114 Column=17)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/text-style-props.md[39m (Line=899 Column=18)
-Details: Could not parse expression with acorn: Unexpected token
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/text.md[39m (Line=490 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/textinput.md[39m (Line=594 Column=16)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/touchablewithoutfeedback.md[39m (Line=182 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/transforms.md[39m (Line=193 Column=28)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/view.md[39m (Line=181 Column=20)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 [31mError while compiling file[39m [34mwebsite/versioned_docs/version-0.72/virtualizedlist.md[39m (Line=428 Column=26)
-Details: Could not parse expression with acorn: Unexpected content after expression
+Details: Could not parse expression with acorn
 [33m---[39m
 "
 `;
