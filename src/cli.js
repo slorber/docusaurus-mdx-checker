@@ -22,7 +22,7 @@ if (options.verbose) {
 const {
   cwd = process.cwd(),
   verbose = false,
-  checkUnknownGlobals: globals = undefined,
+  globals = null,
 } = options;
 
 try {
